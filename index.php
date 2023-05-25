@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/burger_menu.js" defer></script>
     <title>Document</title>
 
 </head>
@@ -37,6 +38,15 @@ if(isset($_GET['page'])){
     }
     if ($_GET['page'] == 'add-recipe') {
         include("pages/add_recipe.php");
+    }
+    if ($_GET['page'] == 'catalog') {
+        include("pages/catalog_selected_category.php");
+    }
+    if ($_GET['page'] == 'one-product') {
+        include("pages/one_product.php");
+    }
+    if ($_GET['page'] == 'user-profile') {
+        include("pages/user_profile.php");
     }
 }
 if(empty($_GET['page'])){

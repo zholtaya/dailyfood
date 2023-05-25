@@ -20,7 +20,7 @@
         </h2>
         <div class="content_popular-products">
             <div class="popular_product_item">
-                <img src="../assets/img/popular/popular_1.jpg" alt="product_item" class="product_item_image">
+                <img src="../assets/img/popular/popular_1.jpg" alt="product_item" class="popular_product_item_image">
                 <div class="popular_product_item_text">
                     <div class="name_item">
                         Хлопья «Fitness»
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="popular_product_item">
-                <img src="../assets/img/popular/popular_2.jpg" alt="product_item" class="product_item_image">
+                <img src="../assets/img/popular/popular_2.jpg" alt="product_item" class="popular_product_item_image">
                 <div class="popular_product_item_text">
                     <div class="name_item">
                         Хлопья «Fitness»
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="popular_product_item">
-                <img src="../assets/img/popular/popular_3.jpg" alt="product_item" class="product_item_image">
+                <img src="../assets/img/popular/popular_3.jpg" alt="product_item" class="popular_product_item_image">
                 <div class="popular_product_item_text">
                     <div class="name_item">
                         Хлопья «Fitness»
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="popular_product_item">
-                <img src="../assets/img/popular/popular_4.jpg" alt="product_item" class="product_item_image">
+                <img src="../assets/img/popular/popular_4.jpg" alt="product_item" class="popular_product_item_image">
                 <div class="popular_product_item_text">
                     <div class="name_item">
                         Хлопья «Fitness»
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="popular_product_item">
-                <img src="../assets/img/popular/popular_4.jpg" alt="product_item" class="product_item_image">
+                <img src="../assets/img/popular/popular_4.jpg" alt="product_item" class="popular_product_item_image">
                 <div class="popular_product_item_text">
                     <div class="name_item">
                         Хлопья «Fitness»
