@@ -26,7 +26,7 @@ if (isset($_POST["sign_up"])) {
 
   if (empty($errors)) {
     $hashPassword = md5($password);
-    $createUserSQL = "INSERT INTO users (name, email, password, address, role) VALUES ('$name', '$email', '$password', 'Не указан', 1)";
+    $createUserSQL = "INSERT INTO users (name, email, password, address, role) VALUES ('$name', '$email', '$hashPassword', 'Не указан', 1)";
     $link->query($createUserSQL);
 
     $getCurrentUserSQL = "SELECT * FROM users WHERE email = '$email' AND password = '$hashPassword'";
