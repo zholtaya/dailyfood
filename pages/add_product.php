@@ -17,6 +17,8 @@
         $proteins = $_POST["proteins"];
         $fats = $_POST["fats"];
         $carb = $_POST["carb"];
+        $price = $_POST["price"];
+        $weight = $_POST["weight"];
         $category = $_POST["category"];
         $subcategory = $_POST["subcategory"];
 
@@ -26,14 +28,14 @@
 
         $errors = array();
 
-        if (!checkEmptyLines(array($name, $structure, $maker, $country, $expDate, $conditions, $calories, $proteins, $fats, $carb, $category, $subcategory, $firstImage, $secondImage, $thirdImage))) {
+        if (!checkEmptyLines(array($name, $structure, $maker, $country, $expDate, $conditions, $calories, $proteins, $fats, $carb, $price, $weight, $category, $subcategory, $firstImage, $secondImage, $thirdImage))) {
           array_push($errors, "Заполните все поля");
         }
 
         //todo: add validation
 
         if (empty($errors)) {
-          $createProductSQL = "INSERT INTO products (name, structure, maker, country, expDate, conditions, calories, proteins, fats, carb, subcategoryId, firstImage, secondImage, thirdImage) VALUES ('$name', '$structure', '$maker', '$country', '$expDate', '$conditions', '$calories', '$proteins', '$fats', '$carb', '$subcategory', '$firstImage', '$secondImage', '$thirdImage')";
+          $createProductSQL = "INSERT INTO products (name, structure, maker, country, expDate, conditions, price, weight, calories, proteins, fats, carb, subcategoryId, firstImage, secondImage, thirdImage) VALUES ('$name', '$structure', '$maker', '$country', '$expDate', '$conditions', '$price', '$weight', '$calories', '$proteins', '$fats', '$carb', '$subcategory', '$firstImage', '$secondImage', '$thirdImage')";
           $link->query($createProductSQL);
         } else {
           echo count($errors);
@@ -55,23 +57,18 @@
         <div class="input_label">
           <label for="maker" class="label_style">Введите производителя</label>
           <input type="text" class="input_style" name="maker" value="<?= $maker ?>" id="maker">
-
         </div>
         <div class="input_label">
           <label for="country" class="label_style">Введите страна производства</label>
           <input type="text" class="input_style" name="country" value="<?= $country ?>" id="country">
-
         </div>
-
         <div class="input_label">
           <label for="expDate" class="label_style">Введите срок годности </label>
           <input type="text" class="input_style" name="expDate" value="<?= $expDate ?>" id="expDate">
-
         </div>
         <div class="input_label">
           <label for="conditions" class="label_style">Введите условия хранения</label>
           <input type="text" class="input_style" name="conditions" value="<?= $conditions ?>" id="conditions">
-
         </div>
         <div>
           <p class="caloric_value_input">
@@ -100,6 +97,14 @@
 
             </div>
           </div>
+        </div>
+        <div class="input_label">
+          <label for="weight" class="label_style">Введите вес</label>
+          <input type="text" class="input_style" name="weight" value="<?= $weight ?>" id="weight">
+        </div>
+        <div class="input_label">
+          <label for="price" class="label_style">Введите цену</label>
+          <input type="number" class="input_style" name="price" value="<?= $price ?>" id="price">
         </div>
         <div class="input_label">
           <label class="label_style">Выберите изображение №1</label>
