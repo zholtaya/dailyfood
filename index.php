@@ -57,6 +57,12 @@ if ($_REQUEST['do'] == 'exit') {
     if ($_GET['page'] == 'add-recipe') {
       include("pages/add_recipe.php");
     }
+    if ($_GET['page'] == 'catalog') {
+      include("pages/catalog.php");
+    }
+    if ($_GET['page'] == 'product') {
+      include("pages/product.php");
+    }
   }
   if (empty($_GET['page'])) {
     include("pages/main.php");
