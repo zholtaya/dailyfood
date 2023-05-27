@@ -23,10 +23,11 @@ if ($_REQUEST['do'] == 'exit') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/burger_menu.js" defer></script>
-  <script src="js/addProductCategory.js" defer></script>
+  <script src="js/partOfTheDay.js" defer></script>
   <title>Document</title>
 
 </head>
@@ -62,6 +63,9 @@ if ($_REQUEST['do'] == 'exit') {
     }
     if ($_GET['page'] == 'product') {
       include("pages/product.php");
+    }
+    if ($_GET['page'] == 'profile') {
+      include("pages/profile.php");
     }
   }
   if (empty($_GET['page'])) {
