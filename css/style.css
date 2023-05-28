@@ -582,6 +582,10 @@ body {
 }
 .product_item a {
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .product_item {
     padding: 24px 22px;
@@ -632,6 +636,10 @@ body {
     width: 194px;
     height: 194px;
     margin-bottom: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* catalog end*/
@@ -1107,7 +1115,7 @@ body {
     padding: 14px 21px;
     font-size: 20px;
     font-weight: 500;
-    color: #2a2a2f;
+    color: #ffffff;
 }
 /* admin end */
 
@@ -1224,12 +1232,12 @@ body {
     margin-top: 38px;
     margin-bottom: 24px;
 }
-.total_price_cart p{
+.total_price_cart p {
     font-size: 24px;
     font-weight: 500;
     color: #4a5743;
 }
-.button_cart{
+.button_cart {
     padding: 18px 120px;
     background-color: #708571;
     border-radius: 8px;
@@ -1238,11 +1246,194 @@ body {
     color: #ffffff;
     text-decoration: none;
     text-align: center;
-
 }
-.content_cart_final_price{
+.content_cart_final_price {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 /* cart end */
+
+/* order */
+.title_order_payment {
+    font-size: 24px;
+    font-weight: 600;
+    color: #4a5743;
+    margin-bottom: 38px;
+}
+.input_style_order {
+    padding: 20px 14px;
+    width: 520px;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    font-family: "Fira Sans", sans-serif;
+    margin-bottom: 14px;
+    text-decoration: none;
+}
+.form_style_order {
+    display: flex;
+    flex-direction: column;
+}
+.input_style_order::placeholder {
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    font-family: "Fira Sans", sans-serif;
+}
+.input_style_order_address::placeholder {
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    font-family: "Fira Sans", sans-serif;
+}
+.input_style_order_address {
+    padding: 20px 14px;
+    width: 106px;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    font-family: "Fira Sans", sans-serif;
+    margin-bottom: 14px;
+    text-decoration: none;
+}
+.select_style_order {
+    padding: 20px 14px;
+    width: 548px;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    font-family: "Fira Sans", sans-serif;
+    margin-bottom: 14px;
+    text-decoration: none;
+}
+/* order end */
+
+/* recipe catalog */
+.recipe {
+    padding-top: 180px;
+    padding-bottom: 90px;
+    box-sizing: border-box;
+}
+.tune_filter {
+    padding: 14px;
+    background-color: #708571;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+.filter_open_search {
+    display: flex;
+    flex-direction: row;
+    column-gap: 14px;
+}
+.content_recipe_list {
+    margin-top: 54px;
+}
+.recipe_item {
+    width: 280px;
+    height: 460px;
+    border-radius: 18px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
+}
+.title_recipe {
+    font-size: 26px;
+    font-weight: 500;
+    color: #ffffff;
+    width: 200px;
+}
+.content_recipe_item {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+}
+.content_recipe_list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    row-gap: 54px;
+    flex-wrap: wrap;
+}
+.image_recipe {
+    width: 1520px;
+    height: 500px;
+    border-radius: 32px;
+}
+/* recipe catalog end */
+
+/* recipe */
+.content_recipe {
+    margin-top: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ingredients_list_container {
+    background-color: #d3ded4;
+    border-radius: 18px;
+    padding: 38px 24px;
+    width: 420px;
+    margin-top: 54px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 38px;
+}
+.description_recipe_item {
+    width: 800px;
+    font-size: 20px;
+}
+.content_description_recipe {
+    display: flex;
+    flex-direction: column;
+    row-gap: 38px;
+}
+.caloric_value_recipe_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.recipe_steps_content {
+    margin-top: 54px;
+}
+.recipe_step_item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+.steps_counter {
+    font-size: 26px;
+    color: #2a2a2f;
+    font-weight: 600;
+}
+.description_recipe_step_item {
+    font-size: 20px;
+    color: #2a2a2f;
+}
+.recipe_steps_list {
+    display: grid;
+    grid-template-columns: repeat(2, 700px);
+    row-gap: 38px;
+    column-gap: 120px;
+    margin-top: 54px;
+}
+/* recipe end */
