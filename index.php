@@ -26,15 +26,16 @@ if ($_REQUEST['do'] == 'exit') {
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/burger_menu.js" defer></script>
-  <script src="js/partOfTheDay.js" defer></script>
+
+  <script src="js/pushNotification.js"></script>
+  <script src="js/partOfTheDay.js"></script>
   <title>Document</title>
 
 </head>
 
 <body>
-
-    <?php
+  <div id="notification-container"></div>
+  <?php
   include("components/header.php");
   if (isset($_GET['page'])) {
     if ($_GET['page'] == 'sign-up') {
@@ -67,24 +68,24 @@ if ($_REQUEST['do'] == 'exit') {
     if ($_GET['page'] == 'profile') {
       include("pages/profile.php");
     }
-        if ($_GET['page'] == 'admin') {
-            include("pages/admin.php");
-        }
-        if($_GET['page']=='moderator'){
-            include("pages/moderator.php");
-        }
-        if ($_GET['page'] == 'moderator-recipes') {
-            include("pages/moderator_recipes.php");
-        }
-        if ($_GET['page'] == 'admin-user') {
-            include("pages/admin_user.php");
-        }
-        if ($_GET['page'] == 'admin-category') {
-            include("pages/admin_category.php");
-        }
-        if ($_GET['page'] == 'admin-products') {
-            include("pages/admin_products.php");
-        }
+    if ($_GET['page'] == 'admin') {
+      include("pages/admin.php");
+    }
+    if ($_GET['page'] == 'moderator') {
+      include("pages/moderator.php");
+    }
+    if ($_GET['page'] == 'moderator-recipes') {
+      include("pages/moderator_recipes.php");
+    }
+    if ($_GET['page'] == 'admin-user') {
+      include("pages/admin_user.php");
+    }
+    if ($_GET['page'] == 'admin-category') {
+      include("pages/admin_category.php");
+    }
+    if ($_GET['page'] == 'admin-products') {
+      include("pages/admin_products.php");
+    }
   }
   if (empty($_GET['page'])) {
     include("pages/main.php");
@@ -92,7 +93,8 @@ if ($_REQUEST['do'] == 'exit') {
   include("components/footer.php");
 
   ?>
-
+  <script src="js/catalogSearch.js"></script>
+  <script src="js/drawer.js"></script>
 </body>
 
 </html>

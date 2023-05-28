@@ -95,7 +95,16 @@ function validatePassword($password)
   }
   return true;
 }
+
 function redirect($route)
 {
   echo "<script>document.location.href='?$route'</script>";
+}
+
+function showErrorNotifications($errors)
+{
+  foreach ($errors as $key => $error) {
+    echo '
+    <script>new PushNotification("' . $error . '", "error").show();</script>';
+  }
 }

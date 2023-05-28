@@ -6,7 +6,7 @@
       </h2>
 
       <form name="search" method="POST" class="form_search">
-        <input type="text" class="input_style" name="search_name" value="<?= $search_name ?>" placeholder="Поиск...">
+        <input id="catalog_search" type="text" class="input_style" name="search_name" value="<?= $search_name ?>" placeholder="Поиск...">
         <button class="search_button">
           <img src="../assets/img/icons/search.svg" alt="">
         </button>
@@ -35,7 +35,7 @@
         $productsResponse = $link->query($getProductsBySubcategorySQL);
 
         while ($product = $productsResponse->fetch_assoc()) { ?>
-          <div class="product_item">
+          <div id="catalog_product" class="product_item">
             <a href="?page=product&id=<?= $product["id"] ?>">
               <img src="<?= $product["firstImage"] ?>" alt="product_image" class="product_item_image">
             </a>

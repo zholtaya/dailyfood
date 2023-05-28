@@ -24,9 +24,7 @@ if (isset($_POST["sign_in"])) {
     $_SESSION["uid"] = $uid;
     redirect("");
   } else {
-    foreach ($errors as $key => $error) {
-      echo $error;
-    }
+    showErrorNotifications($errors);
   }
 }
 ?>
