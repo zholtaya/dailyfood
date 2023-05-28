@@ -115,7 +115,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
+    content: "";
     content: none;
 }
 table {
@@ -126,7 +126,7 @@ table {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     background-color: #f1f5ed;
 }
 .container {
@@ -180,7 +180,7 @@ body {
 /* main page */
 /* banner */
 .main {
-    background-image: url('../assets/img/main.jpg');
+    background-image: url("../assets/img/main.jpg");
     background-position: center;
     display: flex;
     align-items: center;
@@ -219,7 +219,7 @@ body {
     background-color: #708571;
     border-radius: 8px;
     color: #ffffff;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 18px;
     font-weight: 500;
     border: none;
@@ -358,7 +358,7 @@ body {
 /* sign_up and forms */
 
 .form_sign_in {
-    background-image: url('../assets/img/main.jpg');
+    background-image: url("../assets/img/main.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -410,7 +410,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_style::placeholder {
     color: #828284;
@@ -422,7 +422,7 @@ body {
     background-color: #708571;
     border-radius: 8px;
     color: #ffffff;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 18px;
     font-weight: 500;
     border: none;
@@ -458,7 +458,7 @@ body {
     color: #828284;
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .option_style {
     border: none;
@@ -475,7 +475,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_group {
     display: flex;
@@ -494,7 +494,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .caloric_value_input {
     font-size: 18px;
@@ -507,7 +507,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     color: #4a5743;
     font-size: 16px;
     font-weight: 500;
@@ -889,7 +889,7 @@ body {
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     text-decoration: none;
 }
 .header_admin_order_item {
@@ -928,7 +928,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .name_order_item {
     font-size: 22px;
@@ -1000,7 +1000,7 @@ body {
     background-color: #d3ded4;
     border: none;
     outline: none;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .data_category_information:nth-child(1) {
     width: 120px;
@@ -1042,7 +1042,7 @@ body {
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     text-decoration: none;
 }
 .buttons_admin_delete_edit a {
@@ -1423,12 +1423,10 @@ body {
     margin-bottom: 24px;
 }
 .total_price_cart p {
-.total_price_cart p {
     font-size: 24px;
     font-weight: 500;
     color: #4a5743;
 }
-.button_cart {
 .button_cart {
     padding: 18px 120px;
     background-color: #708571;
@@ -1437,10 +1435,8 @@ body {
     font-weight: 500;
     color: #ffffff;
     text-decoration: none;
-
+}
 .content_cart_final_price {
-.content_cart_final_price {
-.content_cart_final_price{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1639,4 +1635,3 @@ body {
 }
 
 /* accordion end */
-
