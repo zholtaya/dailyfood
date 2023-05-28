@@ -23,8 +23,7 @@ if ($_REQUEST['do'] == 'exit') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <script src="js/pushNotification.js"></script>
@@ -35,6 +34,7 @@ if ($_REQUEST['do'] == 'exit') {
 
 <body>
   <div id="notification-container"></div>
+
   <?php
   include("components/header.php");
   if (isset($_GET['page'])) {
@@ -85,6 +85,9 @@ if ($_REQUEST['do'] == 'exit') {
     }
     if ($_GET['page'] == 'admin-products') {
       include("pages/admin_products.php");
+    }
+    if ($_GET['page'] == 'cart') {
+      include("pages/cart.php");
     }
   }
   if (empty($_GET['page'])) {
