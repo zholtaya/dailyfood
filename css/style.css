@@ -627,6 +627,9 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 .product_item_image {
     width: 194px;
@@ -714,8 +717,14 @@ body {
     text-decoration: none;
     display: flex;
     justify-content: flex-end;
+    align-self: flex-end;
     font-size: 22px;
     font-weight: 600;
+
+    margin-top: 20px;
+    border: 0;
+    background-color: inherit;
+    cursor: pointer;
 }
 .one_product_item_price {
     font-size: 32px;
@@ -1416,3 +1425,14 @@ body {
     flex-direction: column;
 }
 /* cart end */
+
+/* accordion */
+
+.accordionContainer {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+}
+
+
+/* accordion end */

@@ -63,7 +63,7 @@ if (isset($_GET["id"])) {
           </div>
         </div>
 
-        <div class="specifications_one_product_list">
+        <div class="specifications_one_product_list" id="productAccordion">
           <div class="specifications_item">
             <p class="specifications_item_name">
               Состав
@@ -96,14 +96,25 @@ if (isset($_GET["id"])) {
               <?= $product["weight"] ?> грамм
             </p>
           </div>
-          <button class="hide_show_button_one_product">Скрыть</button>
-
         </div>
+        <button id="product-accordion-button" class="hide_show_button_one_product">Показать подробную
+          информацию</button>
         <div class="one_product_item_price">
           <?= $product["price"] ?> ₽
         </div>
-        <a href="#" class="button_product_item">В корзину</a>
+        <form name="cart" method="post">
+          <button name="cart" class="button_product_item">В корзину</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
+
+<?php
+if (isset($_POST["cart"])) {
+  $userId = $user["id"];
+  $addProductToCartSQL = "INSERT INTO cart (userId, productId, count) VALUES ('$userId', '$productId', 1)";
+  $link->query($addProductToCartSQL);
+  echo "<script>new PushNotification('Товар добавлен в корзину', 'success').show();</script>";
+}
+?>
