@@ -129,7 +129,7 @@
             $allCategoriesResponse = $link->query($getAllCategoriesSQL);
 
             while ($category = $allCategoriesResponse->fetch_assoc()) { ?>
-              <option value="<?= $category["id"] ?>" class="option_style"><?= $category["title"] ?></option>
+            <option value="<?= $category["id"] ?>" class="option_style"><?= $category["title"] ?></option>
             <? }
             ?>
           </select>
@@ -143,10 +143,9 @@
             $allCategoriesResponse = $link->query($getAllCategoriesSQL);
 
             while ($category = $allCategoriesResponse->fetch_assoc()) { ?>
-              <option value="<?= $category["id"] ?>" class="option_style"><?= $category["title"] ?></option>
+            <option value="<?= $category["id"] ?>" class="option_style"><?= $category["title"] ?></option>
             <? }
             ?>
-            <option value="1" class="option_style">Вода какая то</option>
           </select>
 
         </div>
@@ -160,37 +159,37 @@
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('category').addEventListener('change', function() {
-      const categoryId = this.value;
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('category').addEventListener('change', function() {
+    const categoryId = this.value;
 
-      const subcategorySelect = document.getElementById('subcategory');
-      subcategorySelect.innerHTML = '';
+    const subcategorySelect = document.getElementById('subcategory');
+    subcategorySelect.innerHTML = '';
 
-      fetch('actions/get_subcategories.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          },
-          body: 'category_id=' + encodeURIComponent(categoryId)
-        })
-        .then(function(response) {
-          if (response.ok) {
-            return response.text();
-          } else {
-            throw new Error('Request failed. Error: ' + response.status);
-          }
-        })
-        .then(function(responseText) {
-          if (!responseText) {
-            subcategorySelect.innerHTML = `<option value="0">В данной категории нет подкатегорий</option>`;
-          } else {
-            subcategorySelect.innerHTML = responseText;
-          }
-        })
-        .catch(function(error) {
-          console.error(error);
-        });
-    });
+    fetch('actions/get_subcategories.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'category_id=' + encodeURIComponent(categoryId)
+      })
+      .then(function(response) {
+        if (response.ok) {
+          return response.text();
+        } else {
+          throw new Error('Request failed. Error: ' + response.status);
+        }
+      })
+      .then(function(responseText) {
+        if (!responseText) {
+          subcategorySelect.innerHTML = `<option value="0">В данной категории нет подкатегорий</option>`;
+        } else {
+          subcategorySelect.innerHTML = responseText;
+        }
+      })
+      .catch(function(error) {
+        console.error(error);
+      });
   });
+});
 </script>
