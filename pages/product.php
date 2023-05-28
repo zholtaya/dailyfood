@@ -61,9 +61,6 @@ if (isset($_GET["id"])) {
               </p>
             </div>
           </div>
-        </div>
-
-        <div class="specifications_one_product_list" id="productAccordion">
           <div class="specifications_item">
             <p class="specifications_item_name">
               Состав
@@ -72,6 +69,9 @@ if (isset($_GET["id"])) {
               <?= $product["structure"] ?>
             </p>
           </div>
+        </div>
+
+        <div class="specifications_one_product_list" id="productAccordion">
           <div class="specifications_item">
             <p class="specifications_item_name">
               Производитель, страна
@@ -115,6 +115,6 @@ if (isset($_POST["cart"])) {
   $userId = $user["id"];
   $addProductToCartSQL = "INSERT INTO cart (userId, productId, count) VALUES ('$userId', '$productId', 1)";
   $link->query($addProductToCartSQL);
-  echo "<script>new PushNotification('Товар добавлен в корзину', 'success').show();</script>";
+  showSuccessNotification("Товар успешно добавлен в коризну");
 }
 ?>

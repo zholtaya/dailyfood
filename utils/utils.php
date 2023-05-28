@@ -108,3 +108,8 @@ function showErrorNotifications($errors)
     <script>new PushNotification("' . $error . '", "error").show();</script>';
   }
 }
+
+function showSuccessNotification($text)
+{
+  echo "<script>new PushNotification('" . $text . "', 'success').show();</script>";
+}
