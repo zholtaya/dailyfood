@@ -77,7 +77,8 @@ if (isset($_GET["id"])) {
               Производитель, страна
             </p>
             <p class="specifications_item_description">
-              <?= $product["maker"] ?>, <?= $product["country"] ?>
+              <?= $product["maker"] ?>,
+              <?= $product["country"] ?>
             </p>
           </div>
           <div class="specifications_item">
@@ -85,7 +86,8 @@ if (isset($_GET["id"])) {
               Условия хранения, срок годности
             </p>
             <p class="specifications_item_description">
-              <?= $product["conditions"] ?>, <?= $product["expDate"] ?>
+              <?= $product["conditions"] ?>,
+              <?= $product["expDate"] ?>
             </p>
           </div>
           <div class="specifications_item">
@@ -93,7 +95,7 @@ if (isset($_GET["id"])) {
               Вес
             </p>
             <p class="specifications_item_description">
-              <?= $product["weight"] ?> 
+              <?= $product["weight"] ?>
             </p>
           </div>
         </div>
@@ -113,8 +115,23 @@ if (isset($_GET["id"])) {
 <?php
 if (isset($_POST["cart"])) {
   $userId = $user["id"];
-  $addProductToCartSQL = "INSERT INTO cart (userId, productId, count) VALUES ('$userId', '$productId', 1)";
-  $link->query($addProductToCartSQL);
-  showSuccessNotification("Товар успешно добавлен в коризну");
+  $uniqueId = uniqid();
+
+  $checkCartIsCreatedSQL = "SELECT * FROM cart WHERE userId = '$userId'";
+  $checkCartResponse = $link->query($checkCartIsCreatedSQL);
+  $maybeCart = $checkCartResponse->fetch_assoc();
+
+  if (!$maybeCart) {
+    $createNewCartRowSQL = "INSERT INTO cart (userId, uniqueId) VALUES ('$userId', '$uniqueId')";
+    $link->query($createNewCartRowSQL);
+
+    $getThisCartRowSQL = "SELECT * FROM cart WHERE userId = '$userId' AND uniqueId = '$uniqueId'";
+    $thisCartRowResponse = $link->query($getThisCartRowSQL);
+    $maybeCart = $thisCartRowResponse->fetch_assoc();
+  }
+
+  $addProductIntoCartListSQL = "INSERT INTO cart_list (cartId, productId, count) VALUES ('{$maybeCart['id']}', '$productId', 1)";
+  $link->query($addProductIntoCartListSQL);
+  showSuccessNotification("Товар успешно добавлен в корзину");
 }
 ?>

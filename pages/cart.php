@@ -3,18 +3,23 @@ $userId = $user["id"];
 
 $getFreeDeliveryPriceSQL = "SELECT * FROM delivery_price LIMIT 1";
 $freeDeliveryPriceResponse = $link->query($getFreeDeliveryPriceSQL);
-$freeDeliveryPrice = $freeDeliveryPriceResponse->fetch_assoc();
+$freeDeliveryPriceObject = $freeDeliveryPriceResponse->fetch_assoc();
+$freeDeliveryPrice = $freeDeliveryPriceObject["price"];
 
-$getCartItemsSQL = "SELECT * FROM cart WHERE userId = '$userId'";
-$cartResponse = $link->query($getCartItemsSQL);
-$cartItems = $cartResponse->fetch_assoc();
+
+$getUserCartSQL = "SELECT * FROM cart WHERE userId = '$userId'";
+$userCartResponse = $link->query($getUserCartSQL);
+$userCart = $userCartResponse->fetch_assoc();
+
+$getAllCartProductsSQL = "SELECT * FROM cart_list WHERE cartId = '{$userCart['id']}'";
+$cartProductsResponse = $link->query($getAllCartProductsSQL);
 
 $totalPrice = 0;
 ?>
 
 <?php
 if (isset($_GET["deleteAll"])) {
-  $deleteAllCartItemsSQL = "DELETE FROM cart WHERE userId = '$userId'";
+  $deleteAllCartItemsSQL = "DELETE FROM cart_list WHERE cartId = '{$userCart['id']}'";
   $link->query($deleteAllCartItemsSQL);
   showSuccessNotification("Товары успешно удалены из корзины");
 }
@@ -37,29 +42,32 @@ if (isset($_GET["deleteAll"])) {
     <div class="content_cart">
       <div class="cart_products_list">
         <?php
-        while ($cartItem = $cartResponse->fetch_assoc()) {
-          $productId = $cartItem["productId"];
+        $cartProducts = $cartProductsResponse->fetch_assoc();
+
+        while ($cartProducts) {
+          $productId = $cartProducts["productId"];
           $getProductByIdSQL = "SELECT * FROM products WHERE id = '$productId'";
           $productsResponse = $link->query($getProductByIdSQL);
-
-          while ($product = $productsResponse->fetch_assoc()) {
-            $totalPrice += $product["price"];
-        ?>
-            <div class="cart-product-item">
-              <div class="cart_product_item">
-                <img src="<?= $product["firstImage"] ?>" alt="<?= $product["name"] ?>" class="image_cart_product">
-                <div class="cart_product_item_text">
-                  <p class="cart_product_item_name">
-                    <?= $product["name"] ?>
-                  </p>
-                  <p class="cart_product_item_price">
-                    <?= $product["price"] ?> ₽
-                  </p>
-                </div>
+          $product = $productsResponse->fetch_assoc();
+          $totalPrice += $product["price"];
+          ?>
+          <div class="cart-product-item">
+            <div class="cart_product_item">
+              <img src="<?= $product["firstImage"] ?>" alt="<?= $product["name"] ?>" class="image_cart_product">
+              <div class="cart_product_item_text">
+                <p class="cart_product_item_name">
+                  <?= $product["name"] ?>
+                </p>
+                <p class="cart_product_item_price">
+                  <?= $product["price"] ?> ₽
+                </p>
               </div>
-              <div class="changing_quantity"></div>
             </div>
-        <?  }
+            <div class="changing_quantity"></div>
+          </div>
+          <?php
+
+          $cartProducts = $cartProductsResponse->fetch_assoc();
         }
         ?>
       </div>
@@ -70,37 +78,45 @@ if (isset($_GET["deleteAll"])) {
         <div class="cart_final_price_product_delivery">
           <div class="cart_final_price_product">
             <p>Товары</p>
-            <p><?= $totalPrice ?> ₽</p>
+            <p>
+              <?= $totalPrice ?> ₽
+            </p>
           </div>
           <?php
-          if ((int)$freeDeliveryPrice > (int)$totalPrice) { ?>
+          if ((int) $freeDeliveryPrice > (int) $totalPrice) { ?>
             <div class="cart_final_price_delivery">
               <p>Доставка</p>
               <p>200 ₽</p>
             </div>
             <div class="delivery_price_counter">
-              <p>Еще <?= (int)$freeDeliveryPrice - (int)$totalPrice ?> ₽ до бесплатной доставки</p>
+              <p>Еще
+                <?= (int) $freeDeliveryPrice - (int) $totalPrice ?> ₽ до бесплатной доставки
+              </p>
             </div>
-          <? } else { ?>
+          <?php } else { ?>
             <div class="cart_final_price_delivery">
               <p>Доставка</p>
               <p>0 ₽</p>
             </div>
-          <? }
+          <?php }
           ?>
         </div>
         <div class="total_price_cart">
           <p>К оплате</p>
           <?php
-          if ((int)$freeDeliveryPrice > (int)$totalPrice) { ?>
-            <p><?= (int)$totalPrice + 200 ?> ₽</p>
-          <? } else { ?>
-            <p><?= (int)$totalPrice ?> ₽</p>
-          <? }
+          if ((int) $freeDeliveryPrice > (int) $totalPrice) { ?>
+            <p>
+              <?= (int) $totalPrice + 200 ?> ₽
+            </p>
+          <?php } else { ?>
+            <p>
+              <?= (int) $totalPrice ?> ₽
+            </p>
+          <?php }
           ?>
 
         </div>
-        <a href="?page=order" class="button_cart">Перейти к оплате</a>
+        <a href="?page=order&totalPrice=<?= $totalPrice ?>" class="button_cart">Перейти к оплате</a>
       </div>
     </div>
   </div>
