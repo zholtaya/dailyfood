@@ -100,7 +100,7 @@ if (isset($_GET["deleteAll"])) {
           ?>
 
         </div>
-        <a href="#" class="button_cart">Перейти к оплате</a>
+        <a href="?page=order" class="button_cart">Перейти к оплате</a>
       </div>
     </div>
   </div>

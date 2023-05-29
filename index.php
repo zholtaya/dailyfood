@@ -90,15 +90,15 @@ if ($_REQUEST['do'] == 'exit') {
     if ($_GET['page'] == 'cart') {
       include("pages/cart.php");
     }
-        if ($_GET['page'] == 'order') {
-            include("pages/order.php");
-        }
-        if ($_GET['page'] == 'recipe-catalog') {
-            include("pages/recipe_catalog.php");
-        }
-        if ($_GET['page'] == 'recipe') {
-            include("pages/recipe.php");
-        }
+    if ($_GET['page'] == 'order') {
+        include("pages/order.php");
+    }
+    if ($_GET['page'] == 'recipe-catalog') {
+        include("pages/recipe_catalog.php");
+    }
+    if ($_GET['page'] == 'recipe') {
+        include("pages/recipe.php");
+    }
   }
   if (empty($_GET['page'])) {
     include("pages/main.php");
