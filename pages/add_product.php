@@ -22,10 +22,14 @@
         $category = $_POST["category"];
         $subcategory = $_POST["subcategory"];
 
-        $firstImage = saveUploadedFile($_FILES["firstImage"]);
-        $secondImage = saveUploadedFile($_FILES["secondImage"]);
-        $thirdImage = saveUploadedFile($_FILES["thirdImage"]);
+        $firstImage = $_POST["firstImage"];
+        $secondImage = $_POST["secondImage"];
+        $thirdImage = $_POST["thirdImage"];
 
+        // $firstImage = saveUploadedFile($_FILES["firstImage"]);
+        // $secondImage = saveUploadedFile($_FILES["secondImage"]);
+        // $thirdImage = saveUploadedFile($_FILES["thirdImage"]);
+      
         $errors = array();
 
         if (!checkEmptyLines(array($name, $structure, $maker, $country, $expDate, $conditions, $calories, $proteins, $fats, $carb, $price, $weight, $category, $subcategory, $firstImage, $secondImage, $thirdImage))) {
@@ -33,7 +37,7 @@
         }
 
         //todo: add validation
-        
+      
 
         if (empty($errors)) {
           $createProductSQL = "INSERT INTO products (name, structure, maker, country, expDate, conditions, price, weight, calories, proteins, fats, carb, subcategoryId, firstImage, secondImage, thirdImage) VALUES ('$name', '$structure', '$maker', '$country', '$expDate', '$conditions', '$price', '$weight', '$calories', '$proteins', '$fats', '$carb', '$subcategory', '$firstImage', '$secondImage', '$thirdImage')";
@@ -109,18 +113,18 @@
         </div>
         <div class="input_label">
           <label class="label_style">Выберите изображение №1</label>
-          <label for="firstImage" class="visible_input">Файл не выбран</label>
-          <input type="file" class="input_style_image" name="firstImage" value="<?= $firstImage ?>" id="firstImage">
+          <!-- <label for="firstImage" class="visible_input">Файл не выбран</label> -->
+          <input type="text" class="input_style" name="firstImage" value="<?= $firstImage ?>" id="firstImage">
         </div>
         <div class="input_label">
           <label class="label_style">Выберите изображение №2</label>
-          <label for="secondImage" class="visible_input">Файл не выбран</label>
-          <input type="file" class="input_style_image" name="secondImage" value="<?= $secondImage ?>" id="secondImage">
+          <!-- <label for="secondImage" class="visible_input">Файл не выбран</label> -->
+          <input type="text" class="input_style" name="secondImage" value="<?= $secondImage ?>" id="secondImage">
         </div>
         <div class="input_label">
           <label class="label_style">Выберите изображение №3</label>
-          <label for="thirdImage" class="visible_input">Файл не выбран</label>
-          <input type="file" class="input_style_image" name="thirdImage" value="<?= $thirdImage ?>" id="thirdImage">
+          <!-- <label for="thirdImage" class="visible_input">Файл не выбран</label> -->
+          <input type="text" class="input_style" name="thirdImage" value="<?= $thirdImage ?>" id="thirdImage">
         </div>
         <div class="input_label">
           <label for="category" class="label_style">Выберите категорию</label>
@@ -130,7 +134,7 @@
             $allCategoriesResponse = $link->query($getAllCategoriesSQL);
 
             while ($category = $allCategoriesResponse->fetch_assoc()) { ?>
-            <option value="<?= $category["id"] ?>" class="option_style"><?= $category["title"] ?></option>
+              <option value="<?= $category["id"] ?>" class="option_style"><?= $category["title"] ?></option>
             <? }
             ?>
           </select>
@@ -145,7 +149,7 @@
             $allCategoriesResponse = $link->query($getAllCategoriesSQL);
 
             while ($category = $allCategoriesResponse->fetch_assoc()) { ?>
-            <option value="<?= $category["id"] ?>" class="option_style"><?= $category["title"] ?></option>
+              <option value="<?= $category["id"] ?>" class="option_style"><?= $category["title"] ?></option>
             <? }
             ?>
           </select>
@@ -161,37 +165,37 @@
 </section>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('category').addEventListener('change', function() {
-    const categoryId = this.value;
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('category').addEventListener('change', function () {
+      const categoryId = this.value;
 
-    const subcategorySelect = document.getElementById('subcategory');
-    subcategorySelect.innerHTML = '';
+      const subcategorySelect = document.getElementById('subcategory');
+      subcategorySelect.innerHTML = '';
 
-    fetch('actions/get_subcategories.php', {
+      fetch('actions/get_subcategories.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: 'category_id=' + encodeURIComponent(categoryId)
       })
-      .then(function(response) {
-        if (response.ok) {
-          return response.text();
-        } else {
-          throw new Error('Request failed. Error: ' + response.status);
-        }
-      })
-      .then(function(responseText) {
-        if (!responseText) {
-          subcategorySelect.innerHTML = `<option value="0">В данной категории нет подкатегорий</option>`;
-        } else {
-          subcategorySelect.innerHTML = responseText;
-        }
-      })
-      .catch(function(error) {
-        console.error(error);
-      });
+        .then(function (response) {
+          if (response.ok) {
+            return response.text();
+          } else {
+            throw new Error('Request failed. Error: ' + response.status);
+          }
+        })
+        .then(function (responseText) {
+          if (!responseText) {
+            subcategorySelect.innerHTML = `<option value="0">В данной категории нет подкатегорий</option>`;
+          } else {
+            subcategorySelect.innerHTML = responseText;
+          }
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    });
   });
-});
 </script>

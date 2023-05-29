@@ -96,10 +96,11 @@ if (!$user) {
 </section>
 
 <script>
-  const element = document.querySelector(".js-format_date");
-  const dateString = element.textContent;
-  const date = new Date(dateString);
-  const formattedDate = date.toLocaleDateString("ru-RU", { day: "2-digit", month: "long" });
-
-  element.textContent = formattedDate;
+  const elements = document.querySelectorAll(".js-format_date");
+  [...elements].forEach((element) => {
+    const dateString = element.textContent;
+    const date = new Date(dateString);
+    const formattedDate = date.toLocaleDateString("ru-RU", { day: "2-digit", month: "long" });
+    element.textContent = formattedDate;
+  })
 </script>
