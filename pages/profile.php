@@ -52,24 +52,54 @@ if (!$user) {
           Ваши заказы
         </p>
         <div class="user_profile_orders_list">
-          <div class="user_profile_order_item">
-            <div class="order_information_user">
-              <div class="inf">
-                <p class="title_user_style">
-                  13 апреля в 11:04
-                </p>
-                <div>
-                  <p class="order_text_style">786 ₽ </p>
-                  <p class="order_text_style">улица Аделя Кутуя, 110Е</p>
+          <?php
+          $userId = $user["id"];
+          $getUserOrdersSQL = "SELECT * FROM orders WHERE userId = '$userId'";
+          $userOrdersResponse = $link->query($getUserOrdersSQL);
+
+          while ($order = $userOrdersResponse->fetch_assoc()) {
+            $textStatus = "Собирается";
+            if ($order["status"] == 2) {
+              $textStatus = "Передан курьеру";
+            }
+            if ($order["status"] == 3) {
+              $textStatus = "Доставляется";
+            }
+            if ($order["status"] == 4) {
+              $textStatus = "Доставлен";
+            }
+            ?>
+            <div class="user_profile_order_item">
+              <div class="order_information_user">
+                <div class="inf">
+                  <p class="title_user_style js-format_date">
+                    <?= $order["date"] ?>
+                  </p>
+                  <div>
+                    <p class="order_text_style">
+                      <?= $order["price"] ?> ₽
+                    </p>
+                    <p class="order_text_style">улица Аделя Кутуя, 100Е, кв.104</p>
+                  </div>
+                </div>
+                <div class="status_value_user">
+                  <?= $textStatus ?>
                 </div>
               </div>
-              <div class="status_value_user">
-                Собирается
-              </div>
             </div>
-          </div>
+          <? }
+          ?>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const element = document.querySelector(".js-format_date");
+  const dateString = element.textContent;
+  const date = new Date(dateString);
+  const formattedDate = date.toLocaleDateString("ru-RU", { day: "2-digit", month: "long" });
+
+  element.textContent = formattedDate;
+</script>
