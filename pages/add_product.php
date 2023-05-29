@@ -51,7 +51,7 @@
         </div>
         <div class="input_label">
           <label for="name" class="label_style">Введите состав</label>
-          <textarea name="structure" class="input_style" id="structure" cols="20" rows="6"></textarea>
+          <textarea name="structure" class="input_style" id="structure" cols="20" rows="6"><?= $structure ?></textarea>
 
         </div>
         <div class="input_label">
@@ -75,7 +75,7 @@
             На 100 граммов
           </p>
           <div class="input_group">
-
+            <!-- не добавляется 0 -->
             <div class="input_label">
               <label for="calories" class="label_style">Калории</label>
               <input type="text" class="input_style_group" name="calories" value="<?= $calories ?>" id="calories">
@@ -135,6 +135,7 @@
           </select>
 
         </div>
+        <!-- не выводятся подкатегории по дефолту -->
         <div class="input_label">
           <label for="subcategory" class="label_style">Выберите подкатегорию</label>
           <select name="subcategory" id="subcategory" class="select_style">

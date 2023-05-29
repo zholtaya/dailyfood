@@ -6,7 +6,7 @@
       </h1>
       <div class="subtitle_button">
         <h3>Попробуйте новую возможность подбора рецептов </h3>
-        <a href="#" class="button_style">
+        <a href="?page=recipe-catalog" class="button_style">
           Попробовать
         </a>
       </div>
