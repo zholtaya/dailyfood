@@ -4,7 +4,7 @@
       <div id="close-drawer-btn" class="drawer_close_wrapper">
         <img src="./assets/icons/close.svg" alt="Close" />
       </div>
-      <h1 class="drawer_title">Доброе утро, Равиль</h1>
+      <h1 class="drawer_title"><span class="part-of-the-day">Добрый день</span>, Равиль</h1>
       <nav class="drawer_menu">
         <a href="?" class="drawer_menu_item">
           <span>Главная</span>

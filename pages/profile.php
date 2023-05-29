@@ -8,7 +8,8 @@ if (!$user) {
   <div class="container">
     <div class="header_catalog_selected_category">
       <h2 class="headtitle_style_search">
-        <span id="part-of-the-day">Доброе утро</span>, <?= $user["name"] ?>
+        <span class="part-of-the-day">Доброе утро</span>,
+        <?= $user["name"] ?>
       </h2>
 
       <a href="?do=exit" class="button_log_out">Выход</a>
@@ -66,9 +67,6 @@ if (!$user) {
                 Собирается
               </div>
             </div>
-
-            <a href="#" class="open_button_user">Подробнее</a>
-
           </div>
         </div>
       </div>

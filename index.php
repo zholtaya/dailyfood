@@ -28,7 +28,6 @@ if ($_REQUEST['do'] == 'exit') {
   <link rel="stylesheet" href="css/style.css">
 
   <script src="js/pushNotification.js"></script>
-  <script src="js/partOfTheDay.js"></script>
   <title>Document</title>
 
 </head>
@@ -91,13 +90,13 @@ if ($_REQUEST['do'] == 'exit') {
       include("pages/cart.php");
     }
     if ($_GET['page'] == 'order') {
-        include("pages/order.php");
+      include("pages/order.php");
     }
     if ($_GET['page'] == 'recipe-catalog') {
-        include("pages/recipe_catalog.php");
+      include("pages/recipe_catalog.php");
     }
     if ($_GET['page'] == 'recipe') {
-        include("pages/recipe.php");
+      include("pages/recipe.php");
     }
   }
   if (empty($_GET['page'])) {
@@ -106,9 +105,12 @@ if ($_REQUEST['do'] == 'exit') {
   include("components/footer.php");
 
   ?>
+  <script src="js/partOfTheDay.js"></script>
   <script src="js/catalogSearch.js"></script>
   <script src="js/drawer.js"></script>
   <script src="js/accordions.js"></script>
+
+
 </body>
 
 </html>
