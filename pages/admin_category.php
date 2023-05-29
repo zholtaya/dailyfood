@@ -2,18 +2,18 @@
     <div class="container">
         <div class="content_admin">
             <div class="admin_tabs_list">
-                <button class="tab_item">
+                <a href="?page=admin-user" class="tab_item">
                     Пользователи
-                </button>
-                <button class="tab_item ">
+                </a>
+                <a href="?page=admin-products" class="tab_item">
                     Товары
-                </button>
-                <button class="tab_item active ">
+                </a>
+                <a href="?page=admin-category" class="tab_item active">
                     Категории
-                </button>
-                <button class="tab_item">
+                </a>
+                <a href="?page=admin-orders" class="tab_item ">
                     Заказы
-                </button>
+                </a>
 
             </div>
             <div class="admin_order_content">

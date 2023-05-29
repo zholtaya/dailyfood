@@ -77,7 +77,7 @@
     </div>
   </div>
 </section>
-<section class="catalog_category">
+<section class="catalog_category" id="catalog">
   <div class="container">
     <h2 class="headtitle_style">
       Каталог

@@ -18,7 +18,7 @@
                     <span>Каталог</span>
                     <img src="./assets/icons/catalog.svg" alt="Catalog" />
                 </a>
-                <a href="?page=recipe_catalog" class="drawer_menu_item">
+                <a href="?page=recipe-catalog" class="drawer_menu_item">
                     <span>Рецепты</span>
                     <img src="./assets/icons/recepes.svg" alt="Reciepes" />
                 </a>

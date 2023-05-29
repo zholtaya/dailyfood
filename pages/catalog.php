@@ -1,4 +1,4 @@
-<section class="catalog_selected_category" id="catalog">
+<section class="catalog_selected_category">
   <div class="container">
     <div class="header_catalog_selected_category">
 

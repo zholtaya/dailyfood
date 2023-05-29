@@ -33,6 +33,7 @@
         }
 
         //todo: add validation
+        
 
         if (empty($errors)) {
           $createProductSQL = "INSERT INTO products (name, structure, maker, country, expDate, conditions, price, weight, calories, proteins, fats, carb, subcategoryId, firstImage, secondImage, thirdImage) VALUES ('$name', '$structure', '$maker', '$country', '$expDate', '$conditions', '$price', '$weight', '$calories', '$proteins', '$fats', '$carb', '$subcategory', '$firstImage', '$secondImage', '$thirdImage')";
