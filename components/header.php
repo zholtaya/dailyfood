@@ -1,4 +1,4 @@
-<div id="drawer" class="left-drawer">
+<div id="drawer" class="left-drawer none">
   <div class="drawer_wrapper">
     <div class="drawer_wrapper_top">
       <div id="close-drawer-btn" class="drawer_close_wrapper">
