@@ -93,7 +93,7 @@ if (isset($_GET["id"])) {
               Вес
             </p>
             <p class="specifications_item_description">
-              <?= $product["weight"] ?> грамм
+              <?= $product["weight"] ?> 
             </p>
           </div>
         </div>

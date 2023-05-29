@@ -14,11 +14,11 @@
           <span>Личный кабинет</span>
           <img src="./assets/icons/user.svg" alt="Profile" />
         </a>
-        <a href="?page=catalog" class="drawer_menu_item">
+        <a href="?#catalog" class="drawer_menu_item">
           <span>Каталог</span>
           <img src="./assets/icons/catalog.svg" alt="Catalog" />
         </a>
-        <a href="?page=reciepes" class="drawer_menu_item">
+        <a href="?page=recipe-catalog" class="drawer_menu_item">
           <span>Рецепты</span>
           <img src="./assets/icons/recepes.svg" alt="Reciepes" />
         </a>

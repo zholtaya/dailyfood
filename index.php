@@ -69,8 +69,8 @@ if ($_REQUEST['do'] == 'exit') {
     if ($_GET['page'] == 'profile') {
       include("pages/profile.php");
     }
-    if ($_GET['page'] == 'admin') {
-      include("pages/admin.php");
+    if ($_GET['page'] == 'admin-orders') {
+      include("pages/admin_orders.php");
     }
     if ($_GET['page'] == 'moderator') {
       include("pages/moderator.php");

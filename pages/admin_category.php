@@ -2,18 +2,19 @@
     <div class="container">
         <div class="content_admin">
             <div class="admin_tabs_list">
-                <button class="tab_item">
+                <a href="?page=admin-user" class="tab_item">
                     Пользователи
-                </button>
-                <button class="tab_item ">
+                </a>
+                <a href="?page=admin-products" class="tab_item">
                     Товары
-                </button>
-                <button class="tab_item active ">
+                </a>
+                <a href="?page=admin-category" class="tab_item active">
                     Категории
-                </button>
-                <button class="tab_item">
+                </a>
+                <a href="?page=admin-orders" class="tab_item ">
                     Заказы
-                </button>
+                </a>
+
             </div>
             <div class="admin_order_content">
                 <div class="header_catalog_selected_category">
@@ -40,37 +41,59 @@
                             Редактировать/Удалить
                         </p>
                     </div>
+                    <?php
+                    $getAllCategoriesSQL = "SELECT * FROM categories";
+                    $allCategoriesResponse = $link->query($getAllCategoriesSQL);
 
-                    <div class="admin_user_item">
-                        <div class="content_admin_user_item">
-                            <p class="data_user_information">
-                                1
-                            </p>
-                            <p class="data_category_information">
-                                Готовая еда
-                            </p>
-                            <div class="category_list_admin">
-                                <p class="data_category_information">
-                                    Супы
+                    while ($category = $allCategoriesResponse->fetch_assoc()) {
+
+                        ?>
+                        <div class="admin_user_item">
+                            <div class="content_admin_user_item">
+                                <p class="data_user_information">
+                                    <?= $category['id'] ?>
+
                                 </p>
-                                <button class="data_category_information">
-                                    Показать
-                                </button>
-                            </div>
+                                <p class="data_category_information">
+                                    <?= $category['title'] ?>
 
+                                </p>
 
-                            <div class="buttons_admin_delete_edit">
-                                <a href="#">
-                                    <img class="edit_buttons" src="../assets/img/icons/edit.svg" alt="">
-                                </a>
-                                <a href="#">
-                                    <img class="edit_buttons" src="../assets/img/icons/delete.svg" alt="">
-                                </a>
+                                <div class="category_list_admin">
+
+                                    <div class="category_item_hidden" id="subcategoriesAccordion">
+                                        <?
+                                        $categoryId = $category['id'];
+                                        $getAllSubcategoriesSQL = "SELECT * FROM subcategories WHERE categoryId = '$categoryId'";
+                                        $allSubcategoriesResponse = $link->query($getAllSubcategoriesSQL);
+                                        while ($subcategory = $allSubcategoriesResponse->fetch_assoc()) {
+
+                                            ?>
+                                            <p class="data_category_information">
+                                                <?= $subcategory['title'] ?>
+                                            </p>
+                                        <? }
+
+                                        ?>
+                                    </div>
+                                    <button class="data_category_information" id="subcategory-accordion-button">
+                                        Показать все
+                                    </button>
+                                </div>
+
+                                <div class="buttons_admin_delete_edit">
+                                    <a href="#">
+                                        <img class="edit_buttons" src="../assets/img/icons/edit.svg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="edit_buttons" src="../assets/img/icons/delete.svg" alt="">
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-
+                    <?
+                    }
+                    ?>
                 </div>
             </div>
         </div>

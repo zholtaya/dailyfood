@@ -1,8 +1,21 @@
 <section class="catalog_selected_category">
   <div class="container">
     <div class="header_catalog_selected_category">
+
+      <?
+      if (isset($_GET["categoryId"])) {
+        $categoryId = $_GET["categoryId"];
+
+        $getCategoryIdSQL = "SELECT * FROM categories WHERE id = '$categoryId' LIMIT 1";
+        $categoryResponse = $link->query($getCategoryIdSQL);
+
+        $category = $categoryResponse->fetch_assoc();
+      }
+      
+      ?>
+
       <h2 class="headtitle_style_search">
-        Готовая еда
+        <?=$category["title"]?>
       </h2>
 
       <form name="search" method="POST" class="form_search">
@@ -42,10 +55,10 @@
             <div class="information_product_item">
               <div class="wrapper_product_item">
                 <p class="name_product">
-                  Поке с лососем
+                  <?= $product["name"] ?>
                 </p>
                 <p class="weight_product">
-                  320г
+                  <?= $product["weight"] ?>
                 </p>
               </div>
               <div class="wrapper_product_item">
@@ -56,7 +69,7 @@
               </div>
             </div>
             <a href="#" class="button_product_item">
-              340 ₽
+              <?= $product["price"] ?> ₽
             </a>
           </div>
         <? }

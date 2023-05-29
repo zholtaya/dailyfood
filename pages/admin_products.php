@@ -1,25 +1,24 @@
-
 <section class="user_profile">
     <div class="container">
         <div class="content_admin">
             <div class="admin_tabs_list">
-                <button class="tab_item">
+                <a href="?page=admin-user" class="tab_item ">
                     Пользователи
-                </button>
-                <button class="tab_item active">
+                </a>
+                <a href="?page=admin-products" class="tab_item active">
                     Товары
-                </button>
-                <button class="tab_item ">
+                </a>
+                <a href="?page=admin-category" class="tab_item">
                     Категории
-                </button>
-                <button class="tab_item">
+                </a>
+                <a href="?page=admin-orders" class="tab_item ">
                     Заказы
-                </button>
+                </a>
             </div>
             <div class="admin_order_content">
                 <div class="header_catalog_selected_category">
                     <h2 class="headtitle_style_search">
-                        Список категорий
+                        Список товаров
                     </h2>
 
                     <a href="?page=add-product" class="tab_item active">Добавить товар</a>
@@ -46,43 +45,49 @@
                             Редактировать/Удалить
                         </p>
                     </div>
+                    <?php
+                    $getAllProductsSQL = "SELECT * FROM products";
+                    $allProductsResponse = $link->query($getAllProductsSQL);
 
-                    <div class="admin_user_item">
-                        <div class="content_admin_user_item">
-                            <p class="data_product_information">
-                                1
-                            </p>
-                            <div class="image_product_admin">
-                                <img src="../assets/img/products/product_1.png" alt="">
-                            </div>
-                            <p class="data_product_information">
-                                Поке с лососем
-                            </p>
+                    while ($product = $allProductsResponse->fetch_assoc()) { ?>
+                        <div class="admin_user_item">
+                            <div class="content_admin_user_item">
+                                <p class="data_product_information">
+                                    <?= $product['id'] ?>
+                                </p>
+                                <div class="image_product_admin">
+                                    <img src="<?= $product['firstImage'] ?>" alt="">
+                                </div>
+                                <p class="data_product_information">
+                                    <?= $product['name'] ?>
 
-                            <p class="data_product_information">
-                                320 г
-                            </p>
+                                </p>
 
-                            <p class="data_product_information">
-                                340 ₽ 
-                            </p>
-                       
+                                <p class="data_product_information">
+                                    <?= $product['weight'] ?>
 
-                            <div class="buttons_admin_delete_edit">
-                                <a href="#">
-                                    <img class="edit_buttons" src="../assets/img/icons/edit.svg" alt="">
-                                </a>
-                                <a href="#">
-                                    <img class="edit_buttons" src="../assets/img/icons/delete.svg" alt="">
-                                </a>
+                                </p>
+
+                                <p class="data_product_information">
+                                    <?= $product['price'] ?> ₽
+                                </p>
+
+
+                                <div class="buttons_admin_delete_edit">
+                                    <a href="#">
+                                        <img class="edit_buttons" src="../assets/img/icons/edit.svg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="edit_buttons" src="../assets/img/icons/delete.svg" alt="">
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-
+                    <?
+                    }
+                    ?>
                 </div>
             </div>
         </div>
-
     </div>
 </section>

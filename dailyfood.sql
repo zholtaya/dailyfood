@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: May 28, 2023 at 11:23 PM
--- Server version: 8.0.19
--- PHP Version: 7.4.5
+-- Хост: 127.0.0.1:3306
+-- Время создания: Май 29 2023 г., 19:49
+-- Версия сервера: 5.7.39-log
+-- Версия PHP: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,46 +18,48 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dailyfood`
+-- База данных: `dailyfood`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
+-- Структура таблицы `cart`
 --
 
 CREATE TABLE `cart` (
-  `id` int NOT NULL,
-  `userId` int NOT NULL,
-  `productId` int NOT NULL,
-  `count` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `productId` int(11) NOT NULL,
+  `count` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `cart`
+-- Дамп данных таблицы `cart`
 --
 
 INSERT INTO `cart` (`id`, `userId`, `productId`, `count`) VALUES
 (21, 4, 3, 1),
 (22, 4, 3, 1),
 (23, 4, 3, 1),
-(24, 4, 3, 1);
+(24, 4, 3, 1),
+(25, 5, 2, 1),
+(26, 5, 3, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Структура таблицы `categories`
 --
 
 CREATE TABLE `categories` (
-  `id` int NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `img` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `categories`
+-- Дамп данных таблицы `categories`
 --
 
 INSERT INTO `categories` (`id`, `title`, `img`) VALUES
@@ -77,16 +79,16 @@ INSERT INTO `categories` (`id`, `title`, `img`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `delivery_price`
+-- Структура таблицы `delivery_price`
 --
 
 CREATE TABLE `delivery_price` (
-  `id` int NOT NULL,
-  `price` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int(11) NOT NULL,
+  `price` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `delivery_price`
+-- Дамп данных таблицы `delivery_price`
 --
 
 INSERT INTO `delivery_price` (`id`, `price`) VALUES
@@ -95,163 +97,247 @@ INSERT INTO `delivery_price` (`id`, `price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Структура таблицы `products`
 --
 
 CREATE TABLE `products` (
-  `id` int NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `structure` text COLLATE utf8mb4_general_ci NOT NULL,
-  `maker` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `country` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `expDate` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `conditions` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `price` int NOT NULL,
-  `weight` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `calories` int NOT NULL,
-  `proteins` int NOT NULL,
-  `fats` int NOT NULL,
-  `carb` int NOT NULL,
-  `subcategoryId` int NOT NULL,
-  `firstImage` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `secondImage` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `thirdImage` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `structure` text NOT NULL,
+  `maker` varchar(255) NOT NULL,
+  `country` varchar(255) NOT NULL,
+  `expDate` varchar(255) NOT NULL,
+  `conditions` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `weight` varchar(255) NOT NULL,
+  `calories` int(11) NOT NULL,
+  `proteins` int(11) NOT NULL,
+  `fats` int(11) NOT NULL,
+  `carb` int(11) NOT NULL,
+  `subcategoryId` int(11) NOT NULL,
+  `firstImage` varchar(255) NOT NULL,
+  `secondImage` varchar(255) NOT NULL,
+  `thirdImage` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `products`
+-- Дамп данных таблицы `products`
 --
 
 INSERT INTO `products` (`id`, `name`, `structure`, `maker`, `country`, `expDate`, `conditions`, `price`, `weight`, `calories`, `proteins`, `fats`, `carb`, `subcategoryId`, `firstImage`, `secondImage`, `thirdImage`) VALUES
-(1, 'Кекс ванильный', 'кукуццукцукцку', 'кцуцкукуц', 'куцкукцук', 'кцуцкуц', 'куццкукцкцу', 320, '400 грамм', 11, 11, 11, 11, 3, 'static/1685194799_6472082fb3992.jpg', 'static/1685194799_6472082fb3f13.jpg', 'static/1685194799_6472082fb4463.jpg'),
-(2, 'Поке с лососем', 'Рис для суши (вода питьевая, рис шлифованный, соус мицукан (уксус рисовый из пищевого сырья, сахарный песок, соль, апельсины), соус острый чилли (база для соусов айоли (масло растительное подсолнечное, мелла...', 'ООО «Фитбокс»', 'Россия', '4 дня', 'от +2 °C до +4 °C', 321, '400 грамм', 155, 6, 7, 17, 1, 'static/1685195237_647209e5a0cf5.png', 'static/1685195237_647209e5a12b3.png', 'static/1685195237_647209e5a183f.png'),
-(3, 'Поке с лососем', 'Рис для суши (вода питьевая, рис шлифованный, соус мицукан (уксус рисовый из пищевого сырья, сахарный песок, соль, апельсины), соус острый чилли (база для соусов айоли (масло растительное подсолнечное, мелла...', 'ООО «Фитбокс»', 'Россия', '4 дня', 'от +2 °C до +4 °C', 490, '400 грамм', 155, 6, 7, 17, 1, 'static/1685195244_647209ec0ba21.png', 'static/1685195244_647209ec0bfa2.png', 'static/1685195244_647209ec0c4ed.png'),
-(4, 'Поке с лососем', 'Рис для суши (вода питьевая, рис шлифованный, соус мицукан (уксус рисовый из пищевого сырья, сахарный песок, соль, апельсины), соус острый чилли (база для соусов айоли (масло растительное подсолнечное, мелла...', 'ООО «Фитбокс»', 'Россия', '4 дня', 'от +2 °C до +4 °C', 880, '400 грамм', 155, 6, 7, 17, 1, 'static/1685195249_647209f15d0c2.png', 'static/1685195249_647209f15d700.png', 'static/1685195249_647209f15dc4e.png'),
-(17, 'Попка', 'какой то состав ебачий', 'уйкуе', 'укукеуце', 'кеуцкецук', 'еуцкеуце', 2223, '222', 11, 3, 2, 4, 1, 'static/1685199233_647219815a78c.jpg', 'static/1685199233_647219815ae3e.jpg', 'static/1685199233_647219815bb37.jpg'),
-(18, 'Попка', 'какой то состав ебачий', 'уйкуе', 'укукеуце', 'кеуцкецук', 'еуцкеуце', 2223, '222', 11, 3, 2, 4, 1, 'static/1685199236_64721984e8823.jpg', 'static/1685199236_64721984e8f0d.jpg', 'static/1685199236_64721984e96d0.jpg');
+(19, 'Вода «Сенежская» ', 'Вода минеральная природная столовая.', 'Бобимэкс', 'Россия', '570 д.', 'от 0 °C до +25 °C', 69, '3 л.', 1, 1, 1, 1, 17, 'static/1685363750_64749c261e862.jpg', 'static/1685363750_64749c261eb53.jpg', 'static/1685363750_64749c261edaf.jpg'),
+(20, 'Вода «Раифский источник»', 'Вода питьевая артезианская первой категории.', 'ООО «Перспектива»', 'Россия', '180 д.', 'от 0 °C до +25 °C', 69, '5 л.', 1, 1, 1, 1, 17, 'static/1685364184_64749dd816a23.jpg', 'static/1685364184_64749dd816cbb.jpg', 'static/1685364184_64749dd816f29.jpg'),
+(25, 'Вода минеральная Borjomi', 'Минерализация: 5, 0 – 7, 5 г/л. Основной состав, мг/л: кальций 20 – 150, калий 15 - 45, магний 20 – 150, натрий 1000 – 2000, сульфаты < 10, гидрокарбонаты 3500 – 5000, хлориды 250 – 500.', 'IDS Borjomi Georgia', 'Грузия', '450 д.', 'от 0C˚ до 25C˚', 159, '1 л.', 1, 1, 1, 1, 16, 'static/1685364627_64749f93a432b.jpg', 'static/1685364627_64749f93a4538.jpg', 'static/1685364627_64749f93a4791.jpg'),
+(26, 'Вода «Сестрица»', 'Кальций - 25-40; магний - 5-10; калий - 2-8; бикарбонаты - 100-180; хлориды - не более 150; сульфаты - не более 150; фторид-ион - 0,6-1,2; общая минерализация - 200-250; общая жесткость - 1,5-2,5.', 'ООО Компания «Здоровая жизнь»', 'Россия', '360 д.', 'от 0 °C до +25 °C', 79, '5 л.', 1, 1, 1, 1, 17, 'static/1685375082_6474c86a7786a.jpg', 'static/1685375082_6474c86a77d08.jpg', 'static/1685375082_6474c86a78121.jpg'),
+(27, 'Вода минеральная «Псыж»', 'Сульфатно-гидрокарбонатно-хлоридная, натриевая группа.', 'ЗАО «Аквалайн»', 'Россия', '365 д', 'от 0 °C до +25 °C', 49, '1 л.', 1, 1, 1, 1, 16, 'static/1685375221_6474c8f512916.jpg', 'static/1685375221_6474c8f512e2d.jpg', 'static/1685375221_6474c8f513207.jpg'),
+(28, 'Апельсиновое манго «Любимый»', 'Апельсиновый сок, пюре манго, мандариновый сок, сахар (S)** или сахар и глюкозно-фруктозный сироп (G)**, регулятор кислотности – лимонная кислота, вода. **- буква-код используемого ингредиента – см. на верхней панели пакета.', 'ООО «Лебедянский»', 'Россия', '365 д', 'от 0 °C до +25 °C', 99, '0,95 л.', 55, 2, 1, 13, 18, 'static/1685375557_6474ca45b81b4.jpg', 'static/1685375557_6474ca45b85bf.jpeg', 'static/1685375557_6474ca45b89fb.jpeg'),
+(29, 'Сок J-7 Апельсин', 'Сок апельсиновый. Изготовлен из концентрированного сока.', 'ООО «Лебедянский»', 'Россия', '365 д', 'от 0 °C до +25 °C', 169, '0,97 л.', 45, 1, 1, 11, 18, 'static/1685375966_6474cbde2d400.jpg', 'static/1685375966_6474cbde2d850.jpeg', 'static/1685375966_6474cbde2dcc9.jpeg'),
+(30, 'Сок Яблоко «Добрый»', 'Сок яблочный осветленный восстановленный.', 'АО «Мултон»', 'Россия', '365 д', 'от 0 °C до +25 °C', 159, '1 л.', 42, 1, 1, 11, 18, 'static/1685376643_6474ce833582d.jpg', 'static/1685376643_6474ce8335c67.jpg', 'static/1685376643_6474ce8336001.jpg'),
+(31, 'Сок J-7 яблоко-персик', 'Яблочный сок, персиковое пюре, яблочное пюре, яблочная мякоть.', 'ООО «Лебедянский»', 'Россия', '365 д', 'от 0 °C до +25 °C', 149, '0,97 л.', 55, 1, 1, 13, 18, 'static/1685376827_6474cf3b0922e.jpg', 'static/1685376827_6474cf3b096a0.jpg', 'static/1685376827_6474cf3b09b0a.jpg'),
+(32, 'Нектар Спелый томат «Любимый»', 'Томатный сок, сахар или сахар и глюкозно-фруктозный сироп, соль морская, регулятор кислотности – лимонная кислота, вода.', 'ООО «Лебедянский»', 'Россия', '365 д', 'от 0 °C до +25 °C', 99, '0,95 л.', 20, 1, 1, 5, 19, 'static/1685377254_6474d0e6b6769.jpg', 'static/1685377254_6474d0e6b6c19.jpg', 'static/1685377254_6474d0e6b6ff4.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `subcategories`
+-- Структура таблицы `subcategories`
 --
 
 CREATE TABLE `subcategories` (
-  `id` int NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `categoryId` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `categoryId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `subcategories`
+-- Дамп данных таблицы `subcategories`
 --
 
 INSERT INTO `subcategories` (`id`, `title`, `categoryId`) VALUES
 (1, 'Супы', 10),
 (2, 'Закуски', 10),
-(3, 'Булочкиии', 13),
-(4, 'Какашки', 20),
-(5, 'Мясо всякое', 17),
-(6, 'БАНАН', 12),
-(7, 'ПОПА', 12),
-(8, 'грибочкииии!!', 11),
-(9, 'творог', 14),
-(10, 'молоко', 14),
-(11, 'динозавр', 18),
 (12, 'Вторые блюда', 10),
 (13, 'Сэндвичи', 10),
 (14, 'Салаты', 10),
-(15, 'Суши и роллы', 10);
+(15, 'Суши и роллы', 10),
+(16, 'Газированная вода', 9),
+(17, 'Вода без газа', 9),
+(18, 'Фруктовые соки', 9),
+(19, 'Овощные соки', 9),
+(20, 'Морсы, компоты, кисели', 9),
+(21, 'Холодный чай', 9),
+(22, 'Кофейные напитки', 9),
+(23, 'Помидоры', 11),
+(24, 'Огурцы', 11),
+(25, 'Авокадо', 11),
+(26, 'Картошка и батат', 11),
+(28, 'Свёкла и морковь', 11),
+(29, 'Лук и чеснок', 11),
+(30, 'Капуста', 11),
+(31, 'Кабачки, баклажаны, перец', 11),
+(32, 'Грибы', 11),
+(33, 'Зелень, салат, пряные травы', 11),
+(34, 'Цитрусовые', 12),
+(35, 'Бананы', 12),
+(36, 'Ягоды', 12),
+(37, 'Яблоки и груши', 12),
+(38, 'Виноград', 12),
+(39, 'Сливы, абрикосы, персики', 12),
+(40, 'Сухофрукты', 12),
+(41, 'Хлеб', 13),
+(42, 'Лаваш и лепешки', 13),
+(43, 'Бездрожжевой хлеб', 13),
+(44, 'Сладкая выпечка', 13),
+(45, 'Несладкая выпечка', 13),
+(47, 'Хлебцы', 13),
+(48, 'Печенье и пирожные', 13),
+(49, 'Молоко и сливки', 14),
+(50, 'Масло', 14),
+(51, 'Яйца', 14),
+(52, 'Твердый сыр', 14),
+(53, 'Мягкий сыр', 14),
+(54, 'Творожный сыр', 14),
+(55, 'Кефир, сметана, творог', 14),
+(56, 'Густые йогурты', 14),
+(57, 'Питьевые йогурты', 14),
+(58, 'Йогурты без добавок', 14),
+(59, 'Торты', 15),
+(60, 'Круассаны и маффины', 15),
+(61, 'Зефир и пастила', 15),
+(62, 'Молочный шоколад', 15),
+(63, 'Темный и белый шоколад', 15),
+(64, 'Конфеты и леденцы', 15),
+(65, 'Варенье, мед, пасты', 15),
+(66, 'Орехи и сухофрукты', 16),
+(67, 'Злаковые и фруктовые батончики', 16),
+(68, 'Сырки', 16),
+(69, 'Леденцы и жвачка', 16),
+(70, 'Хлебные и зерновые чипсы', 16),
+(71, 'Сырные снеки', 16),
+(72, 'Индейка и курица', 17),
+(73, 'Говядина', 17),
+(74, 'Фарш', 17),
+(75, 'Стейки', 17),
+(76, 'Солёная и копчёная рыба', 17),
+(77, 'Селёдка и килька', 17),
+(78, 'Икра', 17),
+(79, 'Замороженная рыба', 17),
+(80, 'Морепродукты', 17),
+(81, 'Креветки', 17),
+(82, 'Рыбные консервы', 17),
+(83, 'Макароны', 18),
+(84, 'Соусы для пасты', 18),
+(85, 'Рис', 18),
+(86, 'Гречка', 18),
+(87, 'Другие крупы', 18),
+(88, 'Для выпечки', 18),
+(89, 'Соль, сахар, заменители', 18),
+(90, 'Хлопья и мюсли', 18),
+(91, 'Масло, соусы, специи', 18),
+(92, 'Чай и кофе', 18),
+(93, 'Консервы', 18),
+(94, 'Мороженое', 19),
+(95, 'Пельмени и вареники', 19),
+(96, 'Овощи и ягоды', 19),
+(97, 'Грибы', 19),
+(98, 'Полуфабрикаты', 19),
+(99, 'Молоко и коктейли', 20),
+(100, 'Йогурты и творожки', 20),
+(101, 'Молочные смеси', 20),
+(102, 'Каши', 20),
+(103, 'Пюре', 20),
+(104, 'Печенье и батончики', 20),
+(105, 'Вода и напитки', 20);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Структура таблицы `users`
 --
 
 CREATE TABLE `users` (
-  `id` int NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `address` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `role` int NOT NULL COMMENT '1 - user \r\n2 - moder\r\n3 - admin'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `role` int(11) NOT NULL COMMENT '1 - user \r\n2 - moder\r\n3 - admin'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Дамп данных таблицы `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `address`, `role`) VALUES
-(4, 'Равиль', 'ravil@mail.ru', '3fc0a7acf087f549ac2b266baf94b8b1', 'Не указан', 1);
+(4, 'Равиль', 'ravil@mail.ru', '3fc0a7acf087f549ac2b266baf94b8b1', 'Не указан', 1),
+(5, 'Лейсан', 'leysanf2003@yandex.ru', '72d7d8a2f001bcc16772e58cd0d299e8', 'Не указан', 1);
 
 --
--- Indexes for dumped tables
+-- Индексы сохранённых таблиц
 --
 
 --
--- Indexes for table `cart`
+-- Индексы таблицы `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `categories`
+-- Индексы таблицы `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `products`
+-- Индексы таблицы `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `subcategories`
+-- Индексы таблицы `subcategories`
 --
 ALTER TABLE `subcategories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Индексы таблицы `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT для сохранённых таблиц
 --
 
 --
--- AUTO_INCREMENT for table `cart`
+-- AUTO_INCREMENT для таблицы `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT for table `subcategories`
+-- AUTO_INCREMENT для таблицы `subcategories`
 --
 ALTER TABLE `subcategories`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -2,18 +2,18 @@
     <div class="container">
         <div class="content_admin">
             <div class="admin_tabs_list">
-                <button class="tab_item active">
+                <a href="?page=admin-user" class="tab_item active">
                     Пользователи
-                </button>
-                <button class="tab_item">
+                </a>
+                <a href="?page=admin-products" class="tab_item">
                     Товары
-                </button>
-                <button class="tab_item">
+                </a>
+                <a href="?page=admin-category" class="tab_item">
                     Категории
-                </button>
-                <button class="tab_item">
+                </a>
+                <a href="?page=admin-orders" class="tab_item ">
                     Заказы
-                </button>
+                </a>
             </div>
             <div class="admin_order_content">
                 <div class="header_catalog_selected_category">
@@ -30,7 +30,6 @@
                     </form>
                 </div>
                 <div class="admin_order_list">
-
                     <div class="header_admin_user_item">
                         <p class="name_order_item">
                             ID
@@ -49,96 +48,51 @@
                             Изменить роль
                         </p>
                     </div>
+                    <?php
+                    $getAllUsersSQL = "SELECT * FROM users";
+                    $allUsersResponse = $link->query($getAllUsersSQL);
 
-                    <div class="admin_user_item">
-                        <div class="content_admin_user_item">
-                            <p class="data_user_information">
-                                1
-                            </p>
-                            <p class="data_user_information">
-                                Лейсан
-                            </p>
-                            <p class="data_user_information">
-                                leysanf2003@yandex.ru
-                            </p>
-                            <p class="data_user_information">
-                                Пользователь
-                            </p>
-                            <select name="status" id="status" class="select_style_admin">
-                                <option value="0" class="option_style">Собирается</option>
-                                <option value="1" class="option_style">Передан курьеру</option>
-                                <option value="2" class="option_style">Доставляется</option>
-                                <option value="2" class="option_style">Доставлен</option>
-                            </select>
-                        </div>
-                    </div>
+                    while ($user = $allUsersResponse->fetch_assoc()) { ?>
+                        <div class="admin_user_item">
+                            <div class="content_admin_user_item">
+                                <p class="data_user_information">
+                                    <?= $user['id'] ?>
+                                </p>
+                                <p class="data_user_information">
+                                    <?= $user['name'] ?>
 
-                    <div class="admin_user_item">
-                        <div class="content_admin_user_item">
-                            <p class="data_user_information">
-                                1
-                            </p>
-                            <p class="data_user_information">
-                                Лейсан
-                            </p>
-                            <p class="data_user_information">
-                                leysanf2003@yandex.ru
-                            </p>
-                            <p class="data_user_information">
-                                Пользователь
-                            </p>
-                            <select name="status" id="status" class="select_style_admin">
-                                <option value="0" class="option_style">Собирается</option>
-                                <option value="1" class="option_style">Передан курьеру</option>
-                                <option value="2" class="option_style">Доставляется</option>
-                                <option value="2" class="option_style">Доставлен</option>
-                            </select>
+                                </p>
+                                <p class="data_user_information">
+                                    <?= $user['email'] ?>
+
+                                </p>
+                                <p class="data_user_information">
+                                    <?
+                                    if ($user['role'] == '1') {
+                                        echo 'Пользователь';
+                                    } else {
+                                        if ($user['role'] == '2') {
+                                            echo 'Модератор';
+                                        }
+                                    }
+                                    if ($user['role'] == '3') {
+
+                                        echo 'Администратор';
+                                    }
+                                    ?>
+
+                                </p>
+                                <select name="status" id="status" class="select_style_admin">
+                                    <option value="0" class="option_style">Собирается</option>
+                                    <option value="1" class="option_style">Передан курьеру</option>
+                                    <option value="2" class="option_style">Доставляется</option>
+                                    <option value="2" class="option_style">Доставлен</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="admin_user_item">
-                        <div class="content_admin_user_item">
-                            <p class="data_user_information">
-                                1
-                            </p>
-                            <p class="data_user_information">
-                                Лейсан
-                            </p>
-                            <p class="data_user_information">
-                                leysanf2003@yandex.ru
-                            </p>
-                            <p class="data_user_information">
-                                Пользователь
-                            </p>
-                            <select name="status" id="status" class="select_style_admin">
-                                <option value="0" class="option_style">Собирается</option>
-                                <option value="1" class="option_style">Передан курьеру</option>
-                                <option value="2" class="option_style">Доставляется</option>
-                                <option value="2" class="option_style">Доставлен</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="admin_user_item">
-                        <div class="content_admin_user_item">
-                            <p class="data_user_information">
-                                1
-                            </p>
-                            <p class="data_user_information">
-                                Лейсан
-                            </p>
-                            <p class="data_user_information">
-                                leysanf2003@yandex.ru
-                            </p>
-                            <p class="data_user_information">
-                                Пользователь
-                            </p>
-                            <select name="status" id="status" class="select_style_admin">
-                                <option value="0" class="option_style">Собирается</option>
-                                <option value="1" class="option_style">Передан курьеру</option>
-                                <option value="2" class="option_style">Доставляется</option>
-                                <option value="2" class="option_style">Доставлен</option>
-                            </select>
-                        </div>
-                    </div>
+                    <?
+                    }
+                    ?>
                 </div>
             </div>
         </div>
