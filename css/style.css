@@ -1320,6 +1320,12 @@ body {
     font-size: 36px;
     line-height: 43px;
     color: #ffffff;
+
+    white-space: nowrap;
+}
+
+.part-of-the-day {
+    white-space: nowrap;
 }
 
 .drawer_menu {
@@ -1356,6 +1362,7 @@ body {
     line-height: 100%;
 
     color: #ffffff;
+    white-space: nowrap;
 }
 
 .drawer_logout {
