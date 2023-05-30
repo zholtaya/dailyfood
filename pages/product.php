@@ -1,3 +1,10 @@
+<?
+
+if (!$user) {
+  redirect("page=sign-in");
+}
+?>
+
 <?php
 
 if (isset($_GET["id"])) {

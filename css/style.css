@@ -293,8 +293,13 @@ body {
     background-position: center;
     box-sizing: border-box;
     padding: 36px;
+    filter: brightness(100%);
 }
 
+.item:hover {
+    filter: brightness(95%);
+    transition: all 0.3s ease 0s;
+}
 .title {
     color: #708571;
     font-size: 36px;
@@ -576,6 +581,10 @@ body {
     background-color: #d3ded4;
     border-radius: 8px;
 }
+.category_list_item:hover {
+    background-color: #d3ded4;
+    border-radius: 8px;
+}
 .catalog_products_list {
     display: grid;
     grid-template-columns: repeat(4, 270px);
@@ -596,7 +605,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    cursor: pointer;
 }
+
 .wrapper_product_item {
     display: flex;
     justify-content: space-between;
@@ -636,6 +647,16 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.button_cart_add {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #708571;
     border: none;
     outline: none;
     cursor: pointer;
@@ -1006,7 +1027,7 @@ body {
     font-weight: 500;
     text-align: left;
     display: flex;
-   
+
     align-items: flex-end;
 
     background-color: #d3ded4;
@@ -1138,8 +1159,8 @@ body {
     font-weight: 500;
     color: #ffffff;
 }
-.change_status_order_admin{
-    padding: 14px  38px;
+.change_status_order_admin {
+    padding: 14px 38px;
     background-color: #708571;
     color: #ffffff;
     font-size: 20px;

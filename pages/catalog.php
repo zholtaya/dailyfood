@@ -1,3 +1,10 @@
+<?
+
+if (!$user) {
+  redirect("page=sign-in");
+}
+?>
+
 <section class="catalog_selected_category">
   <div class="container">
     <div class="header_catalog_selected_category">
@@ -11,15 +18,16 @@
 
         $category = $categoryResponse->fetch_assoc();
       }
-      
+
       ?>
 
       <h2 class="headtitle_style_search">
-        <?=$category["title"]?>
+        <?= $category["title"] ?>
       </h2>
 
       <form name="search" method="POST" class="form_search">
-        <input id="catalog_search" type="text" class="input_style" name="search_name" value="<?= $search_name ?>" placeholder="Поиск...">
+        <input id="catalog_search" type="text" class="input_style" name="search_name" value="<?= $search_name ?>"
+          placeholder="Поиск...">
         <button class="search_button">
           <img src="./assets/img/icons/search.svg" alt="">
         </button>
@@ -33,7 +41,8 @@
         $subcategoriesResponse = $link->query($getSubcategoriesSQL);
 
         while ($subcategory = $subcategoriesResponse->fetch_assoc()) { ?>
-          <a href="?page=catalog&categoryId=<?= $categoryId ?>&subcategoryId=<?= $subcategory["id"] ?>" class="<?= $subcategory["id"] === $_GET["subcategoryId"] ? "category_list_item active" : "category_list_item" ?>">
+          <a href="?page=catalog&categoryId=<?= $categoryId ?>&subcategoryId=<?= $subcategory["id"] ?>"
+            class="<?= $subcategory["id"] === $_GET["subcategoryId"] ? "category_list_item active" : "category_list_item" ?>">
             <?= $subcategory["title"] ?>
           </a>
         <? }
@@ -68,9 +77,13 @@
                 <a href="#" class="open_button">Подробнее</a>
               </div>
             </div>
-            <a href="#" class="button_product_item">
-              <?= $product["price"] ?> ₽
-            </a>
+            <form name="cart" method="post" class="button_product_item">
+              <button name="cart" class="button_cart_add">
+                <?= $product["price"] ?> ₽
+              
+              </button>
+            </form>
+            
           </div>
         <? }
         ?>

@@ -45,7 +45,7 @@ if (isset($_POST["sign_up"])) {
   <div class="container">
     <div class="content_form">
       <h3 class="title_form">
-        Для работы с сервисом необходимо зарегистрироваться
+        Зарегистрироваться
       </h3>
       <form method="POST" class="form_style" name="sign_up">
         <div class="input_label">
@@ -65,7 +65,8 @@ if (isset($_POST["sign_up"])) {
         </div>
         <div class="input_label">
           <label for="renewed_password" class="label_style">Подтвердите пароль</label>
-          <input type="renewed_password" class="input_style" name="renewed_password" value="<?= $renewed_password ?>" id="renewed_password">
+          <input type="renewed_password" class="input_style" name="renewed_password" value="<?= $renewed_password ?>"
+            id="renewed_password">
 
         </div>
         <button class="form_button_style" name="sign_up">

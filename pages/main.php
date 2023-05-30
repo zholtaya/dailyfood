@@ -1,3 +1,10 @@
+<?
+
+if (!$user) {
+  redirect("page=sign-in");
+}
+?>
+
 <main class="main">
   <div class="container">
     <div class="content_main">
@@ -26,7 +33,7 @@
             Хлопья «Fitness»
           </div>
           <div class="price_item">
-            320 руб
+            320 ₽
           </div>
         </div>
       </div>
@@ -37,7 +44,7 @@
             Хлопья «Fitness»
           </div>
           <div class="price_item">
-            320 руб
+            320 ₽
           </div>
         </div>
       </div>
@@ -48,7 +55,7 @@
             Хлопья «Fitness»
           </div>
           <div class="price_item">
-            320 руб
+            320 ₽
           </div>
         </div>
       </div>
@@ -59,7 +66,7 @@
             Хлопья «Fitness»
           </div>
           <div class="price_item">
-            320 руб
+            320 ₽
           </div>
         </div>
       </div>
@@ -70,7 +77,7 @@
             Хлопья «Fitness»
           </div>
           <div class="price_item">
-            320 руб
+            320 ₽
           </div>
         </div>
       </div>
@@ -93,6 +100,7 @@
         $subcategoryResponse = $link->query($getSubcategoryByCategoryIdSQL);
         $subcategory = $subcategoryResponse->fetch_assoc();
       ?>
+        
         <a href="?page=catalog&categoryId=<?= $category["id"] ?>&subcategoryId=<?= $subcategory["id"] ?>" class="item" style="background-image: url(<?= $category["img"] ?>);">
           <h5 class="title"><?= $category["title"] ?></h5>
         </a>

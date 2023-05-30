@@ -1,4 +1,8 @@
 <?php
+if (!$user) {
+  redirect("page=sign-in");
+}
+
 $userId = $user["id"];
 
 $getFreeDeliveryPriceSQL = "SELECT * FROM delivery_price LIMIT 1";

@@ -33,7 +33,7 @@ if (isset($_POST["sign_in"])) {
   <div class="container">
     <div class="content_form">
       <h3 class="title_form">
-        Войдите в аккаунт
+        Для работы с сервисом необходимо войти в аккаунт
       </h3>
       <form method="POST" class="form_style" name="sign_in">
         <div class="input_label">

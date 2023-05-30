@@ -1,3 +1,10 @@
+<?
+
+if (!$user) {
+    redirect("page=sign-in");
+}
+?>
+
 <section class="recipe">
     <div class="container">
         <img src="./assets/img/recipes/recipe_3.jpg" alt="" class="image_recipe">

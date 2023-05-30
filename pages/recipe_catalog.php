@@ -1,3 +1,10 @@
+<?
+
+if (!$user) {
+    redirect("page=sign-in");
+}
+?>
+
 <section class="recipe">
     <div class="container">
         <div class="header_catalog_selected_category">
@@ -20,7 +27,7 @@
             </div>
         </div>
         <br><br><br>
-        <a href="?page=add-recipe" class="tab_item active">Добавить рецепт</a>
+        <a href="?page=add-recipe" class="change_status_order_admin">Добавить рецепт</a>
 
         <div class="content_recipe_list">
             <a class="recipe_item"  href="?page=recipe" style="background-image: url(./assets/img/recipes/recipe_1.jpg);">

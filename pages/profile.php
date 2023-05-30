@@ -1,6 +1,6 @@
 <?php
 if (!$user) {
-  redirect("");
+  redirect("page=sign-in");
 }
 ?>
 
