@@ -30,7 +30,8 @@ if (!$user) {
         <a href="?page=add-recipe" class="change_status_order_admin">Добавить рецепт</a>
 
         <div class="content_recipe_list">
-            <a class="recipe_item"  href="?page=recipe" style="background-image: url(./assets/img/recipes/recipe_1.jpg);">
+            <a class="recipe_item"  href="?page=recipe" >
+                <img src="./assets/img/recipes/recipe_1.jpg" alt="" class="recipe_item_image">
                 <div class="content_recipe_item">
                     <h5 class="title_recipe">
                         Тосты с авокадо
@@ -42,9 +43,9 @@ if (!$user) {
                         <p>45 минут</p>
                     </div>
                 </div>
-
             </a>
-            <a class="recipe_item"  href="?page=recipe" style="background-image: url(./assets/img/recipes/recipe_2.jpg);">
+             <a class="recipe_item"  href="?page=recipe" >
+                <img src="./assets/img/recipes/recipe_2.jpg" alt="" class="recipe_item_image">
                 <div class="content_recipe_item">
                     <h5 class="title_recipe">
                         Тосты с авокадо
@@ -56,9 +57,9 @@ if (!$user) {
                         <p>45 минут</p>
                     </div>
                 </div>
-
             </a>
-            <a class="recipe_item" href="?page=recipe" style="background-image: url(./assets/img/recipes/recipe_3.jpg);">
+             <a class="recipe_item"  href="?page=recipe" >
+                <img src="./assets/img/recipes/recipe_3.jpg" alt="" class="recipe_item_image">
                 <div class="content_recipe_item">
                     <h5 class="title_recipe">
                         Тосты с авокадо
@@ -70,9 +71,9 @@ if (!$user) {
                         <p>45 минут</p>
                     </div>
                 </div>
-
             </a>
-            <a class="recipe_item"  href="?page=recipe" style="background-image: url(./assets/img/recipes/recipe_4.jpg);">
+             <a class="recipe_item"  href="?page=recipe" >
+                <img src="./assets/img/recipes/recipe_4.jpg" alt="" class="recipe_item_image">
                 <div class="content_recipe_item">
                     <h5 class="title_recipe">
                         Тосты с авокадо
@@ -80,13 +81,13 @@ if (!$user) {
                         сыром
                     </h5>
                     <div class="button_moderator_recipes">
-                        <img src="../assets/img/icons/time.svg" alt="">
+                        <img src="./assets/img/icons/time.svg" alt="">
                         <p>45 минут</p>
                     </div>
                 </div>
-
             </a>
-            <a class="recipe_item"  href="?page=recipe" style="background-image: url(./assets/img/recipes/recipe_5.jpg);">
+             <a class="recipe_item"  href="?page=recipe" >
+                <img src="./assets/img/recipes/recipe_5.jpg" alt="" class="recipe_item_image">
                 <div class="content_recipe_item">
                     <h5 class="title_recipe">
                         Тосты с авокадо
@@ -94,13 +95,13 @@ if (!$user) {
                         сыром
                     </h5>
                     <div class="button_moderator_recipes">
-                        <img src="../assets/img/icons/time.svg" alt="">
+                        <img src="./assets/img/icons/time.svg" alt="">
                         <p>45 минут</p>
                     </div>
                 </div>
-
             </a>
-            <a class="recipe_item"  href="?page=recipe" style="background-image: url(./assets/img/recipes/recipe_1.jpg);">
+             <a class="recipe_item"  href="?page=recipe" >
+                <img src="./assets/img/recipes/recipe_4.jpg" alt="" class="recipe_item_image">
                 <div class="content_recipe_item">
                     <h5 class="title_recipe">
                         Тосты с авокадо
@@ -108,14 +109,13 @@ if (!$user) {
                         сыром
                     </h5>
                     <div class="button_moderator_recipes">
-                        <img src="../assets/img/icons/time.svg" alt="">
+                        <img src="./assets/img/icons/time.svg" alt="">
                         <p>45 минут</p>
                     </div>
                 </div>
-
             </a>
-
-            <a class="recipe_item"  href="?page=recipe" style="background-image: url(./assets/img/recipes/recipe_5.jpg);">
+             <a class="recipe_item"  href="?page=recipe" >
+                <img src="./assets/img/recipes/recipe_3.jpg" alt="" class="recipe_item_image">
                 <div class="content_recipe_item">
                     <h5 class="title_recipe">
                         Тосты с авокадо
@@ -123,11 +123,10 @@ if (!$user) {
                         сыром
                     </h5>
                     <div class="button_moderator_recipes">
-                        <img src="../assets/img/icons/time.svg" alt="">
+                        <img src="./assets/img/icons/time.svg" alt="">
                         <p>45 минут</p>
                     </div>
                 </div>
-
             </a>
         </div>
     </div>

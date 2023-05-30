@@ -77,8 +77,8 @@ if (!$user) {
                 <a href="#" class="open_button">Подробнее</a>
               </div>
             </div>
-            <form name="cart" method="post" class="button_product_item">
-              <button name="cart" class="button_cart_add">
+            <form name="cart" method="post">
+              <button name="cart" class="button_product_item">
                 <?= $product["price"] ?> ₽
               
               </button>
