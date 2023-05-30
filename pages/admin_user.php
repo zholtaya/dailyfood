@@ -1,3 +1,7 @@
+<?php
+isAdmin($user["role"]);
+?>
+
 <section class="user_profile">
     <div class="container">
         <div class="content_admin">
@@ -83,7 +87,7 @@
 
                                 </p>
                                 <a href="?" class="change_status_order_admin">
-                                   Модератор
+                                    Модератор
                                 </a>
                             </div>
                         </div>

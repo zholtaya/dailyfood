@@ -1,5 +1,19 @@
 <?php
 
+function isAdmin($role)
+{
+  if ($role !== 3) {
+    redirect("");
+  }
+}
+
+function isModeratorOrAdmin($role)
+{
+  if (($role !== 3) or ($role !== 2)) {
+    redirect("");
+  }
+}
+
 function generateUniqueFilename($originalFilename)
 {
   $uniqueId = uniqid();
