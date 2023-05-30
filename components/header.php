@@ -1,3 +1,22 @@
+<?php
+$userId = $user["id"];
+$userCartCount = 0;
+
+$getUserCartSQL = "SELECT * FROM cart WHERE userId = '$userId' LIMIT 1";
+$userCartResponse = $link->query($getUserCartSQL);
+$userCart = $userCartResponse->fetch_assoc();
+
+if ($userCart) {
+  $getAllCartProductsSQL = "SELECT * FROM cart_list WHERE cartId = '{$userCart['id']}'";
+  $cartProductsResponse = $link->query($getAllCartProductsSQL);
+  while ($cartProducts = $cartProductsResponse->fetch_assoc()) {
+    $userCartCount = $userCartCount + 1;
+  }
+}
+
+
+?>
+
 <div id="drawer" class="left-drawer none">
   <div class="drawer_wrapper">
     <div class="drawer_wrapper_top">
@@ -69,7 +88,9 @@
       <?
       if ($_SESSION['uid']) { ?>
         <div class="header_cart">
-          <div class="cart_count">2</div>
+          <div class="cart_count">
+            <?= $userCartCount ?>
+          </div>
           <a href="?page=cart" class="cart_icon">
             <img src="./assets/img/icons/cart.svg" alt="" />
           </a>

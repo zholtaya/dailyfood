@@ -25,6 +25,8 @@ $totalPrice = 0;
 if (isset($_GET["deleteAll"])) {
   $deleteAllCartItemsSQL = "DELETE FROM cart_list WHERE cartId = '{$userCart['id']}'";
   $link->query($deleteAllCartItemsSQL);
+  $deleteCartSQL = "DELETE FROM cart WHERE userId = '$userId'";
+  $link->query($deleteCartSQL);
   showSuccessNotification("Товары успешно удалены из корзины");
 }
 ?>
