@@ -111,7 +111,7 @@ if ($_REQUEST['do'] == 'exit') {
   <script src="js/drawer.js"></script>
   <script src="js/accordions.js"></script>
   <script src="js/cartCheckEmpty.js"></script>
-
+  <script src="js/catalogCheckEmpty.js"></script>
 
 </body>
 
