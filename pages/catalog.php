@@ -21,7 +21,7 @@
       <form name="search" method="POST" class="form_search">
         <input id="catalog_search" type="text" class="input_style" name="search_name" value="<?= $search_name ?>" placeholder="Поиск...">
         <button class="search_button">
-          <img src="../assets/img/icons/search.svg" alt="">
+          <img src="./assets/img/icons/search.svg" alt="">
         </button>
       </form>
     </div>

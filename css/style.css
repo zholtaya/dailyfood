@@ -579,6 +579,7 @@ body {
 .catalog_products_list {
     display: grid;
     grid-template-columns: repeat(4, 270px);
+    align-self: self-start;
     gap: 38px;
 }
 .product_item a {
@@ -989,7 +990,7 @@ body {
     width: 140px;
 }
 .name_order_item:nth-child(5) {
-    width: 240px;
+    width: 180px;
 }
 .admin_order_list {
     display: flex;
@@ -1013,11 +1014,11 @@ body {
     outline: none;
     font-family: "Fira Sans", sans-serif;
 }
-.data_category_information:nth-child(1) {
-    width: 120px;
+.data_category_information:nth-child(3) {
+    width: 220px;
 }
 .data_category_information:nth-child(2) {
-    width: 180px;
+    width: 280px;
 }
 
 .name_category_item {
@@ -1030,10 +1031,10 @@ body {
     width: 120px;
 }
 .name_category_item:nth-child(2) {
-    width: 180px;
+    width: 280px;
 }
 .name_category_item:nth-child(3) {
-    width: 380px;
+    width: 220px;
 }
 .name_category_item:nth-child(4) {
     width: 260px;
@@ -1136,6 +1137,14 @@ body {
     font-size: 20px;
     font-weight: 500;
     color: #ffffff;
+}
+.change_status_order_admin{
+    padding: 14px  38px;
+    background-color: #708571;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 8px;
 }
 /* admin end */
 

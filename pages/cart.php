@@ -33,7 +33,7 @@ if (isset($_GET["deleteAll"])) {
       </h2>
 
       <a href="?page=cart&deleteAll" class="delete_all_products">
-        <img src="../assets/img/icons/delete.svg" alt="">
+        <img src="./assets/img/icons/delete.svg" alt="">
         <p>
           Очистить корзину
         </p>

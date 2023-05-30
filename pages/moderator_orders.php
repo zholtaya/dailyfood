@@ -3,14 +3,9 @@
         <div class="content_admin">
             <div class="admin_tabs_list">
                 <a href="?page=admin-user" class="tab_item">
-                    Пользователи
+                    Рецепты
                 </a>
-                <a href="?page=admin-products" class="tab_item">
-                    Товары
-                </a>
-                <a href="?page=admin-subcategory" class="tab_item">
-                    Подкатегорию
-                </a>
+               
                 <a href="?page=admin-orders" class="tab_item active">
                     Заказы
                 </a>
@@ -48,7 +43,7 @@
                                     <?= $orderUser["email"] ?>
                                 </p>
                                 <a href="?" class="change_status_order_admin">
-                                   Изменить статус
+                                    Изменить статус
                                 </a>
                             </div>
                             <div class="content_admin_order_item">

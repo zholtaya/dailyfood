@@ -71,8 +71,8 @@ if ($_REQUEST['do'] == 'exit') {
     if ($_GET['page'] == 'admin-orders') {
       include("pages/admin_orders.php");
     }
-    if ($_GET['page'] == 'moderator') {
-      include("pages/moderator.php");
+    if ($_GET['page'] == 'moderator-orders') {
+      include("pages/moderator_orders.php");
     }
     if ($_GET['page'] == 'moderator-recipes') {
       include("pages/moderator_recipes.php");
@@ -80,8 +80,8 @@ if ($_REQUEST['do'] == 'exit') {
     if ($_GET['page'] == 'admin-user') {
       include("pages/admin_user.php");
     }
-    if ($_GET['page'] == 'admin-category') {
-      include("pages/admin_category.php");
+    if ($_GET['page'] == 'admin-subcategory') {
+      include("pages/admin_subcategory.php");
     }
     if ($_GET['page'] == 'admin-products') {
       include("pages/admin_products.php");

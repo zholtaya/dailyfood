@@ -8,21 +8,23 @@
                 <a href="?page=admin-products" class="tab_item">
                     Товары
                 </a>
-                <a href="?page=admin-category" class="tab_item active">
-                    Категории
+                <a href="?page=admin-subcategory" class="tab_item active">
+                    Подкатегории
                 </a>
                 <a href="?page=admin-orders" class="tab_item ">
                     Заказы
                 </a>
-
+                <!-- <a href="?page=add-category" class="tab_item active">
+                    Добавить категорию
+                </a> -->
             </div>
             <div class="admin_order_content">
                 <div class="header_catalog_selected_category">
                     <h2 class="headtitle_style_search">
-                        Список категорий
+                        Список подкатегорий
                     </h2>
 
-                    <a href="?page=add-category" class="tab_item active">Добавить категорию</a>
+                    <a href="?page=add-subcategory" class="tab_item active">Добавить подкатегорию</a>
                 </div>
                 <div class="admin_order_list">
 
@@ -34,7 +36,7 @@
                             Название
                         </p>
                         <p class="name_category_item">
-                            Подкатегория
+                            Категория
                         </p>
 
                         <p class="name_category_item">
@@ -42,45 +44,33 @@
                         </p>
                     </div>
                     <?php
-                    $getAllCategoriesSQL = "SELECT * FROM categories";
-                    $allCategoriesResponse = $link->query($getAllCategoriesSQL);
+                    $getAllSubcategoriesSQL = "SELECT * FROM subcategories";
+                    $allSubcategoriesResponse = $link->query($getAllSubcategoriesSQL);
 
-                    while ($category = $allCategoriesResponse->fetch_assoc()) {
+                    while ($subcategory = $allSubcategoriesResponse->fetch_assoc()) {
 
                         ?>
                         <div class="admin_user_item">
                             <div class="content_admin_user_item">
                                 <p class="data_user_information">
-                                    <?= $category['id'] ?>
+                                    <?= $subcategory['id'] ?>
 
                                 </p>
                                 <p class="data_category_information">
-                                    <?= $category['title'] ?>
+                                    <?= $subcategory['title'] ?>
 
                                 </p>
+                                <?
 
-                                <div class="category_list_admin">
+                                $categoryId = $subcategory['categoryId'];
+                                $getCategorySQL = "SELECT * FROM categories WHERE id = '$categoryId'";
+                                $allCategoryResponse = $link->query($getCategorySQL);
+                                $category = $allCategoryResponse->fetch_assoc();
 
-                                    <div class="category_item_hidden" id="subcategoriesAccordion">
-                                        <?
-                                        $categoryId = $category['id'];
-                                        $getAllSubcategoriesSQL = "SELECT * FROM subcategories WHERE categoryId = '$categoryId'";
-                                        $allSubcategoriesResponse = $link->query($getAllSubcategoriesSQL);
-                                        while ($subcategory = $allSubcategoriesResponse->fetch_assoc()) {
-
-                                            ?>
-                                            <p class="data_category_information">
-                                                <?= $subcategory['title'] ?>
-                                            </p>
-                                        <? }
-
-                                        ?>
-                                    </div>
-                                    <button class="data_category_information" id="subcategory-accordion-button">
-                                        Показать все
-                                    </button>
-                                </div>
-
+                                ?>
+                                <p class="data_category_information">
+                                    <?= $category['title'] ?>
+                                </p>
                                 <div class="buttons_admin_delete_edit">
                                     <a href="#">
                                         <img class="edit_buttons" src="../assets/img/icons/edit.svg" alt="">

@@ -1,16 +1,16 @@
 <section class="recipe">
     <div class="container">
-        <img src="../assets/img/recipes/recipe_3.jpg" alt="" class="image_recipe">
+        <img src="./assets/img/recipes/recipe_3.jpg" alt="" class="image_recipe">
 
         <div class="content_recipe">
             <div class="content_ingredients">
                 <div class="buttons_wrapper_moderator">
                     <div class="button_moderator_recipes">
-                        <img src="../assets/img/icons/time.svg" alt="">
+                        <img src="./assets/img/icons/time.svg" alt="">
                         <p>45 минут</p>
                     </div>
                     <div class="button_moderator_recipes">
-                        <img src="../assets/img/icons/stars_2.svg" alt="">
+                        <img src="./assets/img/icons/stars_2.svg" alt="">
                         <p>Средне</p>
                     </div>
                 </div>

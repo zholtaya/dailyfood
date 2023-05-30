@@ -8,8 +8,8 @@
                 <a href="?page=admin-products" class="tab_item active">
                     Товары
                 </a>
-                <a href="?page=admin-category" class="tab_item">
-                    Категории
+                <a href="?page=admin-subcategory" class="tab_item">
+                    Подкатегорию
                 </a>
                 <a href="?page=admin-orders" class="tab_item ">
                     Заказы
@@ -75,10 +75,10 @@
 
                                 <div class="buttons_admin_delete_edit">
                                     <a href="#">
-                                        <img class="edit_buttons" src="../assets/img/icons/edit.svg" alt="">
+                                        <img class="edit_buttons" src="./assets/img/icons/edit.svg" alt="">
                                     </a>
                                     <a href="#">
-                                        <img class="edit_buttons" src="../assets/img/icons/delete.svg" alt="">
+                                        <img class="edit_buttons" src="./assets/img/icons/delete.svg" alt="">
                                     </a>
                                 </div>
                             </div>

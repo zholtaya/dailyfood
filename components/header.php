@@ -4,7 +4,9 @@
       <div id="close-drawer-btn" class="drawer_close_wrapper">
         <img src="./assets/icons/close.svg" alt="Close" />
       </div>
-      <h1 class="drawer_title"><span class="part-of-the-day">Добрый день</span>, Равиль</h1>
+      <h1 class="drawer_title"><span class="part-of-the-day">Добрый день</span>,
+        <?= $user["name"] ?>
+      </h1>
       <nav class="drawer_menu">
         <a href="?" class="drawer_menu_item">
           <span>Главная</span>
@@ -39,13 +41,13 @@
       </div>
       <div class="header_logo">
         <a href="?">
-          <img src="../assets/img/icons/logo.svg" alt="" />
+          <img src="./assets/img/icons/logo.svg" alt="" />
         </a>
       </div>
       <div class="header_cart">
         <div class="cart_count">2</div>
         <a href="?page=cart" class="cart_icon">
-          <img src="../assets/img/icons/cart.svg" alt="" />
+          <img src="./assets/img/icons/cart.svg" alt="" />
         </a>
       </div>
     </div>

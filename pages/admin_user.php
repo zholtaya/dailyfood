@@ -8,8 +8,8 @@
                 <a href="?page=admin-products" class="tab_item">
                     Товары
                 </a>
-                <a href="?page=admin-category" class="tab_item">
-                    Категории
+                <a href="?page=admin-subcategory" class="tab_item">
+                    Подкатегорию
                 </a>
                 <a href="?page=admin-orders" class="tab_item ">
                     Заказы
@@ -25,7 +25,7 @@
                         <input type="text" class="input_style_admin" name="search_name" value="<?= $search_name ?>"
                             placeholder="Поиск...">
                         <button class="search_button">
-                            <img src="../assets/img/icons/search.svg" alt="">
+                            <img src="./assets/img/icons/search.svg" alt="">
                         </button>
                     </form>
                 </div>
@@ -82,12 +82,9 @@
                                     ?>
 
                                 </p>
-                                <select name="status" id="status" class="select_style_admin">
-                                    <option value="0" class="option_style">Собирается</option>
-                                    <option value="1" class="option_style">Передан курьеру</option>
-                                    <option value="2" class="option_style">Доставляется</option>
-                                    <option value="2" class="option_style">Доставлен</option>
-                                </select>
+                                <a href="?" class="change_status_order_admin">
+                                   Модератор
+                                </a>
                             </div>
                         </div>
                     <?

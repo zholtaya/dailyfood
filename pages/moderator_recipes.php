@@ -29,11 +29,11 @@
                                     </p>
                                     <div class="buttons_wrapper_moderator">
                                         <div class="button_moderator_recipes">
-                                            <img src="../assets/img/icons/time.svg" alt="">
+                                            <img src="./assets/img/icons/time.svg" alt="">
                                             <p>45 минут</p>
                                         </div>
                                         <div class="button_moderator_recipes">
-                                            <img src="../assets/img/icons/stars_2.svg" alt="">
+                                            <img src="./assets/img/icons/stars_2.svg" alt="">
                                             <p>Средне</p>
                                         </div>
                                     </div>
@@ -64,11 +64,11 @@
                                     </p>
                                     <div class="buttons_wrapper_moderator">
                                         <div class="button_moderator_recipes">
-                                            <img src="../assets/img/icons/time.svg" alt="">
+                                            <img src="./assets/img/icons/time.svg" alt="">
                                             <p>45 минут</p>
                                         </div>
                                         <div class="button_moderator_recipes">
-                                            <img src="../assets/img/icons/stars_2.svg" alt="">
+                                            <img src="./assets/img/icons/stars_2.svg" alt="">
                                             <p>Средне</p>
                                         </div>
                                     </div>
