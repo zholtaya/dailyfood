@@ -1,12 +1,15 @@
+<?php
+isModeratorOrAdmin($user["role"]);
+?>
+
 <section class="user_profile">
     <div class="container">
         <div class="content_admin">
             <div class="admin_tabs_list">
-                <a href="?page=admin-user" class="tab_item">
+               <a href="?page=moderator-recipes" class="tab_item ">
                     Рецепты
                 </a>
-               
-                <a href="?page=admin-orders" class="tab_item active">
+                <a href="?page=moderator-orders" class="tab_item active">
                     Заказы
                 </a>
             </div>

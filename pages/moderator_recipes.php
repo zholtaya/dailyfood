@@ -1,13 +1,16 @@
+<?php
+isModeratorOrAdmin($user["role"]);
+?>
 <section class="user_profile">
     <div class="container">
         <div class="content_admin">
             <div class="admin_tabs_list">
-                <button class="tab_item active">
+                <a href="?page=moderator-recipes" class="tab_item active">
                     Рецепты
-                </button>
-                <button class="tab_item ">
+                </a>
+                <a href="?page=moderator-orders" class="tab_item ">
                     Заказы
-                </button>
+                </a>
             </div>
             <div class="admin_order_content">
                 <h2 class="headtitle_style_search">
@@ -46,7 +49,7 @@
                             <a href="#" class="open_button_user">Подробнее</a>
                         </div>
                     </div>
-                   
+
                 </div>
                 <div class="admin_order_list">
                     <div class="admin_order_item">
@@ -81,7 +84,7 @@
                             <a href="#" class="open_button_user">Подробнее</a>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </div>

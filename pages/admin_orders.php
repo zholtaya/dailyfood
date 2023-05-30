@@ -1,3 +1,7 @@
+<?php
+isAdmin($user["role"]);
+?>
+
 <section class="user_profile">
     <div class="container">
         <div class="content_admin">

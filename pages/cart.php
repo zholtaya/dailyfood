@@ -27,7 +27,8 @@ if (isset($_GET["deleteAll"])) {
   $link->query($deleteAllCartItemsSQL);
   $deleteCartSQL = "DELETE FROM cart WHERE userId = '$userId'";
   $link->query($deleteCartSQL);
-  showSuccessNotification("Товары успешно удалены из корзины");
+
+  redirect("page=cart");
 }
 ?>
 

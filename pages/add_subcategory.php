@@ -1,4 +1,8 @@
 <?php
+isAdmin($user["role"]);
+?>
+
+<?php
 if (isset($_POST["add_subcategory"])) {
   $title = $_POST["name"];
   $categoryId = $_POST["category"];
