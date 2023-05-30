@@ -45,7 +45,7 @@ if (isset($_GET["deleteAll"])) {
         </p>
       </a>
     </div>
-    <div class="content_cart">
+    <div id="cart-content" class="content_cart">
       <div class="cart_products_list">
         <?php
         $cartProducts = $cartProductsResponse->fetch_assoc();

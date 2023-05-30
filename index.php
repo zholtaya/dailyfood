@@ -110,6 +110,7 @@ if ($_REQUEST['do'] == 'exit') {
   <script src="js/catalogSearch.js"></script>
   <script src="js/drawer.js"></script>
   <script src="js/accordions.js"></script>
+  <script src="js/cartCheckEmpty.js"></script>
 
 
 </body>
