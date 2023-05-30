@@ -51,7 +51,7 @@ if (!$user) {
         <p class="title_user_style">
           Ваши заказы
         </p>
-        <div class="user_profile_orders_list">
+        <div id="user-orders-list" class="user_profile_orders_list">
           <?php
           $userId = $user["id"];
           $getUserOrdersSQL = "SELECT * FROM orders WHERE userId = '$userId'";
@@ -69,7 +69,7 @@ if (!$user) {
               $textStatus = "Доставлен";
             }
             ?>
-            <div class="user_profile_order_item">
+            <div id="user-order-item" class="user_profile_order_item">
               <div class="order_information_user">
                 <div class="inf">
                   <p class="title_user_style js-format_date">

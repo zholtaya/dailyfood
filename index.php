@@ -112,6 +112,7 @@ if ($_REQUEST['do'] == 'exit') {
   <script src="js/accordions.js"></script>
   <script src="js/cartCheckEmpty.js"></script>
   <script src="js/catalogCheckEmpty.js"></script>
+  <script src="js/profileOrdersCheckEmpty.js"></script>
 
 </body>
 
