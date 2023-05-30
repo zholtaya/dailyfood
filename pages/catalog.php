@@ -78,12 +78,11 @@ if (!$user) {
               </div>
             </div>
             <form name="cart" method="post">
+              <input name="cartProductId" type="hidden" value="<?= $product["id"] ?>" />
               <button name="cart" class="button_product_item">
                 <?= $product["price"] ?> ₽
-              
               </button>
             </form>
-            
           </div>
         <? }
         ?>
@@ -91,3 +90,28 @@ if (!$user) {
     </div>
   </div>
 </section>
+
+<?php
+if (isset($_POST["cart"])) {
+  $userId = $user["id"];
+  $uniqueId = uniqid();
+  $productId = $_POST["cartProductId"];
+
+  $checkCartIsCreatedSQL = "SELECT * FROM cart WHERE userId = '$userId'";
+  $checkCartResponse = $link->query($checkCartIsCreatedSQL);
+  $maybeCart = $checkCartResponse->fetch_assoc();
+
+  if (!$maybeCart) {
+    $createNewCartRowSQL = "INSERT INTO cart (userId, uniqueId) VALUES ('$userId', '$uniqueId')";
+    $link->query($createNewCartRowSQL);
+
+    $getThisCartRowSQL = "SELECT * FROM cart WHERE userId = '$userId' AND uniqueId = '$uniqueId'";
+    $thisCartRowResponse = $link->query($getThisCartRowSQL);
+    $maybeCart = $thisCartRowResponse->fetch_assoc();
+  }
+
+  $addProductIntoCartListSQL = "INSERT INTO cart_list (cartId, productId, count) VALUES ('{$maybeCart['id']}', '$productId', 1)";
+  $link->query($addProductIntoCartListSQL);
+  showSuccessNotification("Товар успешно добавлен в корзину");
+}
+?>
