@@ -77,10 +77,10 @@ isAdmin($user["role"]);
                                 </p>
                                 <div class="buttons_admin_delete_edit">
                                     <a href="#">
-                                        <img class="edit_buttons" src="../assets/img/icons/edit.svg" alt="">
+                                        <img class="edit_buttons" src="./assets/img/icons/edit.svg" alt="">
                                     </a>
                                     <a href="#">
-                                        <img class="edit_buttons" src="../assets/img/icons/delete.svg" alt="">
+                                        <img class="edit_buttons" src="./assets/img/icons/delete.svg" alt="">
                                     </a>
                                 </div>
                             </div>

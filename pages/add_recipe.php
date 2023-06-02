@@ -1,6 +1,3 @@
-<?php
-isAdmin($user["role"]);
-?>
 
 <section class="form_admin">
     <div class="container">

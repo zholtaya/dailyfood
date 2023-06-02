@@ -337,6 +337,7 @@ body {
     padding-top: 96px;
     padding-bottom: 96px;
     box-sizing: border-box;
+    
 }
 .content_footer {
     display: flex;
@@ -1185,6 +1186,19 @@ body {
     column-gap: 24px;
     margin-top: 24px;
 }
+.button_moderator_recipes_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 14px;
+    background-color: #708571;
+    border-radius: 8px;
+    padding: 14px 21px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
 .button_moderator_recipes {
     display: flex;
     justify-content: center;
@@ -1275,6 +1289,7 @@ body {
     max-width: 40px;
     width: 100%;
     cursor: pointer;
+    padding: 10px;
 }
 
 .header_menu_item {

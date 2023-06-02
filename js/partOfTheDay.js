@@ -18,3 +18,5 @@ const getTimePeriod = () => {
 [...elements].forEach((item) => {
     item.textContent = getTimePeriod();
 });
+
+

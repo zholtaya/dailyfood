@@ -2,14 +2,14 @@
 
 function isAdmin($role)
 {
-  if ($role !== 3) {
+  if ($role !== '3') {
     redirect("");
   }
 }
 
 function isModeratorOrAdmin($role)
 {
-  if (($role !== 3) or ($role !== 2)) {
+  if (($role !== '3') or ($role !== '2')) {
     redirect("");
   }
 }

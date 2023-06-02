@@ -8,7 +8,7 @@ if (!$user) {
   <div class="container">
     <div class="header_catalog_selected_category">
       <h2 class="headtitle_style_search">
-        <span class="part-of-the-day">Доброе утро</span>,
+        <span class="part-of-the-day">Добрый день</span>,
         <?= $user["name"] ?>
       </h2>
 
