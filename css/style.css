@@ -128,7 +128,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Fira Sans", sans-serif;
-    background-color: #f1f5ed;
+    background-color: rgb(241, 245, 237);
 }
 .container {
     width: 100%;
@@ -140,7 +140,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 38px;
+    margin-top: 24px;
     position: absolute;
     width: 100%;
     top: 0;
@@ -176,8 +176,10 @@ body {
     font-size: 12px;
     font-weight: 500;
 }
-.header_logo {
+.header_logo img{
     margin: auto;
+    width: 115px;
+    height: 50px;
 }
 
 /* header end */
@@ -234,7 +236,7 @@ body {
 .button_style:hover {
     background-color: #d3ded4;
     color: #708571;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 /* banner end*/
 /* popular products */
@@ -337,7 +339,10 @@ body {
     padding-top: 96px;
     padding-bottom: 96px;
     box-sizing: border-box;
-    
+}
+.footer_logo img{
+    width: 160px;
+    height: 60px;
 }
 .content_footer {
     display: flex;
@@ -1803,3 +1808,160 @@ body {
 }
 
 /* accordion end */
+
+/* adaptive */
+
+@media (max-width: 1600px) {
+    .container {
+        max-width: 1300px;
+    }
+    .title_main {
+        font-size: 66px;
+        width: 680px;
+    }
+    .subtitle_button {
+        width: 680px;
+    }
+    .headtitle_style {
+        font-size: 42px;
+    }
+    .headtitle_style_search {
+        font-size: 42px;
+    }
+    .popular_product_item_image {
+        width: 280px;
+        height: 360px;
+    }
+    .popular_product_item {
+        width: 280px;
+        height: 360px;
+    }
+    .popular_product_item_text{
+        font-size: 22px;
+    }
+    .content_catalog-category{
+        column-gap: 30px;
+    }
+    .item{
+        width: 460px;
+        height: 210px;
+    }
+    .item:nth-child(6n + 4){
+        width: 300px;
+        height: 210px;
+
+    }
+     .item:nth-child(6n + 2){
+        width: 300px;
+        height: 210px;
+    }
+    .title{
+        font-size: 32px;
+    }
+    .recipe_item_image{
+        height: 380px;
+        width: 230px;
+    }
+    .recipe_item{
+        height: 380px;
+        width: 230px;
+    }
+    .content_recipe_list{
+        column-gap: 0px;
+        justify-content: space-between;
+    }
+    .title_recipe{
+        font-size: 22px;
+        width: 170px;
+    }
+    .button_moderator_recipes{
+        font-size: 18px;
+        padding: 12px 18px;
+    }
+    .button_moderator_recipes_2{
+        padding: 12px 18px;
+        font-size: 18px;
+    }
+    .nav-link{
+        font-size: 18px;
+    }
+    .button_style{
+        padding: 14px 35px;
+    }
+    .tune_filter{
+        padding: 10px;
+    }
+    .input_style{
+        width: 320px;
+    }
+    .name_product{
+        font-size: 22px;
+    }
+    .catalog_products_list{
+        grid-template-columns: repeat(3, 250px);
+    }
+    .category_list_item{
+        font-size: 22px;
+    }
+    .category_list{
+        row-gap: 10px;
+    }
+    .description_one_product{
+        width: 650px;
+    }
+    .slider_wrapper img{
+        width: 480px;
+        height: 500px;
+    }
+    .content_cart_final_price{
+        width: 420px;
+    }
+    .cart_products_list{
+        width: 700px;
+    }
+    .button_cart{
+        font-size: 20px;
+        padding: 18px 100px;
+    }
+    .delete_all_products{
+        padding: 15px 25px;
+    }
+    .delete_all_products p{
+        font-size: 20px;
+    }
+    .image_recipe{
+        width: 1300px;
+    }
+    .ingredients_list_container{
+        width: 380px;
+    }
+    .description_recipe_item{
+        width: 750px;
+    }
+    .recipe_steps_list{
+        grid-template-columns: repeat(2, 600px);
+    }
+    .content_admin_user_item{
+        width: 900px;
+    }
+    .content_admin_order_item{
+        width: 850px;
+    }
+    .select_style{
+        width: 354px;
+    }
+    .input_group{
+        column-gap: 6px;
+    }
+    .input_style_group{
+        width: 50px;
+    }
+}
+@media (max-width: 1320px) {
+    .container {
+        max-width: 1150px;
+    }
+    .title_main{
+        font-size: 56px;
+    }
+}

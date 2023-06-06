@@ -3,7 +3,7 @@
         <div class="content_footer">
             <div class="footer_logo_content">
                 <div class="footer_logo">
-                    <img src="../assets/img/icons/logo_white.svg" alt="">
+                    <img src="../assets/icons/logo_white.svg" alt="">
                 </div>
                 <div class="ask_questions">
                     <p>Остались вопросы? </p>

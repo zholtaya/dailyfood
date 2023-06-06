@@ -82,7 +82,7 @@ if ($userCart) {
 
       <div class="header_logo">
         <a href="?">
-          <img src="./assets/img/icons/logo.svg" alt="" />
+          <img src="./assets/icons/logo.svg" alt="" />
         </a>
       </div>
       <?
