@@ -92,7 +92,7 @@ if ($userCart) {
             <?= $userCartCount ?>
           </div>
           <a href="?page=cart" class="cart_icon">
-            <img src="./assets/img/icons/cart.svg" alt="" />
+            <img src="./assets/img/icons/cart.svg" alt="Корзина" />
           </a>
         </div>
       <? }

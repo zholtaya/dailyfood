@@ -27,6 +27,7 @@ if ($_REQUEST['do'] == 'exit') {
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <script src="js/pushNotification.js"></script>
   <title>DailyFood</title>
@@ -113,7 +114,6 @@ if ($_REQUEST['do'] == 'exit') {
   <script src="js/cartCheckEmpty.js"></script>
   <script src="js/catalogCheckEmpty.js"></script>
   <script src="js/profileOrdersCheckEmpty.js"></script>
-
 </body>
 
 </html>

@@ -25,61 +25,49 @@ if (!$user) {
     <h2 class="headtitle_style">
       Популярное
     </h2>
-    <div class="content_popular-products">
-      <div class="popular_product_item">
-        <img src="./assets/img/popular/popular_1.jpg" alt="product_item" class="popular_product_item_image">
-        <div class="popular_product_item_text">
-          <div class="name_item">
-            Хлопья «Fitness»
+    <div class="content_popular-products swiper">
+      <div class="swiper-wrapper popular_products_wrapper">
+        <?php
+        $getPopularProductsSQL = "SELECT products.*, COUNT(ol.ProductID) AS order_count FROM products JOIN orders_list ol ON products.id = ol.ProductID GROUP BY products.id, products.name ORDER BY order_count DESC LIMIT 10";
+
+        $getPopularProductsResponse = $link->query($getPopularProductsSQL);
+
+        while ($product = $getPopularProductsResponse->fetch_assoc()) { ?>
+          <div class="popular_product_item swiper-slide">
+            <img src="<?= $product["thirdImage"] ?>" alt="product_item" class="popular_product_item_image">
+            <div class="popular_product_item_text">
+              <div class="name_item">
+                <?= $product["name"] ?>
+              </div>
+              <div class="price_item">
+                <?= $product["price"] ?> ₽
+              </div>
+            </div>
           </div>
-          <div class="price_item">
-            320 ₽
+          <div class="popular_product_item swiper-slide">
+            <img src="<?= $product["thirdImage"] ?>" alt="product_item" class="popular_product_item_image">
+            <div class="popular_product_item_text">
+              <div class="name_item">
+                <?= $product["name"] ?>
+              </div>
+              <div class="price_item">
+                <?= $product["price"] ?> ₽
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="popular_product_item">
-        <img src="./assets/img/popular/popular_2.jpg" alt="product_item" class="popular_product_item_image">
-        <div class="popular_product_item_text">
-          <div class="name_item">
-            Хлопья «Fitness»
+          <div class="popular_product_item swiper-slide">
+            <img src="<?= $product["thirdImage"] ?>" alt="product_item" class="popular_product_item_image">
+            <div class="popular_product_item_text">
+              <div class="name_item">
+                <?= $product["name"] ?>
+              </div>
+              <div class="price_item">
+                <?= $product["price"] ?> ₽
+              </div>
+            </div>
           </div>
-          <div class="price_item">
-            320 ₽
-          </div>
-        </div>
-      </div>
-      <div class="popular_product_item">
-        <img src="./assets/img/popular/popular_3.jpg" alt="product_item" class="popular_product_item_image">
-        <div class="popular_product_item_text">
-          <div class="name_item">
-            Хлопья «Fitness»
-          </div>
-          <div class="price_item">
-            320 ₽
-          </div>
-        </div>
-      </div>
-      <div class="popular_product_item">
-        <img src="./assets/img/popular/popular_4.jpg" alt="product_item" class="popular_product_item_image">
-        <div class="popular_product_item_text">
-          <div class="name_item">
-            Хлопья «Fitness»
-          </div>
-          <div class="price_item">
-            320 ₽
-          </div>
-        </div>
-      </div>
-      <div class="popular_product_item">
-        <img src="./assets/img/popular/popular_4.jpg" alt="product_item" class="popular_product_item_image">
-        <div class="popular_product_item_text">
-          <div class="name_item">
-            Хлопья «Fitness»
-          </div>
-          <div class="price_item">
-            320 ₽
-          </div>
-        </div>
+        <? }
+        ?>
       </div>
     </div>
   </div>
@@ -99,10 +87,13 @@ if (!$user) {
         $getSubcategoryByCategoryIdSQL = "SELECT * FROM subcategories WHERE categoryId = '$categoryId' LIMIT 1";
         $subcategoryResponse = $link->query($getSubcategoryByCategoryIdSQL);
         $subcategory = $subcategoryResponse->fetch_assoc();
-      ?>
-        
-        <a href="?page=catalog&categoryId=<?= $category["id"] ?>&subcategoryId=<?= $subcategory["id"] ?>" class="item" style="background-image: url(<?= $category["img"] ?>);">
-          <h5 class="title"><?= $category["title"] ?></h5>
+        ?>
+
+        <a href="?page=catalog&categoryId=<?= $category["id"] ?>&subcategoryId=<?= $subcategory["id"] ?>" class="item"
+          style="background-image: url(<?= $category["img"] ?>);">
+          <h5 class="title">
+            <?= $category["title"] ?>
+          </h5>
         </a>
       <?
       }
@@ -110,3 +101,6 @@ if (!$user) {
     </div>
   </div>
 </section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/popularSlider.js"></script>
