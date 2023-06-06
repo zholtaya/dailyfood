@@ -1,23 +1,46 @@
 <?php
-isAdmin($user["role"]);
+isModeratorOrAdmin($user["role"]);
+?>
+
+<?php
+if (isset($_GET["status"])) {
+    $nextStatus = (int) $_GET["status"] + 1;
+    $orderId = $_GET["orderId"];
+
+    $updateOrderStatusSQL = "UPDATE orders SET status = '$nextStatus' WHERE id = '$orderId'";
+    $link->query($updateOrderStatusSQL);
+
+    showSuccessNotification("Статус заказа успешно изменен");
+}
 ?>
 
 <section class="user_profile">
     <div class="container">
         <div class="content_admin">
             <div class="admin_tabs_list">
-                <a href="?page=admin-user" class="tab_item">
-                    Пользователи
-                </a>
-                <a href="?page=admin-products" class="tab_item">
-                    Товары
-                </a>
-                <a href="?page=admin-subcategory" class="tab_item">
-                    Подкатегорию
-                </a>
-                <a href="?page=admin-orders" class="tab_item active">
-                    Заказы
-                </a>
+                <?php
+                if ($user["role"] == '2') { ?>
+                    <a href="?page=moderator-recipes" class="tab_item ">
+                        Рецепты
+                    </a>
+                    <a href="?page=moderator-orders" class="tab_item active">
+                        Заказы
+                    </a>
+                <? } else if ($user["role"] == '3') { ?>
+                        <a href="?page=admin-user" class="tab_item">
+                            Пользователи
+                        </a>
+                        <a href="?page=admin-products" class="tab_item">
+                            Товары
+                        </a>
+                        <a href="?page=admin-subcategory" class="tab_item">
+                            Подкатегорию
+                        </a>
+                        <a href="?page=admin-orders" class="tab_item active">
+                            Заказы
+                        </a>
+                <? }
+                ?>
             </div>
             <div class="admin_order_content">
                 <h2 class="headtitle_style_search">
@@ -41,7 +64,7 @@ isAdmin($user["role"]);
                         if ($order["status"] == 3) {
                             $textStatus = "Доставляется";
                         }
-                        if ($order["status"] == 4) {
+                        if ($order["status"] >= 4) {
                             $textStatus = "Доставлен";
                         }
                         ?>
@@ -51,9 +74,12 @@ isAdmin($user["role"]);
                                     Пользователь:
                                     <?= $orderUser["email"] ?>
                                 </p>
-                                <a href="?" class="change_status_order_admin">
-                                   Изменить статус
-                                </a>
+                                <?php
+                                if ($order["status"] < 4) { ?>
+                                    <a href="?page=admin-orders&status=<?= $order["status"] ?>&orderId=<?= $order["id"] ?>"
+                                        class="change_status_order_admin">Изменить статус</a>
+                                <? }
+                                ?>
                             </div>
                             <div class="content_admin_order_item">
                                 <div class="order_information_user">

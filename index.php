@@ -74,7 +74,7 @@ if ($_REQUEST['do'] == 'exit') {
       include("pages/admin_orders.php");
     }
     if ($_GET['page'] == 'moderator-orders') {
-      include("pages/moderator_orders.php");
+      include("pages/admin_orders.php");
     }
     if ($_GET['page'] == 'moderator-recipes') {
       include("pages/moderator_recipes.php");

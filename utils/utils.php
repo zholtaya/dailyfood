@@ -9,7 +9,7 @@ function isAdmin($role)
 
 function isModeratorOrAdmin($role)
 {
-  if (($role !== '3') or ($role !== '2')) {
+  if (($role !== '3') && ($role !== '2')) {
     redirect("");
   }
 }

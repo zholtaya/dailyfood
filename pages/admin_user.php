@@ -86,9 +86,17 @@ isAdmin($user["role"]);
                                     ?>
 
                                 </p>
-                                <a href="?" class="change_status_order_admin">
-                                    Модератор
-                                </a>
+                                <?php
+                                if ($user["role"] == 1) { ?>
+                                    <a href="?page=admin-user&role=2" class="change_status_order_admin">
+                                        Модератор
+                                    </a>
+                                <? } else { ?>
+                                    <a href="?page=admin-user&role=1" class="change_status_order_admin">
+                                        Пользователь
+                                    </a>
+                                <? }
+                                ?>
                             </div>
                         </div>
                     <?
@@ -100,3 +108,7 @@ isAdmin($user["role"]);
 
     </div>
 </section>
+
+<?php
+    
+?>
