@@ -81,7 +81,7 @@ isAdmin($user["role"]);
                                     <a href="#">
                                         <img class="edit_buttons" src="./assets/img/icons/edit.svg" alt="">
                                     </a>
-                                    <a href="#">
+                                    <a href="?page=admin-products&delete=<?= $product["id"] ?>">
                                         <img class="edit_buttons" src="./assets/img/icons/delete.svg" alt="">
                                     </a>
                                 </div>
@@ -95,3 +95,13 @@ isAdmin($user["role"]);
         </div>
     </div>
 </section>
+
+<?php
+if (isset($_GET["delete"])) {
+    $deleteProductId = $_GET["delete"];
+    $deleteProductSQL = "DELETE FROM products WHERE id = '$deleteProductId'";
+    $link->query($deleteProductSQL);
+
+    showSuccessNotification("Товар успешно удален");
+}
+?>
