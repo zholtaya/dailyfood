@@ -1559,6 +1559,7 @@ body {
     border-radius: 8px;
     width: 130px;
     height: 35px;
+    display: none;
 }
 .content_cart {
     display: flex;
@@ -2172,6 +2173,22 @@ body {
     .container {
         max-width: 1150px;
     }
+    .image_recipe {
+        width: 1150px;
+        height: 400px;
+    }
+    .description_recipe_item {
+        width: 600px;
+    }
+    .content_description_recipe {
+        width: 600px;
+    }
+    .ingredients_list_container {
+        width: 390px;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(2, 500px);
+    }
     .title_main {
         font-size: 56px;
     }
@@ -2252,6 +2269,37 @@ body {
 @media (max-width: 1150px) {
     .container {
         max-width: 950px;
+    }
+    .image_recipe {
+        width: 950px;
+        object-fit: cover;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(1, 700px);
+    }
+    .content_description_recipe {
+        width: 500px;
+    }
+    .description_recipe_item {
+        width: 500px;
+    }
+    .caloric_value_one_product {
+        width: 500px;
+    }
+    .caloric_value_data_item {
+        padding: 18px 24px;
+    }
+    .caloric_value_number_data {
+        font-size: 20px;
+    }
+    .caloric_value_name_data {
+        font-size: 20px;
+    }
+    .ingredients_list_container {
+        width: 350px;
+    }
+    .button_cart {
+        padding: 18px 70px;
     }
     .cart_icon img {
         padding: 10px 15px;
@@ -2509,6 +2557,28 @@ body {
         row-gap: 24px;
         column-gap: 16px;
     }
+    .image_recipe {
+        width: 700px;
+    }
+    .content_recipe {
+        flex-direction: column;
+    }
+    .ingredients_list_container {
+        width: 650px;
+        margin-bottom: 38px;
+    }
+    .description_recipe_item {
+        width: 700px;
+    }
+    .content_description_recipe {
+        width: 700px;
+    }
+    .caloric_value_one_product {
+        width: 700px;
+    }
+    .caloric_value_data_item {
+        padding: 24px 30px;
+    }
 }
 @media (max-width: 700px) {
     .container {
@@ -2532,7 +2602,7 @@ body {
         display: flex;
     }
     .caloric_value_one_product {
-        width: 500px;
+        width: 400px;
     }
     .header_catalog_selected_category {
         align-items: center;
@@ -2570,6 +2640,24 @@ body {
     }
     .product__images {
         flex-direction: row;
+    }
+    .image_recipe {
+        width: 600px;
+    }
+    .ingredients_list_container {
+        width: 550px;
+    }
+    .description_recipe_item {
+        width: 600px;
+    }
+    .content_description_recipe {
+        width: 600px;
+    }
+    .caloric_value_recipe_list {
+        width: 600px;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(1, 600px);
     }
 }
 @media (max-width: 600px) {
@@ -2697,6 +2785,36 @@ body {
     .title_recipe {
         width: 160px;
     }
+    .image_recipe {
+        width: 400px;
+    }
+    .ingredients_list_container {
+        width: 350px;
+    }
+    .description_recipe_item {
+        width: 400px;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(1, 400px);
+    }
+    .caloric_value_recipe_list{
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        width: 400px;
+        row-gap: 24px;
+    }
+    .content_description_recipe{
+        width: 400px;
+    }
+    .caloric_value_name{
+        font-size: 22px;
+    }
+    .steps_counter{
+        font-size: 22px;
+    }
+    .final_price_title{
+        font-size: 28px;
+    }
 }
 @media (max-width: 500px) {
     .container {
@@ -2740,7 +2858,7 @@ body {
     }
     .caloric_value_data_item {
         padding: 22px 38px;
-        width: 100%;
+        /* width: 100%; */
     }
     .product-big-image {
         width: 340px;
@@ -2763,6 +2881,27 @@ body {
         width: 220px;
         height: 360px;
     }
+    .image_recipe{
+        width: 380px;
+    }
+    .ingredients_list_container{
+        width: 330px;
+    }
+    .description_recipe_item{
+        width: 380px;
+    }
+    .content_description_recipe{
+        width: 380px;
+    }
+    .caloric_value_recipe_list{
+        width: 380px;
+        grid-template-columns: repeat(1, 360px);
+        justify-content: flex-start;
+        column-gap: 38px;
+    }
+    .recipe_steps_list{
+        grid-template-columns: repeat(1, 380px);
+    }
 }
 @media (max-width: 400px) {
     .container {
@@ -2782,8 +2921,9 @@ body {
         column-gap: 10px;
     }
     .product-big-image {
-        width: 310px;
+        width: 290px;
         height: 330px;
+        object-fit: contain;
     }
     .description_one_product {
         width: 320px;
@@ -2817,5 +2957,33 @@ body {
     }
     .filter_open_search {
         column-gap: 12px;
+    }
+    .image_recipe{
+        width: 300px;
+    }
+    .ingredients_list_container{
+        width: 250px;
+    }
+    .description_recipe_item{
+        width: 300px;
+    }
+    .content_description_recipe{
+        width: 300px;
+    }
+    .caloric_value_recipe_list{
+        width: 300px;
+        grid-template-columns: repeat(1, 300px);
+        justify-content: flex-start;
+        column-gap: 38px;
+    }
+    .recipe_steps_list{
+        grid-template-columns: repeat(1, 300px);
+    }
+    .button_moderator_recipes_2{
+        padding: 12px 14px;
+        font-size: 16px;
+    }
+    .buttons_wrapper_moderator{
+        column-gap: 22px;
     }
 }
