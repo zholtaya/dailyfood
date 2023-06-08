@@ -1704,7 +1704,7 @@ select {
     color: #4a5743;
 }
 .button_cart {
-    padding: 18px 120px;
+    padding: 18px 100px;
     background-color: #708571;
     font-family: "Fira Sans", sans-serif;
     border: none;
@@ -1961,6 +1961,15 @@ select {
 /* recipe catalog end */
 
 /* recipe */
+
+.recipe-product-span {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+
+    color: #4a5743;
+}
+
 .content_recipe {
     margin-top: 38px;
     display: flex;
@@ -1977,6 +1986,13 @@ select {
     flex-direction: column;
     row-gap: 38px;
 }
+
+.ingredients_list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
 .description_recipe_item {
     width: 800px;
     font-size: 20px;
@@ -2070,6 +2086,12 @@ select {
 
 /* modal */
 
+#map {
+    box-sizing: border-box;
+    width: 1252px;
+    height: 495px;
+}
+
 .modal {
     position: fixed;
     z-index: 999;
@@ -2152,6 +2174,17 @@ select {
 .modal-content.open {
     opacity: 1;
     transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#closeMapModal {
+    background: none;
 }
 
 .close {
@@ -2279,7 +2312,7 @@ select {
     }
     .button_cart {
         font-size: 20px;
-        padding: 18px 100px;
+        padding: 18px 80px;
     }
     .delete_all_products {
         padding: 15px 25px;

@@ -1,46 +1,124 @@
-<?
-
+<?php
 if (!$user) {
     redirect("page=sign-in");
 }
 ?>
 
+<?php
+if (isset($_GET["id"])) {
+    $recipeId = $_GET["id"];
+    $getRecipeByIdSQL = "SELECT * FROM recipes WHERE id = '$recipeId'";
+    $recipeResponse = $link->query($getRecipeByIdSQL);
+    $recipe = $recipeResponse->fetch_assoc();
+} else {
+    redirect("?page=recipe-catalog");
+}
+?>
+
+<?php
+if (isset($_GET["buyAll"])) {
+    $getRecipeProductsSQL = "SELECT * FROM recipe_products WHERE recipeId = '$recipeId'";
+    $recipeProductsResponse = $link->query($getRecipeProductsSQL);
+
+    $userId = $user["id"];
+    $uniqueId = uniqid();
+
+    $checkCartIsCreatedSQL = "SELECT * FROM cart WHERE userId = '$userId'";
+    $checkCartResponse = $link->query($checkCartIsCreatedSQL);
+    $maybeCart =
+        $checkCartResponse->fetch_assoc();
+    if (!$maybeCart) {
+        $createNewCartRowSQL = "INSERT INTO cart
+(userId, uniqueId) VALUES ('$userId', '$uniqueId')";
+        $link->query($createNewCartRowSQL);
+        $getThisCartRowSQL = "SELECT * FROM cart WHERE userId = '$userId' AND uniqueId = '$uniqueId'";
+        $thisCartRowResponse = $link->query($getThisCartRowSQL);
+        $maybeCart =
+            $thisCartRowResponse->fetch_assoc();
+    }
+
+    while ($recipeProduct = $recipeProductsResponse->fetch_assoc()) {
+        $productId = $recipeProduct["productId"];
+        $addProductIntoCartListSQL = "INSERT INTO cart_list (cartId,
+productId, count) VALUES ('{$maybeCart['id']}', '$productId', 1)";
+        $link->query($addProductIntoCartListSQL);
+    }
+
+    showSuccessNotification("Товар успешно добавлен в
+корзину");
+}
+?>
+
 <section class="recipe">
     <div class="container">
-        <img src="./assets/img/recipes/recipe_3.jpg" alt="" class="image_recipe">
+        <img src="<?= $recipe["banner"] ?>" alt="<?= $recipe["title"] ?>" class="image_recipe">
 
         <div class="content_recipe">
             <div class="content_ingredients">
                 <div class="buttons_wrapper_moderator">
                     <div class="button_moderator_recipes_2">
                         <img src="./assets/img/icons/time.svg" alt="">
-                        <p>45 минут</p>
+                        <p>
+                            <?= $recipe["time"] ?> минут
+                        </p>
                     </div>
-                    <div class="button_moderator_recipes_2">
-                        <img src="./assets/img/icons/stars_2.svg" alt="">
-                        <p>Средне</p>
-                    </div>
+                    <?php
+                    if ($recipe["complexity"] == "1") { ?>
+                        <div class="button_moderator_recipes_2">
+                            <img src="./assets/img/icons/stars_1.svg" alt="">
+                            <p>Легко</p>
+                        </div>
+                    <? }
+
+                    if ($recipe["complexity"] == "2") { ?>
+                        <div class="button_moderator_recipes_2">
+                            <img src="./assets/img/icons/stars_2.svg" alt="">
+                            <p>Средне</p>
+                        </div>
+                    <? }
+
+                    if ($recipe["complexity"] == "3") { ?>
+                        <div class="button_moderator_recipes_2">
+                            <img src="./assets/img/icons/stars_3.svg" alt="">
+                            <p>Сложно</p>
+                        </div>
+                    <? }
+                    ?>
+
                 </div>
                 <div class="ingredients_list_container">
                     <p class="final_price_title">
                         Ингредиенты
                     </p>
                     <div class="ingredients_list">
+                        <?php
+                        $getRecipeProductsSQL = "SELECT * FROM recipe_products WHERE recipeId = '$recipeId'";
+                        $recipeProductsResponse = $link->query($getRecipeProductsSQL);
 
+                        while ($recipeProduct = $recipeProductsResponse->fetch_assoc()) {
+                            $productId = $recipeProduct["productId"];
+                            $getProductById = "SELECT * FROM products WHERE id = '$productId'";
+                            $productsResponse = $link->query($getProductById);
+                            $product = $productsResponse->fetch_assoc();
+                            ?>
+                            <span class="recipe-product-span">
+                                ●
+                                <?= $product["name"] ?>
+                            </span>
+                        <?
+                        }
+                        ?>
                     </div>
-                    <a href="#" class="button_cart">Купить продукты</a>
+                    <a href="?page=recipe&id=<?= $recipeId ?>&buyAll" class="button_cart">Добавить в корзину</a>
 
                 </div>
             </div>
             <div class="content_description_recipe">
                 <h2 class="headtitle_style_search">
-                    Мидии в сливочно-чесночном
-                    соусе
+                    <?= $recipe["title"] ?>
                 </h2>
                 <p class="description_recipe_item">
-                    А вы знаете, что мидии – это практически чистый белок? Притом он является легкоусвояемым и
-                    дополнительно содержит массу полезных для человеческого организма веществ. Поэтому мидии в
-                    сливочно-чесночном соусе – это не просто безумно вкусное, но еще и полезное блюдо.
+                    <?= $recipe["description"] ?>
                 </p>
                 <p class="final_price_title">
                     Пищевая и энергетическая ценность
@@ -52,7 +130,7 @@ if (!$user) {
                     <div class="caloric_value_recipe_list">
                         <div class="caloric_value_data_item">
                             <p class="caloric_value_number_data">
-                                2543
+                                <?= (int) $recipe["calories"] * ((int) $recipe["weight"] / 100) ?>
                             </p>
                             <p class="caloric_value_name_data">
                                 Ккал
@@ -60,7 +138,7 @@ if (!$user) {
                         </div>
                         <div class="caloric_value_data_item">
                             <p class="caloric_value_number_data">
-                                96,1
+                                <?= (int) $recipe["proteins"] * ((int) $recipe["weight"] / 100) ?>
                             </p>
                             <p class="caloric_value_name_data">
                                 Белки
@@ -68,7 +146,7 @@ if (!$user) {
                         </div>
                         <div class="caloric_value_data_item">
                             <p class="caloric_value_number_data">
-                                127,8
+                                <?= (int) $recipe["fats"] * ((int) $recipe["weight"] / 100) ?>
                             </p>
                             <p class="caloric_value_name_data">
                                 Жиры
@@ -76,7 +154,7 @@ if (!$user) {
                         </div>
                         <div class="caloric_value_data_item">
                             <p class="caloric_value_number_data">
-                                243,8
+                                <?= (int) $recipe["carb"] * ((int) $recipe["weight"] / 100) ?>
                             </p>
                             <p class="caloric_value_name_data">
                                 Углеводы
@@ -91,7 +169,7 @@ if (!$user) {
                     <div class="caloric_value_recipe_list">
                         <div class="caloric_value_data_item">
                             <p class="caloric_value_number_data">
-                                194
+                                <?= $recipe["calories"] ?>
                             </p>
                             <p class="caloric_value_name_data">
                                 Ккал
@@ -99,7 +177,7 @@ if (!$user) {
                         </div>
                         <div class="caloric_value_data_item">
                             <p class="caloric_value_number_data">
-                                7,3
+                                <?= $recipe["proteins"] ?>
                             </p>
                             <p class="caloric_value_name_data">
                                 Белки
@@ -107,7 +185,7 @@ if (!$user) {
                         </div>
                         <div class="caloric_value_data_item">
                             <p class="caloric_value_number_data">
-                                9,8
+                                <?= $recipe["fats"] ?>
                             </p>
                             <p class="caloric_value_name_data">
                                 Жиры
@@ -115,7 +193,7 @@ if (!$user) {
                         </div>
                         <div class="caloric_value_data_item">
                             <p class="caloric_value_number_data">
-                                19
+                                <?= $recipe["carb"] ?>
                             </p>
                             <p class="caloric_value_name_data">
                                 Углеводы
@@ -137,45 +215,73 @@ if (!$user) {
                         Шаг 1
                     </p>
                     <p class="description_recipe_step_item">
-                        Для этого блюда подойдут как мидии в ракушках, так и очищенные замороженные. Если у вас ракушки,
-                        то предварительно замочите их в холодной воде, отберите только те, что раскрылись, и соскоблите
-                        с ракушек грязь острым ножом. Замороженные мидии разморозьте.
+                        <?= $recipe["step1"] ?>
                     </p>
                 </div>
-                <div class="recipe_step_item">
-                    <p class="steps_counter">
-                        Шаг 2
-                    </p>
-                    <p class="description_recipe_step_item">
-                        Чеснок мелко нарежьте. Количество варьируйте по своему вкусу. Забросьте его в заранее нагретую
-                        сковороду с растопленным сливочным маслом. Обжарьте на медленном огне в течение 40-60 секунд.
-                        Очень важно, чтобы чеснок не подгорел. Кстати, при желании вместе с чесноком можете обжарить
-                        немного лука.
-                    </p>
-                </div>
-                <div class="recipe_step_item">
-                    <p class="steps_counter">
-                        Шаг 3
-                    </p>
-                    <p class="description_recipe_step_item">
-                        После этого забросьте мидии к чесноку, хорошо перемешайте, добавьте любимые сухие травы
-                        (например, смесь прованских) и свежемолотый черный перец. Обжаривайте все на слабом огне около 7
-                        минут. После этого влейте сливки и продолжайте тушить до тех пор, пока они не загустеют.
-                        Жирность сливок выбирайте по вкусу, но чем они жирнее, тем калорийнее получится готовое блюдо.
-                        Если готовите мидии в раковинах, то положите их в сковородку с небольшим количеством воды и
-                        сливочным маслом и прогревайте под закрытой крышкой примерно с минуту на медленном огне.
-                    </p>
-                </div>
-                <div class="recipe_step_item">
-                    <p class="steps_counter">
-                        Шаг 4
-                    </p>
-                    <p class="description_recipe_step_item">
-                        Подавайте мидии в сливочно-чесночном соусе горячими вместе с гарниром из риса или вашей любимой
-                        пастой.И помните, тишина за столом, нарушаемая только стуком приборов, – верный признак того,
-                        что блюдо удалось на славу.
-                    </p>
-                </div>
+                <?php
+                if ($recipe["step2"]) { ?>
+                    <div class="recipe_step_item">
+                        <p class="steps_counter">
+                            Шаг 2
+                        </p>
+                        <p class="description_recipe_step_item">
+                            <?= $recipe["step2"] ?>
+                        </p>
+                    </div>
+                <? }
+                ?>
+
+                <?php
+                if ($recipe["step3"]) { ?>
+                    <div class="recipe_step_item">
+                        <p class="steps_counter">
+                            Шаг 3
+                        </p>
+                        <p class="description_recipe_step_item">
+                            <?= $recipe["step3"] ?>
+                        </p>
+                    </div>
+                <? }
+                ?>
+
+                <?php
+                if ($recipe["step4"]) { ?>
+                    <div class="recipe_step_item">
+                        <p class="steps_counter">
+                            Шаг 4
+                        </p>
+                        <p class="description_recipe_step_item">
+                            <?= $recipe["step4"] ?>
+                        </p>
+                    </div>
+                <? }
+                ?>
+
+                <?php
+                if ($recipe["step5"]) { ?>
+                    <div class="recipe_step_item">
+                        <p class="steps_counter">
+                            Шаг 5
+                        </p>
+                        <p class="description_recipe_step_item">
+                            <?= $recipe["step5"] ?>
+                        </p>
+                    </div>
+                <? }
+                ?>
+
+                <?php
+                if ($recipe["step6"]) { ?>
+                    <div class="recipe_step_item">
+                        <p class="steps_counter">
+                            Шаг 6
+                        </p>
+                        <p class="description_recipe_step_item">
+                            <?= $recipe["step6"] ?>
+                        </p>
+                    </div>
+                <? }
+                ?>
             </div>
         </div>
     </div>

@@ -67,6 +67,20 @@ if (isset($_POST["order"])) {
 }
 ?>
 
+<div id="orderModal" class="modal">
+  <div class="modal-content cartModal">
+    <div class="modal-header">
+      <h3 class="modal-title">
+        Укажите ваш адрес
+      </h3>
+      <button id="closeMapModal">
+        <img src="assets/icons/closeIcon.svg" alt="Закрыть">
+      </button>
+    </div>
+    <div id="map" style="width: 1252px"></div>
+  </div>
+</div>
+
 <section class="cart">
   <div class="container">
     <h2 class="headtitle_style">
@@ -86,7 +100,7 @@ if (isset($_POST["order"])) {
         <p class="title_order_payment">
           Адрес доставки
         </p>
-        <input name="mainAddress" type="text" class="input_style_order" placeholder="Улица, номер дома">
+        <input id="openMap" name="mainAddress" type="text" class="input_style_order" placeholder="Улица, номер дома">
 
         <div class="address_inputs_order">
           <input name="office" type="text" class="input_style_order_address" placeholder="Кв/офис">
@@ -148,3 +162,38 @@ if (isset($_POST["order"])) {
     </form>
   </div>
 </section>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=2aa5814d-439d-4477-bb6c-237f9bbf7357
+&lang=ru_RU" type="text/javascript">
+</script>
+
+<script src="/js/modal.js"></script>
+<script>
+  const mapModal = new Modal("orderModal", "openMap", "closeMapModal");
+</script>
+
+<script>
+  ymaps.ready(init);
+
+  function init() {
+    const map = new ymaps.Map("map", {
+      center: [55.801320, 49.177342], // Set the initial center of the map
+      zoom: 15 // Set the initial zoom level
+    });
+
+    // Add a click event listener to the map
+    map.events.add("click", function (e) {
+      const coords = e.get("coords");
+
+      // Use the Yandex Geocoder to get the place name based on the coordinates
+      ymaps.geocode(coords).then(function (res) {
+        const firstGeoObject = res.geoObjects.get(0);
+        const placeName = firstGeoObject.getAddressLine();
+
+        // Update the input field with the place name
+        document.getElementById("openMap").value = placeName;
+        mapModal.closeModal();
+      });
+    });
+  }
+</script>
