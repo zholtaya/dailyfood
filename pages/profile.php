@@ -4,6 +4,20 @@ if (!$user) {
 }
 ?>
 
+<div id="deleteAccountModal" class="modal">
+  <div class="modal-content default-modal">
+    <h3 class="modal-title">
+      Удаление всех товаров <br />
+      из корзины
+    </h3>
+    <p class="modal-description">Вы действительно хотите удалить все товары из корзины?</p>
+    <div class="modal-btns">
+      <button id="closeDeleteAccountModal" class="modal-btn modal-btn-cancel">Отменить</button>
+      <a id="closeDeleteAccountModal" href="?page=profile&deleteAccount" class="modal-btn modal-btn-success">Удалить</a>
+    </div>
+  </div>
+</div>
+
 <section class="user_profile">
   <div class="container">
     <div class="header_catalog_selected_category">
@@ -45,7 +59,7 @@ if (!$user) {
             </p>
           </div>
         </div>
-        <a href="#" class="delete_button">Удалить аккаунт</a>
+        <button id="openDeleteAccountModal" class="delete_button">Удалить аккаунт</button>
       </div>
       <div class="user-profile_information">
         <p class="title_user_style">
@@ -68,7 +82,7 @@ if (!$user) {
             if ($order["status"] == 4) {
               $textStatus = "Доставлен";
             }
-            ?>
+          ?>
             <div id="user-order-item" class="user_profile_order_item">
               <div class="order_information_user">
                 <div class="inf">
@@ -95,12 +109,19 @@ if (!$user) {
   </div>
 </section>
 
+<script src="/js/modal.js"></script>
+
 <script>
   const elements = document.querySelectorAll(".js-format_date");
   [...elements].forEach((element) => {
     const dateString = element.textContent;
     const date = new Date(dateString);
-    const formattedDate = date.toLocaleDateString("ru-RU", { day: "2-digit", month: "long" });
+    const formattedDate = date.toLocaleDateString("ru-RU", {
+      day: "2-digit",
+      month: "long"
+    });
     element.textContent = formattedDate;
   })
+
+  const deleteAccountModal = new Modal("deleteAccountModal", "openDeleteAccountModal", "closeDeleteAccountModal");
 </script>
