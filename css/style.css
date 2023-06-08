@@ -892,6 +892,7 @@ body {
     width: 565px;
     height: 565px;
     padding: 28px 20px;
+    object-fit: cover;
 }
 
 .product__images {
@@ -917,6 +918,7 @@ body {
     box-sizing: border-box;
     width: 132px;
     height: 132px;
+    object-fit: cover;
 }
 
 .specifications_one_product_list {

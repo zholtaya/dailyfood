@@ -115,3 +115,17 @@ if (isset($_POST["cart"])) {
   showSuccessNotification("Товар успешно добавлен в корзину");
 }
 ?>
+
+
+<script src="js/catalogSearch.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const search = new ElementSearch(
+      "#catalog_search",
+      ".catalog_products_list",
+      "#catalog_product",
+      ".information_product_item .wrapper_product_item .name_product"
+    );
+  });
+
+</script>

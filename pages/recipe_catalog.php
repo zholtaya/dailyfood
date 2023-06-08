@@ -14,12 +14,11 @@ if (!$user) {
             <div class="filter_open_search">
                 <button class="tune_filter" name="filter">
                     <img src="./assets/img/icons/tune.svg" alt="">
-
                 </button>
                 <form name="search" method="POST" class="form_search">
 
-                    <input type="text" class="input_style_recipe" name="search_name" value="<?= $search_name ?>"
-                        placeholder="Поиск по названию...">
+                    <input type="text" class="input_style_recipe" name="search_name" id="recipeSearch"
+                        value="<?= $search_name ?>" placeholder="Поиск по названию...">
                     <button class="search_button" name="search">
                         <img src="./assets/img/icons/search.svg" alt="">
                     </button>
@@ -31,24 +30,24 @@ if (!$user) {
                 <div class="ingridients">
                     <h5 class="filter_title">Выберите ингредиенты</h5>
                     <div class="ingridients_wrapper">
-                        <div id="grocery" class="ingridient">
+                        <a href="?page=recipe-catalog&categoryId=18&index=0" id="grocery" class="ingridient">
                             <img src="assets/icons/recipes/grocery.svg" alt="Бакалея">
-                        </div>
-                        <div id="meat" class="ingridient">
+                        </a>
+                        <a href="?page=recipe-catalog&categoryId=17&index=1" id="meat" class="ingridient">
                             <img src="assets/icons/recipes/meat.svg" alt="Мясо">
-                        </div>
-                        <div id="vegetable" class="ingridient">
+                        </a>
+                        <a href="?page=recipe-catalog&categoryId=11&index=2" id="vegetable" class="ingridient">
                             <img src="assets/icons/recipes/vegetable.svg" alt="Овощи">
-                        </div>
-                        <div id="fish" class="ingridient">
+                        </a>
+                        <a href="?page=recipe-catalog&categoryId=17&index=3" id="fish" class="ingridient">
                             <img src="assets/icons/recipes/fish.svg" alt="Рыба">
-                        </div>
-                        <div id="fruits" class="ingridient">
+                        </a>
+                        <a href="?page=recipe-catalog&categoryId=12&index=4" id="fruits" class="ingridient">
                             <img src="assets/icons/recipes/fruits.svg" alt="Фрукты">
-                        </div>
-                        <div id="milk" class="ingridient">
+                        </a>
+                        <a href="?page=recipe-catalog&categoryId=14&index=5" id="milk" class="ingridient">
                             <img src="assets/icons/recipes/milk.svg" alt="Молочная продукция">
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="complexity">
@@ -77,91 +76,38 @@ if (!$user) {
         <a href="?page=add-recipe" class="change_status_order_admin">Добавить рецепт</a>
 
         <div class="content_recipe_list">
-            <a class="recipe_item" href="?page=recipe">
-                <img src="./assets/img/recipes/recipe_1.jpg" alt="" class="recipe_item_image">
-                <div class="content_recipe_item">
-                    <h5 class="title_recipe">
-                        Тосты с авокадо
-                        и сливочным
-                        сыром
-                    </h5>
-                    <div class="button_moderator_recipes">
-                        <img src="./assets/img/icons/time.svg" alt="">
-                        <p>45 минут</p>
-                    </div>
-                </div>
-            </a>
-            <a class="recipe_item" href="?page=recipe">
-                <img src="./assets/img/recipes/recipe_2.jpg" alt="" class="recipe_item_image">
-                <div class="content_recipe_item">
-                    <h5 class="title_recipe">
-                        Тосты с авокадо
-                        и сливочным
-                        сыром
-                    </h5>
-                    <div class="button_moderator_recipes">
-                        <img src="./assets/img/icons/time.svg" alt="">
-                        <p>45 минут</p>
-                    </div>
-                </div>
-            </a>
-            <a class="recipe_item" href="?page=recipe">
-                <img src="./assets/img/recipes/recipe_3.jpg" alt="" class="recipe_item_image">
-                <div class="content_recipe_item">
-                    <h5 class="title_recipe">
-                        Тосты с авокадо
-                        и сливочным
-                        сыром
-                    </h5>
-                    <div class="button_moderator_recipes">
-                        <img src="./assets/img/icons/time.svg" alt="">
-                        <p>45 минут</p>
-                    </div>
-                </div>
-            </a>
-            <a class="recipe_item" href="?page=recipe">
-                <img src="./assets/img/recipes/recipe_4.jpg" alt="" class="recipe_item_image">
-                <div class="content_recipe_item">
-                    <h5 class="title_recipe">
-                        Тосты с авокадо
-                        и сливочным
-                        сыром
-                    </h5>
-                    <div class="button_moderator_recipes">
-                        <img src="./assets/img/icons/time.svg" alt="">
-                        <p>45 минут</p>
-                    </div>
-                </div>
-            </a>
-            <a class="recipe_item" href="?page=recipe">
-                <img src="./assets/img/recipes/recipe_5.jpg" alt="" class="recipe_item_image">
-                <div class="content_recipe_item">
-                    <h5 class="title_recipe">
-                        Тосты с авокадо
-                        и сливочным
-                        сыром
-                    </h5>
-                    <div class="button_moderator_recipes">
-                        <img src="./assets/img/icons/time.svg" alt="">
-                        <p>45 минут</p>
-                    </div>
-                </div>
-            </a>
-            <a class="recipe_item" href="?page=recipe">
-                <img src="./assets/img/recipes/recipe_4.jpg" alt="" class="recipe_item_image">
-                <div class="content_recipe_item">
-                    <h5 class="title_recipe">
-                        Тосты с авокадо
-                        и сливочным
-                        сыром
-                    </h5>
-                    <div class="button_moderator_recipes">
-                        <img src="./assets/img/icons/time.svg" alt="">
-                        <p>45 минут</p>
-                    </div>
-                </div>
-            </a>
+            <?php
+            $getAllRecipesSQL = "SELECT * FROM recipes";
 
+            if (isset($_GET["categoryId"])) {
+                $categoryId = $_GET["categoryId"];
+                $getAllRecipesSQL = "SELECT DISTINCT r.* FROM recipes AS r JOIN recipe_products AS rp ON r.id = rp.recipeId JOIN products AS p ON rp.productId = p.id JOIN subcategories AS sc ON p.subcategoryId = sc.id JOIN categories AS c ON sc.categoryID = c.id WHERE c.id = '$categoryId'";
+            }
+
+            if (isset($_GET["complexity"])) {
+                $complexity = $_GET["complexity"];
+                $getAllRecipesSQL = "SELECT * FROM recipes WHERE complexity = '$complexity'";
+            }
+
+            $allRecipesResponse = $link->query($getAllRecipesSQL);
+
+            while ($recipe = $allRecipesResponse->fetch_assoc()) { ?>
+                <a class="recipe_item" href="?page=recipe&id=<?= $recipe["id"] ?>">
+                    <img src="<?= $recipe["banner"] ?>" alt="<?= $recipe["title"] ?>" class="recipe_item_image">
+                    <div class="content_recipe_item">
+                        <h5 class="title_recipe">
+                            <?= $recipe["title"] ?>
+                        </h5>
+                        <div class="button_moderator_recipes">
+                            <img src="./assets/img/icons/time.svg" alt="">
+                            <p>
+                                <?= $recipe["time"] ?> минут
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            <? }
+            ?>
         </div>
     </div>
 </section>
@@ -195,4 +141,33 @@ if (!$user) {
 
     const milk = document.getElementById('milk');
     const milkTooltip = new Tooltip(milk, milk.querySelector("img").alt);
+</script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryIdParam = urlParams.get('categoryId');
+    const complexityParam = urlParams.get('complexity');
+    const index = urlParams.get('index');
+
+    if (categoryIdParam || complexityParam) {
+        filtersAcc.toggle();
+    }
+
+    const ingridients = document.querySelectorAll(".ingridient");
+    ingridients[Number(index)].classList.add("active-ingridient");
+
+    const complexityItems = document.querySelectorAll(".filter-complexity-item");
+    complexityItems[Number(complexityParam - 1)].classList.add("filter-complexity-item-active");
+</script>
+
+<script src="js/catalogSearch.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const recipeSearch = new ElementSearch(
+            "#recipeSearch",
+            ".content_recipe_list",
+            ".recipe_item",
+            ".content_recipe_item .title_recipe"
+        );
+    });
 </script>
