@@ -73,31 +73,31 @@ if (isset($_POST["order"])) {
       Оформление заказа
     </h2>
     <form method="post" name="order" class="content_cart">
-      <div class="payment_address_content">
-        <div class="order_payment_content">
-          <div class="form_style_order">
-            <p class="title_order_payment">
-              Способ оплаты
-            </p>
-            <select name="payment" id="payment" class="select_style_order">
-              <option value="Картой">Картой</option>
-              <option value="Наличными">Наличными при получении</option>
-            </select>
-            <p class="title_order_payment">
-              Адрес доставки
-            </p>
-            <input name="mainAddress" type="text" class="input_style_order" placeholder="Улица, номер дома">
 
-            <div class="address_inputs_order">
-              <input name="office" type="text" class="input_style_order_address" placeholder="Кв/офис">
-              <input name="entrance" type="text" class="input_style_order_address" placeholder="Подъезд">
-              <input name="floor" type="text" class="input_style_order_address" placeholder="Этаж">
-              <input name="code" type="text" class="input_style_order_address" placeholder="Домофон">
-            </div>
-            <input name="comment" type="text" class="input_style_order" placeholder="Комментарий курьеру">
-          </div>
+
+      <div class="form_style_order">
+        <p class="title_order_payment">
+          Способ оплаты
+        </p>
+        <select name="payment" id="payment" class="select_style_order">
+          <option value="Картой">Картой</option>
+          <option value="Наличными">Наличными при получении</option>
+        </select>
+        <p class="title_order_payment">
+          Адрес доставки
+        </p>
+        <input name="mainAddress" type="text" class="input_style_order" placeholder="Улица, номер дома">
+
+        <div class="address_inputs_order">
+          <input name="office" type="text" class="input_style_order_address" placeholder="Кв/офис">
+          <input name="entrance" type="text" class="input_style_order_address" placeholder="Подъезд">
+          <input name="floor" type="text" class="input_style_order_address" placeholder="Этаж">
+          <input name="code" type="text" class="input_style_order_address" placeholder="Домофон">
         </div>
+        <input name="comment" type="text" class="input_style_order" placeholder="Комментарий курьеру">
       </div>
+
+
       <div class="content_cart_final_price">
         <p class="final_price_title">
           Итого

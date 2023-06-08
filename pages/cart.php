@@ -59,18 +59,22 @@ if (isset($_GET["deleteAll"])) {
           $totalPrice += $product["price"];
           ?>
           <div class="cart-product-item">
-            <div class="cart_product_item">
-              <img src="<?= $product["firstImage"] ?>" alt="<?= $product["name"] ?>" class="image_cart_product">
-              <div class="cart_product_item_text">
-                <p class="cart_product_item_name">
-                  <?= $product["name"] ?>
-                </p>
-                <p class="cart_product_item_price">
-                  <?= $product["price"] ?> ₽
-                </p>
+            <img src="<?= $product["firstImage"] ?>" alt="<?= $product["name"] ?>" class="image_cart_product">
+
+            <div class="cart_product_quantity_name">
+              <div class="cart_product_item">
+                <div class="cart_product_item_text">
+                  <p class="cart_product_item_name">
+                    <?= $product["name"] ?>
+                  </p>
+                  <p class="cart_product_item_price">
+                    <?= $product["price"] ?> ₽
+                  </p>
+                </div>
               </div>
+              <div class="changing_quantity"></div>
             </div>
-            <div class="changing_quantity"></div>
+
           </div>
           <?php
 

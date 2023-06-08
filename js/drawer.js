@@ -26,7 +26,11 @@ class Drawer {
             this.drawer.style.overflow = "hidden";
 
             if (this.drawer.classList.contains("left-drawer")) {
-                this.drawer.style.width = `${500}px`;
+                if (window.innerWidth <= 600) {
+                    this.drawer.style.width = `${300}px`;
+                } else {
+                    this.drawer.style.width = `${500}px`;
+                }
             } else if (this.drawer.classList.contains("top-drawer")) {
                 this.drawer.style.height = `${this.viewportHeight}px`;
             }

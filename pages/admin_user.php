@@ -88,11 +88,13 @@ isAdmin($user["role"]);
                                 </p>
                                 <?php
                                 if ($user["role"] == 1) { ?>
-                                    <a href="?page=admin-user&role=2" class="change_status_order_admin">
+                                    <a href="?page=admin-user&role=2&userId=<?= $user["id"] ?>"
+                                        class="change_status_order_admin">
                                         Модератор
                                     </a>
                                 <? } else { ?>
-                                    <a href="?page=admin-user&role=1" class="change_status_order_admin">
+                                    <a href="?page=admin-user&role=1&userId=<?= $user["id"] ?>" class="
+                                        change_status_order_admin">
                                         Пользователь
                                     </a>
                                 <? }
@@ -110,5 +112,15 @@ isAdmin($user["role"]);
 </section>
 
 <?php
-    
+
+if (isset($_GET["role"])) {
+    $role = $_GET["role"];
+    $roleUserId = $_GET["userId"];
+
+    $updateUserRoleSQL = "UPDATE users SET role = '$role' WHERE id = '$roleUserId'";
+    $link->query($updateUserRoleSQL);
+
+    showSuccessNotification("Роль пользователя успешно изменена");
+}
+
 ?>
