@@ -34,4 +34,4 @@ class Modal {
   }
 }
 
-const modal = new Modal("cartModal", "openCartModal", "closeCartModal")
+const cartModal = new Modal("cartModal", "openCartModal", "closeCartModal");
