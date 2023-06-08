@@ -65,7 +65,6 @@ if (isset($_POST["add-recipe"])) {
         <div class="input_label">
           <label for="description" class="label_style">Введите описание</label>
           <textarea name="description" class="input_style" id="description" cols="20" rows="6"></textarea>
-
         </div>
         <div class="input_label">
           <label for="time" class="label_style">Введите время приготовления (в минутах)</label>

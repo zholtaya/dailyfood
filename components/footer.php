@@ -1,15 +1,45 @@
+<?php
+if (isset($_POST["feedback"])) {
+    $message = $_POST["message"];
+    $currentDate = date("Y-m-d");
+    $userId = $user["id"];
+
+    $sendFeedbackSQL = "INSERT INTO feedback (userId, message, date) VALUES ('$userId', '$message', '$currentDate')";
+    $link->query($sendFeedbackSQL);
+    showSuccessNotification("Ваше сообщение успешно отправлено!");
+}
+?>
+
+<div id="feedbackModal" class="modal">
+    <div class="modal-content default-modal">
+        <form class="feedback-form" name="feedback" method="post">
+            <h3 class="modal-title">
+                Задайте нам любой вопрос
+            </h3>
+            <div class="input_label modal-textarea">
+                <label for="message" class="label_style">Ваш вопрос</label>
+                <textarea name="message" class="input_style" id="message" cols="20" rows="6"></textarea>
+            </div>
+            <div class="modal-btns">
+                <button id="closeFeedbackModal" class="modal-btn modal-btn-cancel">Закрыть</button>
+                <button id="closeFeedbackModal" name="feedback" class="modal-btn modal-btn-success">Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 <footer class="footer">
     <div class="container">
         <div class="content_footer">
             <div class="footer_logo_content">
                 <div class="footer_logo">
-                    <img src="../assets/icons/logo_white.svg" alt="">
+                    <img src="./assets/icons/logo_white.svg" alt="">
                 </div>
                 <div class="ask_questions">
-                    <p>Остались вопросы? </p>
-                    <a href="#" class="button_style">
+                    <p>Остались вопросы?</p>
+                    <button id="openFeedbackModal" class="button_style">
                         Напишите нам
-                    </a>
+                    </button>
                 </div>
             </div>
             <div class="nav-footer">
@@ -41,8 +71,13 @@
                     <a href="?page=catalog&categoryId=14&subcategoryId=49" class="nav-link">Молочные продукты</a>
                     <a href="?page=catalog&categoryId=19&subcategoryId=94" class="nav-link">Заморозка</a>
                 </nav>
-                
+
             </div>
         </div>
     </div>
 </footer>
+
+<script src="/js/modal.js"></script>
+<script>
+    const feedbackModal = new Modal("feedbackModal", "openFeedbackModal", "closeFeedbackModal");
+</script>

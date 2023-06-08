@@ -2187,6 +2187,24 @@ select {
     background: none;
 }
 
+.feedback-form {
+    width: 620px;
+}
+
+.modal-textarea {
+    margin-top: 20px;
+    box-sizing: border-box;
+    max-width: 620px;
+    width: 100%;
+}
+
+#message {
+    box-sizing: border-box;
+    width: 100%;
+
+    resize: none;
+}
+
 .close {
     cursor: pointer;
 }
