@@ -116,7 +116,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
+    content: "";
     content: none;
 }
 table {
@@ -128,13 +128,13 @@ button {
     outline: none;
     border: none;
     cursor: pointer;
-    font-family: 'Fira Sans';
+    font-family: "Fira Sans";
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     background-color: rgb(241, 245, 237);
 }
 .container {
@@ -196,7 +196,7 @@ body {
 /* main page */
 /* banner */
 .main {
-    background-image: url('../assets/img/main.jpg');
+    background-image: url("../assets/img/main.jpg");
     background-position: center;
     display: flex;
     align-items: center;
@@ -235,7 +235,7 @@ body {
     background-color: #708571;
     border-radius: 8px;
     color: #ffffff;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 18px;
     font-weight: 500;
     border: none;
@@ -423,7 +423,7 @@ body {
 /* sign_up and forms */
 
 .form_sign_in {
-    background-image: url('../assets/img/main.jpg');
+    background-image: url("../assets/img/main.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -475,7 +475,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_style_recipe {
     padding: 17px;
@@ -487,7 +487,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_style::placeholder {
     color: #828284;
@@ -499,7 +499,7 @@ body {
     background-color: #708571;
     border-radius: 8px;
     color: #ffffff;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 18px;
     font-weight: 500;
     border: none;
@@ -535,7 +535,7 @@ body {
     color: #828284;
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .option_style {
     border: none;
@@ -552,7 +552,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_group {
     display: flex;
@@ -564,7 +564,6 @@ body {
 
 .added_products {
     box-sizing: border-box;
-    margin: 40px 0;
     gap: 15px;
     max-width: 400px;
     width: 100%;
@@ -640,7 +639,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .caloric_value_input {
     font-size: 18px;
@@ -653,7 +652,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     color: #4a5743;
     font-size: 16px;
     font-weight: 500;
@@ -1114,7 +1113,7 @@ body {
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     text-decoration: none;
 }
 .header_admin_order_item {
@@ -1153,7 +1152,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .name_order_item {
     font-size: 22px;
@@ -1229,7 +1228,7 @@ body {
     background-color: #d3ded4;
     border: none;
     outline: none;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .data_category_information:nth-child(3) {
     width: 220px;
@@ -1271,7 +1270,7 @@ body {
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     text-decoration: none;
 }
 .buttons_admin_delete_edit a {
@@ -1554,6 +1553,17 @@ body {
 .none {
     display: none;
 }
+
+#stepsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+select {
+    resize: none;
+}
+
 /* drawer end */
 
 /* cart */
@@ -1694,7 +1704,7 @@ body {
 .button_cart {
     padding: 18px 120px;
     background-color: #708571;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     border: none;
     outline: none;
     border-radius: 8px;
@@ -1760,7 +1770,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: #4a5743;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     margin-bottom: 14px;
     text-decoration: none;
 }
@@ -1772,13 +1782,13 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: #4a5743;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_style_order_address::placeholder {
     font-size: 18px;
     font-weight: 500;
     color: #4a5743;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_style_order_address {
     padding: 20px 14px;
@@ -1790,7 +1800,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: #4a5743;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     margin-bottom: 14px;
     text-decoration: none;
 }
@@ -1804,7 +1814,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: #4a5743;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     margin-bottom: 14px;
     text-decoration: none;
 }
@@ -2043,7 +2053,7 @@ body {
     font-size: 24px;
     line-height: 29px;
     color: #4a5743;
-    font-family: 'Fira Sans';
+    font-family: "Fira Sans";
 }
 
 .modal-btn-success {
@@ -2870,22 +2880,22 @@ body {
     .recipe_steps_list {
         grid-template-columns: repeat(1, 400px);
     }
-    .caloric_value_recipe_list{
+    .caloric_value_recipe_list {
         display: grid;
         grid-template-columns: repeat(2, 180px);
         width: 400px;
         row-gap: 24px;
     }
-    .content_description_recipe{
+    .content_description_recipe {
         width: 400px;
     }
-    .caloric_value_name{
+    .caloric_value_name {
         font-size: 22px;
     }
-    .steps_counter{
+    .steps_counter {
         font-size: 22px;
     }
-    .final_price_title{
+    .final_price_title {
         font-size: 28px;
     }
 }
@@ -2954,25 +2964,25 @@ body {
         width: 220px;
         height: 360px;
     }
-    .image_recipe{
+    .image_recipe {
         width: 380px;
     }
-    .ingredients_list_container{
+    .ingredients_list_container {
         width: 330px;
     }
-    .description_recipe_item{
+    .description_recipe_item {
         width: 380px;
     }
-    .content_description_recipe{
+    .content_description_recipe {
         width: 380px;
     }
-    .caloric_value_recipe_list{
+    .caloric_value_recipe_list {
         width: 380px;
         grid-template-columns: repeat(1, 360px);
         justify-content: flex-start;
         column-gap: 38px;
     }
-    .recipe_steps_list{
+    .recipe_steps_list {
         grid-template-columns: repeat(1, 380px);
     }
 }
@@ -3031,32 +3041,32 @@ body {
     .filter_open_search {
         column-gap: 12px;
     }
-    .image_recipe{
+    .image_recipe {
         width: 300px;
     }
-    .ingredients_list_container{
+    .ingredients_list_container {
         width: 250px;
     }
-    .description_recipe_item{
+    .description_recipe_item {
         width: 300px;
     }
-    .content_description_recipe{
+    .content_description_recipe {
         width: 300px;
     }
-    .caloric_value_recipe_list{
+    .caloric_value_recipe_list {
         width: 300px;
         grid-template-columns: repeat(1, 300px);
         justify-content: flex-start;
         column-gap: 38px;
     }
-    .recipe_steps_list{
+    .recipe_steps_list {
         grid-template-columns: repeat(1, 300px);
     }
-    .button_moderator_recipes_2{
+    .button_moderator_recipes_2 {
         padding: 12px 14px;
         font-size: 16px;
     }
-    .buttons_wrapper_moderator{
+    .buttons_wrapper_moderator {
         column-gap: 22px;
     }
 }
