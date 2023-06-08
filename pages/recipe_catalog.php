@@ -7,7 +7,7 @@ if (!$user) {
 
 <section class="recipe">
     <div class="container">
-        <div class="header_catalog_selected_category">
+        <div class="header_some_pages">
             <h2 class="headtitle_style_search">
                 Рецепты
             </h2>
@@ -18,7 +18,7 @@ if (!$user) {
                 </button>
                 <form name="search" method="POST" class="form_search">
 
-                    <input type="text" class="input_style" name="search_name" value="<?= $search_name ?>"
+                    <input type="text" class="input_style_recipe" name="search_name" value="<?= $search_name ?>"
                         placeholder="Поиск по названию...">
                     <button class="search_button" name="search">
                         <img src="./assets/img/icons/search.svg" alt="">

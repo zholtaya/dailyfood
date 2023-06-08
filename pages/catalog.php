@@ -7,7 +7,7 @@ if (!$user) {
 
 <section class="catalog_selected_category">
   <div class="container">
-    <div class="header_catalog_selected_category">
+    <div class="header_some_pages">
 
       <?
       if (isset($_GET["categoryId"])) {
