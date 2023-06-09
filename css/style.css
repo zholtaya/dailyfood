@@ -137,6 +137,19 @@ body {
     font-family: "Fira Sans", sans-serif;
     background-color: rgb(241, 245, 237);
 }
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+*::-webkit-scrollbar-track {
+    background: #f1f5ed;
+}
+*::-webkit-scrollbar-thumb {
+    background: #708571;
+    border: 3px solid #708571;
+    border-radius: 12px;
+}
+
 .container {
     width: 100%;
     max-width: 1520px;
@@ -276,7 +289,7 @@ body {
     flex-shrink: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     cursor: pointer;
 }
@@ -297,7 +310,7 @@ body {
 
 .popular_product_item_image {
     height: 420px;
-    width: 300px;
+    width: 100%;
     border-radius: 18px;
     transition: 1s;
     display: block;
@@ -2230,10 +2243,6 @@ select {
     .headtitle_style_search {
         font-size: 42px;
     }
-    .popular_product_item_image {
-        width: 280px;
-        height: 360px;
-    }
     .popular_product_item {
         width: 280px;
         height: 360px;
@@ -2414,9 +2423,6 @@ select {
     .title_main {
         font-size: 56px;
     }
-    .popular_product_item_image {
-        width: 260px;
-    }
     .nav-footer {
         column-gap: 90px;
     }
@@ -2546,10 +2552,6 @@ select {
     }
     .headtitle_style_search {
         font-size: 36px;
-    }
-    .popular_product_item_image {
-        width: 220px;
-        height: 300px;
     }
     .swiper-slide {
         width: 220px;

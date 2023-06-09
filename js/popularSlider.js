@@ -2,11 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".content_popular-products", {
         slidesPerView: 5,
         spaceBetween: 12,
-        
         loop: true,
-        // autoplay: {
-        //     delay: 1500,
-        // },
+        autoplay: {
+            delay: 1500,
+        },
         loopedSlides: 5,
         watchOverflow: true,
         breakpoints: {
@@ -31,5 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 outerWidth: 220,
             },
         },
+    });
+
+    const categorySwiper = new Swiper(".subcategory-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 12,
+        loop: true,
+        autoplay: {
+            delay: 1500,
+        },
+        loopedSlides: 1,
+        watchOverflow: true,
     });
 });
