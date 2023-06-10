@@ -1043,6 +1043,7 @@ body {
     display: flex;
     justify-content: flex-end;
     text-decoration: none;
+    background-color: #f1f5ed;
 }
 .user_profile_orders_list {
     display: flex;
@@ -1623,7 +1624,6 @@ select {
 }
 .cart-product-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     column-gap: 24px;
@@ -1908,6 +1908,7 @@ select {
     width: 1520px;
     height: 500px;
     border-radius: 32px;
+    object-fit: cover;
 }
 
 .filter_title {
@@ -2493,6 +2494,9 @@ select {
         width: 215px;
         height: 375px;
     }
+    .catalog_products_list{
+        grid-template-columns: repeat(2,260px);
+    }
 }
 @media (max-width: 1150px) {
     .container {
@@ -2650,6 +2654,12 @@ select {
     .user-profile_information {
         margin-top: 54px;
     }
+    .filters{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 24px;
+    }
 }
 @media (max-width: 950px) {
     .container {
@@ -2701,12 +2711,18 @@ select {
         font-size: 28px;
     }
     .category_list {
-        flex-direction: row;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 38px;
     }
     .category_list_item {
-        width: 200px;
+        width: 95%;
+    }
+    .catalog_products_list{
+        justify-content: center;
+        align-items: center;
+        align-self: center;
     }
     .catalog-empty-text {
         font-size: 26px;
@@ -2883,6 +2899,9 @@ select {
     .recipe_steps_list {
         grid-template-columns: repeat(1, 600px);
     }
+    .category_list_item {
+        width: 92%;
+    }
 }
 @media (max-width: 600px) {
     .container {
@@ -3038,6 +3057,18 @@ select {
     }
     .final_price_title {
         font-size: 28px;
+    }
+    .catalog_products_list{
+        grid-template-columns: repeat(1, 260px);
+    }
+    .headtitle_style_search{
+        margin-bottom: 18px;
+    }
+    .ingridients_wrapper{
+        flex-wrap: wrap;
+    }
+    .complexity_wrapper{
+        flex-wrap: wrap;
     }
 }
 @media (max-width: 500px) {

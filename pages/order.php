@@ -167,7 +167,7 @@ if (isset($_POST["order"])) {
 &lang=ru_RU" type="text/javascript">
 </script>
 
-<script src="/js/modal.js"></script>
+<script src="js/modal.js"></script>
 <script>
   const mapModal = new Modal("orderModal", "openMap", "closeMapModal");
 </script>

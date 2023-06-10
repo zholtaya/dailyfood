@@ -23,7 +23,7 @@ if ($userCart) {
       <div id="close-drawer-btn" class="drawer_close_wrapper">
         <img src="./assets/icons/close.svg" alt="Close" />
       </div>
-      <h1 class="drawer_title"><span class="part-of-the-day">Добрый день</span>,
+      <h1 class="drawer_title"><span class="part-of-the-day-drawer">Добрый день</span>,
         <?= $user["name"] ?>
       </h1>
       <nav class="drawer_menu">
@@ -101,3 +101,22 @@ if ($userCart) {
     </div>
   </div>
 </header>
+
+<script>
+  const getTimePeriod = () => {
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+
+    if (currentHour >= 5 && currentHour < 12) {
+      return "Доброе утро";
+    } else if (currentHour >= 12 && currentHour < 18) {
+      return "Добрый день";
+    } else if (currentHour >= 18 && currentHour < 21) {
+      return "Добрый вечер";
+    } else {
+      return "Доброй ночи";
+    }
+  };
+
+  document.querySelectorAll(".part-of-the-day-drawer").textContent = getTimePeriod();
+</script>

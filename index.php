@@ -24,7 +24,8 @@ if ($_REQUEST['do'] == 'exit') {
   <link rel="icon" type="image/jpg" href="./assets/icons/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -106,7 +107,6 @@ if ($_REQUEST['do'] == 'exit') {
   include("components/footer.php");
 
   ?>
-  <script src="js/partOfTheDay.js"></script>
   <script src="js/catalogSearch.js"></script>
   <script src="js/drawer.js"></script>
   <script src="js/accordions.js"></script>

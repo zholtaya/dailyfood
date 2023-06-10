@@ -34,7 +34,7 @@ if (!$user) {
 
         while ($product = $getPopularProductsResponse->fetch_assoc()) { ?>
           <div class="swiper-slide">
-            <div class="popular_product_item">
+            <a href="?page=product&id=<?=$product['id']?>" class="popular_product_item">
               <img src="<?= $product["thirdImage"] ?>" alt="product_item" class="popular_product_item_image">
               <div class="popular_product_item_text">
                 <div class="name_item">
@@ -44,7 +44,7 @@ if (!$user) {
                   <?= $product["price"] ?> ₽
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         <? }
         ?>

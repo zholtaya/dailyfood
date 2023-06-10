@@ -112,9 +112,9 @@ if (isset($_POST["add-recipe"])) {
         <div class="input_label">
           <label for="complexity" class="label_style">Выберите сложность</label>
           <select name="complexity" id="complexity" class="select_style">
-            <option value="0" class="option_style">Легкая</option>
-            <option value="1" class="option_style">Средняя</option>
-            <option value="2" class="option_style">Сложная</option>
+            <option value="1" class="option_style">Легкая</option>
+            <option value="2" class="option_style">Средняя</option>
+            <option value="3" class="option_style">Сложная</option>
 
           </select>
 
@@ -127,7 +127,7 @@ if (isset($_POST["add-recipe"])) {
         </div>
         <button class="add_step_link">
           Добавить шаг
-          <img src="../assets/img/icons/plus.svg" alt="">
+          <img src="./assets/img/icons/plus.svg" alt="">
         </button>
         <div class="input_label">
           <label class="label_style">Выберите изображение</label>

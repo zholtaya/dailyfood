@@ -77,7 +77,7 @@ if (isset($_POST["feedback"])) {
     </div>
 </footer>
 
-<script src="/js/modal.js"></script>
+<script src="js/modal.js"></script>
 <script>
     const feedbackModal = new Modal("feedbackModal", "openFeedbackModal", "closeFeedbackModal");
 </script>

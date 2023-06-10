@@ -22,7 +22,7 @@ if (!$user) {
   <div class="container">
     <div class="header_catalog_selected_category">
       <h2 class="headtitle_style_search">
-        <span class="part-of-the-day">Добрый день</span>,
+        <span class="part-of-the-day-profile">Добрый день</span>,
         <?= $user["name"] ?>
       </h2>
 
@@ -82,7 +82,7 @@ if (!$user) {
             if ($order["status"] == 4) {
               $textStatus = "Доставлен";
             }
-          ?>
+            ?>
             <div id="user-order-item" class="user_profile_order_item">
               <div class="order_information_user">
                 <div class="inf">
@@ -109,7 +109,7 @@ if (!$user) {
   </div>
 </section>
 
-<script src="/js/modal.js"></script>
+<script src="js/modal.js"></script>
 
 <script>
   const elements = document.querySelectorAll(".js-format_date");
@@ -124,4 +124,23 @@ if (!$user) {
   })
 
   const deleteAccountModal = new Modal("deleteAccountModal", "openDeleteAccountModal", "closeDeleteAccountModal");
+</script>
+
+<script>
+  const getTimePeriod = () => {
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+
+    if (currentHour >= 5 && currentHour < 12) {
+      return "Доброе утро";
+    } else if (currentHour >= 12 && currentHour < 18) {
+      return "Добрый день";
+    } else if (currentHour >= 18 && currentHour < 21) {
+      return "Добрый вечер";
+    } else {
+      return "Доброй ночи";
+    }
+  };
+
+  document.querySelector(".part-of-the-day-profile").textContent = getTimePeriod();
 </script>
