@@ -1424,6 +1424,40 @@ body {
 
 /* my recipes */
 
+.moderate_recipes {
+    width: 100%;
+    padding: 200px 0;
+}
+
+.moderate_recipes .container {
+    display: flex;
+    justify-content: center;
+}
+
+.recipe_status {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe_status_btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.time-recipe-flex {
+    position: unset !important;
+}
+
+.moderate-title {
+    text-align: center;
+}
+
 .myrecipes {
     display: flex;
     flex-direction: column;
