@@ -116,7 +116,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: "";
+    content: '';
     content: none;
 }
 table {
@@ -128,13 +128,13 @@ button {
     outline: none;
     border: none;
     cursor: pointer;
-    font-family: "Fira Sans";
+    font-family: 'Fira Sans';
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     background-color: rgb(241, 245, 237);
 }
 
@@ -209,7 +209,7 @@ body {
 /* main page */
 /* banner */
 .main {
-    background-image: url("../assets/img/main.jpg");
+    background-image: url('../assets/img/main.jpg');
     background-position: center;
     display: flex;
     align-items: center;
@@ -248,7 +248,7 @@ body {
     background-color: #708571;
     border-radius: 8px;
     color: #ffffff;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     font-size: 18px;
     font-weight: 500;
     border: none;
@@ -436,7 +436,7 @@ body {
 /* sign_up and forms */
 
 .form_sign_in {
-    background-image: url("../assets/img/main.jpg");
+    background-image: url('../assets/img/main.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -488,7 +488,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 .input_style_recipe {
     padding: 17px;
@@ -500,7 +500,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 .input_style::placeholder {
     color: #828284;
@@ -512,7 +512,7 @@ body {
     background-color: #708571;
     border-radius: 8px;
     color: #ffffff;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     font-size: 18px;
     font-weight: 500;
     border: none;
@@ -548,7 +548,7 @@ body {
     color: #828284;
     font-size: 16px;
     font-weight: 500;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 .option_style {
     border: none;
@@ -565,7 +565,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 .input_group {
     display: flex;
@@ -652,7 +652,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 .caloric_value_input {
     font-size: 18px;
@@ -665,7 +665,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     color: #4a5743;
     font-size: 16px;
     font-weight: 500;
@@ -1129,7 +1129,7 @@ body {
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     text-decoration: none;
 }
 .header_admin_order_item {
@@ -1168,7 +1168,7 @@ body {
     color: #4a5743;
     font-size: 18px;
     font-weight: 500;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 .name_order_item {
     font-size: 22px;
@@ -1244,7 +1244,7 @@ body {
     background-color: #d3ded4;
     border: none;
     outline: none;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 .data_category_information:nth-child(3) {
     width: 220px;
@@ -1286,7 +1286,7 @@ body {
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     text-decoration: none;
 }
 .buttons_admin_delete_edit a {
@@ -1391,6 +1391,37 @@ body {
     font-weight: 500;
     border-radius: 8px;
 }
+
+#openRulesButton {
+    margin: 20px 0;
+    font-size: 16px;
+
+    transition: color 0.3s ease-in-out;
+}
+
+#openRulesButton:hover {
+    color: #708571;
+}
+
+.rules_list {
+    max-width: 600px;
+    width: 100%;
+}
+
+.rules_list li {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.rules_list li span {
+    font-weight: 600;
+}
+
+.rules-btn {
+    justify-content: center !important;
+}
+
 /* admin end */
 
 /* push notifications */
@@ -1719,7 +1750,7 @@ select {
 .button_cart {
     padding: 18px 100px;
     background-color: #708571;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     border: none;
     outline: none;
     border-radius: 8px;
@@ -1785,7 +1816,7 @@ select {
     font-size: 18px;
     font-weight: 500;
     color: #4a5743;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     margin-bottom: 14px;
     text-decoration: none;
 }
@@ -1797,13 +1828,13 @@ select {
     font-size: 18px;
     font-weight: 500;
     color: #4a5743;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 .input_style_order_address::placeholder {
     font-size: 18px;
     font-weight: 500;
     color: #4a5743;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 .input_style_order_address {
     padding: 20px 14px;
@@ -1815,7 +1846,7 @@ select {
     font-size: 18px;
     font-weight: 500;
     color: #4a5743;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     margin-bottom: 14px;
     text-decoration: none;
 }
@@ -1829,7 +1860,7 @@ select {
     font-size: 18px;
     font-weight: 500;
     color: #4a5743;
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     margin-bottom: 14px;
     text-decoration: none;
 }
@@ -2177,7 +2208,7 @@ select {
     font-size: 24px;
     line-height: 29px;
     color: #4a5743;
-    font-family: "Fira Sans";
+    font-family: 'Fira Sans';
 }
 
 .modal-btn-success {
@@ -2494,8 +2525,8 @@ select {
         width: 215px;
         height: 375px;
     }
-    .catalog_products_list{
-        grid-template-columns: repeat(2,260px);
+    .catalog_products_list {
+        grid-template-columns: repeat(2, 260px);
     }
 }
 @media (max-width: 1150px) {
@@ -2654,7 +2685,7 @@ select {
     .user-profile_information {
         margin-top: 54px;
     }
-    .filters{
+    .filters {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -2719,7 +2750,7 @@ select {
     .category_list_item {
         width: 95%;
     }
-    .catalog_products_list{
+    .catalog_products_list {
         justify-content: center;
         align-items: center;
         align-self: center;
@@ -3058,16 +3089,16 @@ select {
     .final_price_title {
         font-size: 28px;
     }
-    .catalog_products_list{
+    .catalog_products_list {
         grid-template-columns: repeat(1, 260px);
     }
-    .headtitle_style_search{
+    .headtitle_style_search {
         margin-bottom: 18px;
     }
-    .ingridients_wrapper{
+    .ingridients_wrapper {
         flex-wrap: wrap;
     }
-    .complexity_wrapper{
+    .complexity_wrapper {
         flex-wrap: wrap;
     }
 }
