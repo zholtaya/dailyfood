@@ -102,36 +102,82 @@ if (isset($_GET["id"])) {
           <?= $product["price"] ?>
           ₽
         </div>
-        <form name="cart" method="post">
-          <button name="cart" class="button_product_item">В корзину</button>
-        </form>
+        <div class="catalog_product-btns">
+          <button class="button_product_item">
+            В корзину
+          </button>
+          <div id="counterContainer" class="counter-container counter-in-product none">
+            <input class="cartProductId" type="hidden" value="<?= $product["id"] ?>" />
+            <button class="counter-container-minus">-</button>
+            <span>1</span>
+            <button class="counter-container-plus">+</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<?php
-if (isset($_POST["cart"])) {
-  $userId = $user["id"];
-  $uniqueId = uniqid();
-
-  $checkCartIsCreatedSQL = "SELECT * FROM cart WHERE userId = '$userId'";
-  $checkCartResponse = $link->query($checkCartIsCreatedSQL);
-  $maybeCart =
-    $checkCartResponse->fetch_assoc();
-  if (!$maybeCart) {
-    $createNewCartRowSQL = "INSERT INTO cart
-(userId, uniqueId) VALUES ('$userId', '$uniqueId')";
-    $link->query($createNewCartRowSQL);
-    $getThisCartRowSQL = "SELECT * FROM cart WHERE userId = '$userId' AND uniqueId = '$uniqueId'";
-    $thisCartRowResponse = $link->query($getThisCartRowSQL);
-    $maybeCart =
-      $thisCartRowResponse->fetch_assoc();
-  }
-  $addProductIntoCartListSQL = "INSERT INTO cart_list (cartId,
-productId, count) VALUES ('{$maybeCart['id']}', '$productId', 1)";
-  $link->query($addProductIntoCartListSQL);
-  showSuccessNotification("Товар успешно добавлен в
-корзину");
-} ?>
 <script src="js/productImagesTabs.js"></script>
+<script>
+  const countersContainers = document.querySelectorAll(".counter-container");
+  const btnWithPriceElements = document.querySelectorAll(".button_product_item");
+
+  const increment = (currentContainer, productId) => {
+    if (currentContainer.classList.contains("disable-counter")) {
+      currentContainer.classList.remove("disable-counter");
+    }
+    const currentCounterSpan = currentContainer.querySelector("span");
+    const prevValue = Number(currentCounterSpan.textContent);
+    currentCounterSpan.textContent = `${prevValue + 1}`;
+    updateProductQuantity(productId, "increment")
+  }
+
+  const decrement = (currentContainer, productId) => {
+    const currentCounterSpan = currentContainer.querySelector("span");
+    const prevValue = Number(currentCounterSpan.textContent);
+    if (prevValue == 1) {
+      currentContainer.classList.add("disable-counter");
+    } else {
+      currentCounterSpan.textContent = `${prevValue - 1}`;
+      updateProductQuantity(productId, "decrement")
+    }
+  }
+
+  btnWithPriceElements.forEach((element, index) => {
+    element.addEventListener("click", () => {
+      element.classList.add("none");
+      countersContainers[index].classList.remove("none");
+
+      const productId = countersContainers[index].querySelector(".cartProductId").value;
+
+      updateProductQuantity(productId, "new");
+
+      const minusBtnElement = countersContainers[index].querySelector(".counter-container-minus");
+      const plusBtnElement = countersContainers[index].querySelector(".counter-container-plus");
+
+      plusBtnElement.addEventListener("click", () => {
+        increment(countersContainers[index], productId);
+      });
+
+      minusBtnElement.addEventListener("click", () => {
+        decrement(countersContainers[index], productId);
+      })
+    });
+  });
+
+  const updateProductQuantity = (productId, type) => {
+    // type === increment || decrement || new
+    return fetch(`actions/update-quantity.php?product_id=${productId}&type=${type}`)
+      .then((response) => {
+        console.log(response);
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  };
+</script>

@@ -808,6 +808,60 @@ body {
   outline: none;
   cursor: pointer;
   width: 100%;
+
+  transition: opacity 0.2s ease-in-out;
+}
+
+.button_product_item:hover {
+  opacity: 0.8;
+}
+
+.counter-container {
+  box-sizing: border-box;
+  max-height: 59.73px;
+  background: #708571;
+  border-radius: 8px;
+  width: 100%;
+
+  padding: 10px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 24px;
+}
+
+.counter-in-product {
+  width: 226px;
+}
+
+.disable-counter {
+  opacity: 0.6;
+}
+
+.counter-container button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.counter-container button:hover {
+  transform: scale(1.2);
+}
+
+.counter-container span {
+  color: #ffffff;
+  font-family: 'Fira Sans';
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .button_cart_add {
