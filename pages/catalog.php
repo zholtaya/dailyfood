@@ -221,11 +221,14 @@ if (!$user) {
     // type === increment || decrement || new
     return fetch(`actions/update-quantity.php?product_id=${productId}&type=${type}`)
       .then((response) => {
-        console.log(response);
         return response.json();
       })
-      .then((data) => {
-        console.log(data);
+      .finally(() => {
+        if (type === "decrement") {
+          new PushNotification("Товар удален из корзины", "error").show();
+        } else {
+          new PushNotification("Товар добавлен в корзину", "success").show();
+        }
       })
       .catch((error) => {
         console.log(error);

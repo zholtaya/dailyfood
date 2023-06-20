@@ -176,6 +176,7 @@ if (isset($_GET["deleteAll"])) {
     if (prevValue == 1) {
       currentContainer.parentElement.parentElement.parentElement.classList.add("none");
       updateProductQuantity(productId, "decrement");
+      document.location.href = "?page=cart";
     } else {
       currentCounterSpan.textContent = `${prevValue - 1}`;
       updateProductQuantity(productId, "decrement");
