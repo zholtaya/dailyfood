@@ -2,7 +2,7 @@ class Drawer {
     constructor(drawerId) {
         this.drawer = document.getElementById(drawerId);
         this.isOpen = false;
-        this.transitionDuration = "0.5s";
+        this.transitionDuration = "0.7s";
         this.init();
     }
 
@@ -20,7 +20,7 @@ class Drawer {
             this.drawer.style.overflow = "hidden";
 
             if (this.drawer.classList.contains("left-drawer")) {
-              this.drawer.style.transform = `translateX(0px)`;
+                this.drawer.style.transform = `translateX(0px)`;
             }
         }
     }
@@ -28,11 +28,11 @@ class Drawer {
     close() {
         this.drawer.classList.remove("none");
         if (this.isOpen) {
-          this.isOpen = false;
-          this.drawer.style.transition = `all ${this.transitionDuration} ease-in-out`;
+            this.isOpen = false;
+            this.drawer.style.transition = `all ${this.transitionDuration} ease-in-out`;
 
             if (this.drawer.classList.contains("left-drawer")) {
-              this.drawer.style.transform = `translateX(-500px)`;
+                this.drawer.style.transform = `translateX(-1500px)`;
             }
         }
     }
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeDrawerButton = document.getElementById("close-drawer-btn");
 
     openDrawerButton.addEventListener("click", () => {
-      console.log("click");
+        console.log("click");
         mainDrawer.open();
     });
 

@@ -72,16 +72,27 @@ if (!$user) {
                 <p class="caloric_value_product_item">
                   На 100г
                 </p>
-                <a href="#" class="open_button">Подробнее</a>
+                <button class="open_button">Подробнее</button>
+              </div>
+              <div class="product-acc">
+                <div class="product-acc-item">
+                  <span>Ккал - </span>
+                  <span><?= $product["calories"] ?></span>
+                </div>
+                <div class="product-acc-item">
+                  <span>Белки - </span>
+                  <span><?= $product["proteins"] ?></span>
+                </div>
+                <div class="product-acc-item">
+                  <span>Жиры - </span>
+                  <span><?= $product["fats"] ?></span>
+                </div>
+                <div class="product-acc-item">
+                  <span>Углеводы - </span>
+                  <span><?= $product["carb"] ?></span>
+                </div>
               </div>
             </div>
-            <!-- <form name="cart" method="post">
-              <input name="cartProductId" type="hidden" value="<?= $product["id"] ?>" />
-              <button name="cart" class="button_product_item">
-                <?= $product["price"] ?> ₽
-              </button>
-            </form> -->
-
             <div class="catalog_product-btns">
               <button class="button_product_item">
                 <?= $product["price"] ?> ₽
@@ -100,6 +111,53 @@ if (!$user) {
     </div>
   </div>
 </section>
+
+<script>
+  class Accordion {
+    constructor(container) {
+      this.container = container;
+      this.container.classList.add("accordionContainer");
+      this.isOpen = false;
+      this.transitionDuration = "0.3s";
+      this.transitionTimingFunction = "ease";
+    }
+
+    toggle() {
+      if (this.isOpen) {
+        this.container.style.transition = `max-height ${this.transitionDuration} ${this.transitionTimingFunction}`;
+        this.container.style.maxHeight = "0";
+        this.isOpen = false;
+      } else {
+        this.container.style.transition = `max-height ${this.transitionDuration} ${this.transitionTimingFunction}`;
+        this.container.style.maxHeight = `${this.container.scrollHeight}px`;
+        this.isOpen = true;
+      }
+    }
+
+    getIsOpen() {
+      return this.isOpen;
+    }
+  }
+
+  const productsArray = document.querySelectorAll(".product_item");
+
+  productsArray.forEach((element) => {
+    const container = element.querySelector(".product-acc");
+    const productAccordion = new Accordion(container);
+    const productAccordionButton = element.querySelector(".open_button");
+    console.log(productAccordionButton);
+
+    productAccordionButton.addEventListener("click", () => {
+      productAccordion.toggle();
+      if (productAccordion.getIsOpen()) {
+        productAccordionButton.textContent = "Скрыть";
+      } else {
+        productAccordionButton.textContent =
+          "Подробнее";
+      }
+    });
+  });
+</script>
 
 <script src="js/catalogSearch.js"></script>
 <script>

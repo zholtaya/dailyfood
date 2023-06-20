@@ -79,13 +79,13 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -99,335 +99,342 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 body {
-  line-height: 1;
+    line-height: 1;
 }
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none;
+    content: "";
+    content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  font-family: 'Fira Sans';
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Fira Sans";
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Fira Sans', sans-serif;
-  background-color: rgb(241, 245, 237);
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Sans", sans-serif;
+    background-color: rgb(241, 245, 237);
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 *::-webkit-scrollbar-track {
-  background: #f1f5ed;
+    background: #f1f5ed;
 }
 *::-webkit-scrollbar-thumb {
-  background: #708571;
-  border: 3px solid #708571;
-  border-radius: 12px;
+    background: #708571;
+    border: 3px solid #708571;
+    border-radius: 12px;
 }
 
 .container {
-  width: 100%;
-  max-width: 1520px;
-  margin: auto;
+    width: 100%;
+    max-width: 1520px;
+    margin: auto;
 }
 /* header */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .header_inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .header_cart {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 .cart_icon img {
-  padding: 15px 21px;
-  background: rgba(112, 133, 113, 0.2);
-  border-radius: 8px;
+    padding: 15px 21px;
+    background: rgba(112, 133, 113, 0.2);
+    border-radius: 8px;
 }
 .cart_icon img:hover {
-  background-color: rgba(112, 133, 113, 0.5);
-  transition: 0.8s;
+    background-color: rgba(112, 133, 113, 0.5);
+    transition: 0.8s;
 }
 .cart_count {
-  position: absolute;
-  background-color: #708571;
-  color: #ffffff;
-  border-radius: 6px;
-  padding: 3px 6px;
-  right: 4px;
-  bottom: 45px;
-  font-size: 12px;
-  font-weight: 500;
+    position: absolute;
+    background-color: #708571;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 3px 6px;
+    right: 4px;
+    bottom: 45px;
+    font-size: 12px;
+    font-weight: 500;
 }
 .header_logo img {
-  margin: auto;
-  width: 115px;
-  height: 50px;
+    margin: auto;
+    width: 115px;
+    height: 50px;
 }
 .header_logo {
-  margin: auto;
+    margin: auto;
 }
 /* header end */
 
 /* main page */
 /* banner */
 .main {
-  background-image: url('../assets/img/main.jpg');
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
+    background-image: url("../assets/img/main.jpg");
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
 }
 .content_main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 20px;
 }
+
+.content_main h3 {
+    text-align: center;
+}
+
 .title_main {
-  font-size: 76px;
-  font-weight: 700;
-  color: #708571;
-  width: 780px;
+    font-size: 76px;
+    font-weight: 700;
+    color: #708571;
+    width: 780px;
+    text-align: center;
 }
 .subtitle_button {
-  margin-top: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 760px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 760px;
 }
 .subtitle_button h3 {
-  font-size: 20px;
-  color: #2a2a2f;
-  width: 380px;
+    font-size: 20px;
+    color: #2a2a2f;
+    width: 380px;
 }
 .button_style {
-  padding: 17px 47px;
-  background-color: #708571;
-  border-radius: 8px;
-  color: #ffffff;
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  text-decoration: none;
+    padding: 17px 47px;
+    background-color: #708571;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    text-decoration: none;
 }
 .button_style:hover {
-  background-color: #d3ded4;
-  color: #708571;
-  transition: 0.5s;
+    background-color: #d3ded4;
+    color: #708571;
+    transition: 0.5s;
 }
 /* banner end*/
 /* popular products */
 
 .popular_products {
-  padding-top: 96px;
-  padding-bottom: 96px;
-  box-sizing: border-box;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    box-sizing: border-box;
 }
 .headtitle_style {
-  color: #4a5743;
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 96px;
+    color: #4a5743;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 96px;
 }
 
 .content_popular-products {
-  width: 100%;
-  overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 }
 
 .swiper-wrapper {
-  display: flex;
-  transition: transform 0.3s ease;
+    display: flex;
+    transition: transform 0.3s ease;
 }
 
 .swiper-slide {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  display: flex !important;
-  justify-content: center;
-  cursor: pointer;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .swiper-hidden-slide {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .popular_product_item {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  height: 420px;
-  width: 300px;
-  border-radius: 18px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 420px;
+    width: 300px;
+    border-radius: 18px;
 }
 
 .popular_product_item_image {
-  height: 420px;
-  width: 100%;
-  border-radius: 18px;
-  transition: 1s;
-  display: block;
-  object-fit: cover;
-  filter: brightness(0.6);
+    height: 420px;
+    width: 100%;
+    border-radius: 18px;
+    transition: 1s;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.6);
 }
 .popular_product_item_image:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 .popular_product_item_text {
-  color: #fff;
-  position: absolute;
-  left: 24px;
-  bottom: 24px;
-  font-weight: 500;
-  font-size: 26px;
+    color: #fff;
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    font-weight: 500;
+    font-size: 26px;
 }
 .name_item {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 /* popular products end*/
 
 /* catalog category */
 .catalog_category {
-  padding-top: 96px;
-  padding-bottom: 96px;
-  box-sizing: border-box;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    box-sizing: border-box;
 }
 .content_catalog-category {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 40px;
-  row-gap: 62px;
-  padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0;
 }
 .content_catalog-category a {
-  text-decoration: none;
+    text-decoration: none;
 }
 .item {
-  height: 226px;
-  width: 540px;
-  border-radius: 18px;
-  background-size: cover;
-  background-position: center;
-  box-sizing: border-box;
-  padding: 36px;
-  filter: brightness(100%);
+    height: 226px;
+    width: 540px;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    padding: 36px;
+    filter: brightness(100%);
 }
 
 .item:hover {
-  filter: brightness(95%);
-  transition: all 0.3s ease 0s;
+    filter: brightness(95%);
+    transition: all 0.3s ease 0s;
 }
 .title {
-  color: #708571;
-  font-size: 36px;
-  font-weight: 600;
+    color: #708571;
+    font-size: 36px;
+    font-weight: 600;
 }
 
 .item:nth-child(6n + 2),
 .item:nth-child(6n + 4) {
-  width: 360px;
+    width: 360px;
 }
 
 /* catalog category end */
 
 /* footer */
 .footer {
-  background: rgba(112, 133, 113, 0.7);
-  padding-top: 96px;
-  padding-bottom: 96px;
-  box-sizing: border-box;
+    background: rgba(112, 133, 113, 0.7);
+    padding-top: 96px;
+    padding-bottom: 96px;
+    box-sizing: border-box;
 }
 .footer_logo img {
-  width: 160px;
-  height: 60px;
+    width: 160px;
+    height: 60px;
 }
 .content_footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 .ask_questions {
-  margin-top: 42px;
+    margin-top: 42px;
 }
 .ask_questions p {
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 28px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 28px;
 }
 .nav-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 120px;
 }
 .nav-list {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  row-gap: 12px;
+    row-gap: 12px;
 }
 .nav-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
 }
 .nav-link:nth-child(1) {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
 }
 .nav-link:hover {
-  color: #4a5743;
+    color: #4a5743;
 }
 /* footer end*/
 
@@ -436,1119 +443,1158 @@ body {
 /* sign_up and forms */
 
 .form_sign_in {
-  background-image: url('../assets/img/main.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
+    background-image: url("../assets/img/main.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
 }
 .content_form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 150px;
-  padding-bottom: 90px;
-  box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 90px;
+    box-sizing: border-box;
 }
 .title_form {
-  text-align: center;
-  font-size: 36px;
-  color: #708571;
-  font-weight: 700;
-  width: 40%;
+    text-align: center;
+    font-size: 36px;
+    color: #708571;
+    font-weight: 700;
+    width: 40%;
 }
 .form_style {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 38px;
-  row-gap: 28px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 38px;
+    row-gap: 28px;
 }
 .input_label {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .input_label .label_style {
-  font-size: 16px;
-  font-weight: 500;
-  color: #4a5743;
-  margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4a5743;
+    margin-bottom: 10px;
 }
 .input_style {
-  padding: 17px;
-  width: 350px;
-  background-color: #d3ded4;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  color: #4a5743;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
+    padding: 17px;
+    width: 350px;
+    background-color: #d3ded4;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #4a5743;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_style_recipe {
-  padding: 17px;
-  width: 350px;
-  background-color: #d3ded4;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  color: #4a5743;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
+    padding: 17px;
+    width: 350px;
+    background-color: #d3ded4;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #4a5743;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_style::placeholder {
-  color: #828284;
-  font-size: 18px;
-  font-weight: 500;
+    color: #828284;
+    font-size: 18px;
+    font-weight: 500;
 }
 .form_button_style {
-  padding: 17px 47px;
-  background-color: #708571;
-  border-radius: 8px;
-  color: #ffffff;
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  margin-top: 10px;
+    padding: 17px 47px;
+    background-color: #708571;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    margin-top: 10px;
 }
 .question_form {
-  color: #2a2a2f;
-  font-weight: 400;
-  margin-top: 16px;
+    color: #2a2a2f;
+    font-weight: 400;
+    margin-top: 16px;
 }
 .question_form a {
-  color: #708571;
-  font-weight: 500;
+    color: #708571;
+    font-weight: 500;
 }
 .description_form {
-  color: #2a2a2f;
-  font-weight: 400;
-  margin-top: 16px;
-  width: 380px;
-  text-align: center;
+    color: #2a2a2f;
+    font-weight: 400;
+    margin-top: 16px;
+    width: 380px;
+    text-align: center;
 }
 .input_style_image {
-  display: none;
+    display: none;
 }
 .visible_input {
-  padding: 17px;
-  width: 350px;
-  background-color: #d3ded4;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  color: #828284;
-  font-size: 16px;
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
+    padding: 17px;
+    width: 350px;
+    background-color: #d3ded4;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #828284;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Fira Sans", sans-serif;
 }
 .option_style {
-  border: none;
-  outline: none;
-  margin-top: 14px;
+    border: none;
+    outline: none;
+    margin-top: 14px;
 }
 .select_style {
-  padding: 17px;
-  width: 384px;
-  background-color: #d3ded4;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  color: #4a5743;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
+    padding: 17px;
+    width: 384px;
+    background-color: #d3ded4;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #4a5743;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_group {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 
-  justify-content: center;
-  column-gap: 12px;
+    justify-content: center;
+    column-gap: 12px;
 }
 
 .added_products {
-  box-sizing: border-box;
-  gap: 15px;
-  max-width: 400px;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+    box-sizing: border-box;
+    gap: 15px;
+    max-width: 400px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .added-product {
-  box-sizing: border-box;
-  width: 45%;
-  height: auto;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #d3ded4;
+    box-sizing: border-box;
+    width: 45%;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #d3ded4;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .added-product img {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
 }
 
 .added-product span {
-  text-align: center;
-  font-weight: 500;
-  color: #4a5743;
+    text-align: center;
+    font-weight: 500;
+    color: #4a5743;
 }
 
 #products-dropdown {
-  box-sizing: border-box;
-  width: 100%;
-  background-color: #d3ded4;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #d3ded4;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
 
-  max-height: 400px;
-  overflow-y: scroll;
-  margin-top: 15px;
-  border-radius: 8px;
+    max-height: 400px;
+    overflow-y: scroll;
+    margin-top: 15px;
+    border-radius: 8px;
 }
 
 .products-dropdown-item {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-  color: #2a2a2f;
-  font-size: 14px;
-  border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    color: #2a2a2f;
+    font-size: 14px;
+    border-radius: 8px;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .products-dropdown-item:hover {
-  background-color: #708571;
+    background-color: #708571;
 }
 
 .input_style_group {
-  padding: 17px;
-  width: 53px;
-  background-color: #d3ded4;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  color: #4a5743;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
+    padding: 17px;
+    width: 53px;
+    background-color: #d3ded4;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #4a5743;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Fira Sans", sans-serif;
 }
 .caloric_value_input {
-  font-size: 18px;
-  font-weight: 500;
-  color: #4a5743;
-  text-align: left;
-  margin-bottom: 28px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    text-align: left;
+    margin-bottom: 28px;
 }
 .add_step_link {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-family: 'Fira Sans', sans-serif;
-  color: #4a5743;
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 14px;
-  column-gap: 8px;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  background: none;
-  padding: 0;
-  cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Fira Sans", sans-serif;
+    color: #4a5743;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 14px;
+    column-gap: 8px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
 }
 /* end forms */
 
 /* catalog */
 
 .catalog_selected_category {
-  padding-top: 180px;
-  padding-bottom: 96px;
-  box-sizing: border-box;
+    padding-top: 180px;
+    padding-bottom: 96px;
+    box-sizing: border-box;
 }
 .header_catalog_selected_category {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .header_some_pages {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .headtitle_style_search {
-  color: #4a5743;
-  font-size: 48px;
-  font-weight: 700;
+    color: #4a5743;
+    font-size: 48px;
+    font-weight: 700;
 }
 .form_search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #d3ded4;
-  padding: 4px 6px;
-  border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3ded4;
+    padding: 4px 6px;
+    border-radius: 8px;
 }
 .search_button {
-  background-color: #d3ded4;
-  border: none;
-  outline: none;
+    background-color: #d3ded4;
+    border: none;
+    outline: none;
 }
 .content_catalog_selected {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 96px;
-  margin-top: 96px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 96px;
+    margin-top: 96px;
 }
 .category_list {
-  display: flex;
-  row-gap: 14px;
-  flex-direction: column;
+    display: flex;
+    row-gap: 14px;
+    flex-direction: column;
 }
 .category_list_item {
-  text-decoration: none;
-  color: #708571;
-  font-size: 24px;
-  font-weight: 600;
-  padding: 12px 16px;
-  width: 280px;
+    text-decoration: none;
+    color: #708571;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 12px 16px;
+    width: 280px;
 }
 .category_list_item.active {
-  background-color: #d3ded4;
-  border-radius: 8px;
+    background-color: #d3ded4;
+    border-radius: 8px;
 }
 .category_list_item:hover {
-  background-color: #d3ded4;
-  border-radius: 8px;
+    background-color: #d3ded4;
+    border-radius: 8px;
 }
 .catalog_products_list {
-  display: grid;
-  grid-template-columns: repeat(4, 270px);
-  align-self: self-start;
-  gap: 38px;
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    align-self: self-start;
+    gap: 38px;
 }
 .product_item a {
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .product_item {
-  padding: 24px 22px;
-  background-color: #d3ded4;
-  border-radius: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  cursor: pointer;
+    padding: 24px 22px;
+    background-color: #d3ded4;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
 }
 
 .wrapper_product_item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 14px;
 }
 .name_product {
-  color: #4a5743;
-  font-size: 24px;
-  font-weight: 600;
-  width: 160px;
+    color: #4a5743;
+    font-size: 24px;
+    font-weight: 600;
+    width: 160px;
 }
 .weight_product {
-  color: #4a5743;
-  font-size: 20px;
-  font-weight: 500;
+    color: #4a5743;
+    font-size: 20px;
+    font-weight: 500;
 }
 .caloric_value_product_item {
-  color: #4a5743;
-  font-size: 14px;
-  font-weight: 500;
+    color: #4a5743;
+    font-size: 14px;
+    font-weight: 500;
 }
-.open_button {
-  text-decoration: none;
-  color: #4a5743;
-  font-size: 14px;
-  font-weight: 500;
-}
-.button_product_item {
-  text-decoration: none;
-  color: #ffffff;
-  border-radius: 8px;
-  background-color: #708571;
-  padding: 18px 70px;
-  font-size: 20px;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  margin-top: 24px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  width: 100%;
 
-  transition: opacity 0.2s ease-in-out;
+.open_button {
+    text-decoration: none;
+    color: #4a5743;
+    font-size: 14px;
+    font-weight: 500;
+
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+.product-acc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.product-acc-item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #708571;
+}
+
+.button_product_item {
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 8px;
+    background-color: #708571;
+    padding: 18px 70px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+
+    transition: opacity 0.2s ease-in-out;
 }
 
 .button_product_item:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .counter-container {
-  box-sizing: border-box;
-  max-height: 59.73px;
-  background: #708571;
-  border-radius: 8px;
-  width: 100%;
+    box-sizing: border-box;
+    max-height: 59.73px;
+    background: #708571;
+    border-radius: 8px;
+    width: 100%;
 
-  padding: 10px 28px;
+    padding: 10px 28px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  margin-top: 24px;
+    margin-top: 24px;
 }
 
 .counter-in-product {
-  width: 226px;
+    width: 226px;
 }
 
 .disable-counter {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
 .counter-container button {
-  background-color: inherit;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: "Fira Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
 
-  transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .counter-container button:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .counter-container span {
-  color: #ffffff;
-  font-family: 'Fira Sans';
-  font-weight: 600;
-  font-size: 24px;
+    color: #ffffff;
+    font-family: "Fira Sans";
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.counter-container-cart {
+    margin-top: 0;
+    background: #d3ded4;
+    border-radius: 8px;
+
+    padding: 10px 20px;
+    width: 147px;
+}
+
+.counter-container-cart button {
+    color: #4a5743;
+}
+
+.counter-container-cart span {
+    color: #4a5743;
 }
 
 .button_cart_add {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
-  background-color: #708571;
-  border: none;
-  outline: none;
-  cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #708571;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 .product_item_image {
-  width: 194px;
-  height: 194px;
-  margin-bottom: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    width: 194px;
+    height: 194px;
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .catalog-empty-wrapper {
-  width: 100%;
+    width: 100%;
 }
 
 .catalog-empty-text {
-  padding: 15px;
-  background-color: #d3ded4;
-  border-radius: 8px;
-  text-align: center;
-  width: 100%;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 58px;
-  color: #4a5743;
+    padding: 15px;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 58px;
+    color: #4a5743;
 }
 
 /* catalog end*/
 
 /* one_product */
 .one_product {
-  padding-top: 180px;
-  padding-bottom: 96px;
-  box-sizing: border-box;
+    padding-top: 180px;
+    padding-bottom: 96px;
+    box-sizing: border-box;
 }
 .content_one_product {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .caloric_value_one_product {
-  display: flex;
-  flex-direction: column;
-  row-gap: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
 }
 .caloric_value_name {
-  color: #4a5743;
-  font-size: 26px;
-  font-weight: 600;
+    color: #4a5743;
+    font-size: 26px;
+    font-weight: 600;
 }
 .caloric_value_data_list {
-  display: flex;
+    display: flex;
 
-  column-gap: 54px;
+    column-gap: 54px;
 }
 .caloric_value_data_item {
-  background-color: #d3ded4;
-  padding: 26px 32px;
-  border-radius: 18px;
+    background-color: #d3ded4;
+    padding: 26px 32px;
+    border-radius: 18px;
 }
 .caloric_value_number_data {
-  font-size: 22px;
-  color: #2a2a2f;
-  font-weight: 600;
-  margin-bottom: 12px;
+    font-size: 22px;
+    color: #2a2a2f;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 .caloric_value_name_data {
-  font-size: 22px;
-  color: #4a5743;
-  font-weight: 600;
+    font-size: 22px;
+    color: #4a5743;
+    font-weight: 600;
 }
 .slider_wrapper {
-  border-radius: 32px;
-  display: flex;
-  gap: 20px;
+    border-radius: 32px;
+    display: flex;
+    gap: 20px;
 }
 
 .product-image-wrapper-big {
-  background: #cdd8ce;
-  border-radius: 32px;
+    background: #cdd8ce;
+    border-radius: 32px;
 }
 
 .product-big-image {
-  width: 565px;
-  height: 565px;
-  padding: 28px 20px;
-  object-fit: cover;
+    width: 565px;
+    height: 565px;
+    padding: 28px 20px;
+    object-fit: cover;
 }
 
 .product__images {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .product-image-wrapper {
-  padding: 8px;
-  background: #d3ded4;
-  border-radius: 18px;
-  cursor: pointer;
+    padding: 8px;
+    background: #d3ded4;
+    border-radius: 18px;
+    cursor: pointer;
 
-  transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .active-image-wrapper {
-  background-color: #708571;
+    background-color: #708571;
 }
 
 .product-mini-img {
-  box-sizing: border-box;
-  width: 132px;
-  height: 132px;
-  object-fit: cover;
+    box-sizing: border-box;
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
 }
 
 .specifications_one_product_list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 54px;
-  margin-top: 54px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 54px;
+    margin-top: 54px;
 }
 .specifications_item {
-  display: flex;
-  flex-direction: column;
-  row-gap: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
 }
 .specifications_item_name {
-  font-size: 22px;
-  color: #708571;
-  font-weight: 600;
+    font-size: 22px;
+    color: #708571;
+    font-weight: 600;
 }
 .specifications_item_description {
-  color: #2a2a2f;
-  font-size: 20px;
-  font-weight: 400;
-  width: 700px;
+    color: #2a2a2f;
+    font-size: 20px;
+    font-weight: 400;
+    width: 700px;
 }
 .hide_show_button_one_product {
-  color: #4a5743;
-  text-decoration: none;
-  display: flex;
-  justify-content: flex-end;
-  align-self: flex-end;
-  font-size: 22px;
-  font-weight: 600;
+    color: #4a5743;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    font-size: 22px;
+    font-weight: 600;
 
-  margin-top: 20px;
-  border: 0;
-  background-color: inherit;
-  cursor: pointer;
+    margin-top: 20px;
+    border: 0;
+    background-color: inherit;
+    cursor: pointer;
 }
 .one_product_item_price {
-  font-size: 32px;
-  color: #4a5743;
-  font-weight: 600;
-  margin-top: 54px;
-  margin-bottom: 38px;
+    font-size: 32px;
+    color: #4a5743;
+    font-weight: 600;
+    margin-top: 54px;
+    margin-bottom: 38px;
 }
 .description_one_product {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 /* one_product end */
 
 /* user profile */
 .user_profile {
-  padding-top: 180px;
-  padding-bottom: 90px;
-  box-sizing: border-box;
+    padding-top: 180px;
+    padding-bottom: 90px;
+    box-sizing: border-box;
 }
 .button_log_out {
-  background-color: #d3ded4;
-  color: #4a5743;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 24px;
-  padding: 18px 52px;
-  text-decoration: none;
+    background-color: #d3ded4;
+    color: #4a5743;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 18px 52px;
+    text-decoration: none;
 }
 .content_user-profile {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 54px;
 }
 .user-profile_information {
-  display: flex;
-  flex-direction: column;
-  row-gap: 38px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 38px;
 }
 .title_user_style {
-  font-size: 36px;
-  font-weight: 600;
-  color: #4a5743;
+    font-size: 36px;
+    font-weight: 600;
+    color: #4a5743;
 }
 .user-profile_information_list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 14px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
 }
 .user_profile_item {
-  padding: 10px 16px;
-  background-color: #d3ded4;
-  border-radius: 8px;
-  width: 460px;
+    padding: 10px 16px;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    width: 460px;
 }
 .field_name {
-  font-size: 16px;
-  font-weight: 500;
-  color: #828284;
+    font-size: 16px;
+    font-weight: 500;
+    color: #828284;
 }
 .user_data {
-  font-size: 18px;
-  font-weight: 500;
-  color: #4a5743;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
 }
 .delete_button {
-  font-size: 18px;
-  color: #828284;
-  font-weight: 500;
-  display: flex;
-  justify-content: flex-end;
-  text-decoration: none;
-  background-color: #f1f5ed;
+    font-size: 18px;
+    color: #828284;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    background-color: #f1f5ed;
 }
 .user_profile_orders_list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 38px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 38px;
 }
 .user_profile_order_item {
-  padding: 24px;
-  background-color: #d3ded4;
-  border-radius: 18px;
-  width: 720px;
+    padding: 24px;
+    background-color: #d3ded4;
+    border-radius: 18px;
+    width: 720px;
 }
 .order_information_user div {
-  display: flex;
-  column-gap: 8px;
+    display: flex;
+    column-gap: 8px;
 }
 .order_information_user {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 
-  align-items: center;
+    align-items: center;
 }
 .inf {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
 }
 .order_text_style {
-  font-size: 18px;
-  color: #828284;
-  font-weight: 500;
+    font-size: 18px;
+    color: #828284;
+    font-weight: 500;
 }
 .status_value_user {
-  padding: 12px 38px;
-  background-color: #708571;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 18px;
+    padding: 12px 38px;
+    background-color: #708571;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 18px;
 }
 .open_button_user {
-  display: flex;
-  margin-top: 38px;
-  justify-content: flex-end;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #4a5743;
+    display: flex;
+    margin-top: 38px;
+    justify-content: flex-end;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #4a5743;
 }
 /* user profile end */
 
 /* admin  */
 .content_admin {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 .admin_tabs_list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
 }
 .tab_item {
-  padding: 18px 55px;
-  background-color: #d3ded4;
-  color: #4a5743;
-  border: none;
-  outline: none;
-  font-size: 22px;
-  font-weight: 600;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    padding: 18px 55px;
+    background-color: #d3ded4;
+    color: #4a5743;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .select_style_admin {
-  padding: 14px;
-  width: 240px;
-  background-color: #708571;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
-  text-decoration: none;
+    padding: 14px;
+    width: 240px;
+    background-color: #708571;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Fira Sans", sans-serif;
+    text-decoration: none;
 }
 .header_admin_order_item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 12px;
 }
 .content_admin_order_item {
-  padding: 24px 38px;
-  background-color: #d3ded4;
-  border-radius: 18px;
-  width: 900px;
+    padding: 24px 38px;
+    background-color: #d3ded4;
+    border-radius: 18px;
+    width: 900px;
 }
 .user_name_order_item {
-  font-size: 18px;
-  color: #4a5743;
-  font-weight: 500;
+    font-size: 18px;
+    color: #4a5743;
+    font-weight: 500;
 }
 .admin_order_item {
-  margin-top: 38px;
+    margin-top: 38px;
 }
 
 .tab_item.active {
-  color: #ffffff;
-  background-color: #708571;
-  text-decoration: none;
+    color: #ffffff;
+    background-color: #708571;
+    text-decoration: none;
 }
 .input_style_admin {
-  padding: 17px;
-  width: 240px;
-  background-color: #d3ded4;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  color: #4a5743;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
+    padding: 17px;
+    width: 240px;
+    background-color: #d3ded4;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #4a5743;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Fira Sans", sans-serif;
 }
 .name_order_item {
-  font-size: 22px;
-  font-weight: 600;
-  color: #2a2a2f;
-  text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2a2a2f;
+    text-align: left;
 }
 .content_admin_user_item {
-  background-color: #d3ded4;
-  border-radius: 8px;
-  padding: 8px 14px;
-  width: 1000px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    padding: 8px 14px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .data_user_information {
-  color: #4a5743;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: left;
+    color: #4a5743;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
 }
 .header_admin_user_item {
-  display: flex;
-  justify-content: space-between;
-  padding: 14px 14px;
-  margin-top: 54px;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 14px;
+    margin-top: 54px;
 }
 .data_user_information:nth-child(1) {
-  width: 30px;
+    width: 30px;
 }
 .data_user_information:nth-child(2) {
-  width: 80px;
+    width: 80px;
 }
 .data_user_information:nth-child(3) {
-  width: 220px;
+    width: 220px;
 }
 .data_user_information:nth-child(4) {
-  width: 140px;
+    width: 140px;
 }
 .name_order_item:nth-child(1) {
-  width: 30px;
+    width: 30px;
 }
 .name_order_item:nth-child(2) {
-  width: 80px;
+    width: 80px;
 }
 .name_order_item:nth-child(3) {
-  width: 220px;
+    width: 220px;
 }
 .name_order_item:nth-child(4) {
-  width: 140px;
+    width: 140px;
 }
 .name_order_item:nth-child(5) {
-  width: 180px;
+    width: 180px;
 }
 .admin_order_list {
-  display: flex;
-  flex-direction: column;
-  column-gap: 14px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 14px;
 }
 .admin_user_item {
-  margin-bottom: 24px;
+    margin-bottom: 24px;
 }
 .data_category_information {
-  color: #4a5743;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: left;
-  display: flex;
+    color: #4a5743;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
 
-  align-items: flex-end;
+    align-items: flex-end;
 
-  background-color: #d3ded4;
-  border: none;
-  outline: none;
-  font-family: 'Fira Sans', sans-serif;
+    background-color: #d3ded4;
+    border: none;
+    outline: none;
+    font-family: "Fira Sans", sans-serif;
 }
 .data_category_information:nth-child(3) {
-  width: 220px;
+    width: 220px;
 }
 .data_category_information:nth-child(2) {
-  width: 280px;
+    width: 280px;
 }
 
 .name_category_item {
-  font-size: 22px;
-  font-weight: 600;
-  color: #2a2a2f;
-  text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2a2a2f;
+    text-align: left;
 }
 .name_category_item:nth-child(1) {
-  width: 120px;
+    width: 120px;
 }
 .name_category_item:nth-child(2) {
-  width: 280px;
+    width: 280px;
 }
 .name_category_item:nth-child(3) {
-  width: 220px;
+    width: 220px;
 }
 .name_category_item:nth-child(4) {
-  width: 260px;
+    width: 260px;
 }
 .category_list_admin {
-  width: 380px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 .edit_buttons {
-  padding: 8px 11px;
-  background-color: #708571;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
-  text-decoration: none;
+    padding: 8px 11px;
+    background-color: #708571;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Fira Sans", sans-serif;
+    text-decoration: none;
 }
 .buttons_admin_delete_edit a {
-  text-decoration: none;
+    text-decoration: none;
 }
 .buttons_admin_delete_edit {
-  width: 260px;
-  display: flex;
-  justify-content: flex-end;
-  column-gap: 8px;
+    width: 260px;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 8px;
 }
 .name_product_item {
-  font-size: 22px;
-  font-weight: 600;
-  color: #2a2a2f;
-  text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2a2a2f;
+    text-align: left;
 }
 .data_product_information {
-  color: #4a5743;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: left;
+    color: #4a5743;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
 }
 .name_product_item:nth-child(1) {
-  width: 30px;
+    width: 30px;
 }
 .data_product_information:nth-child(1) {
-  width: 30px;
+    width: 30px;
 }
 
 .name_product_item:nth-child(2) {
-  width: 160px;
+    width: 160px;
 }
 .image_product_admin {
-  width: 160px;
+    width: 160px;
 }
 .image_product_admin img {
-  width: 60px;
-  height: 65px;
-  padding: 4px;
-  background-color: #708571;
-  border-radius: 8px;
+    width: 60px;
+    height: 65px;
+    padding: 4px;
+    background-color: #708571;
+    border-radius: 8px;
 }
 .name_product_item:nth-child(3) {
-  width: 165px;
+    width: 165px;
 }
 .data_product_information:nth-child(3) {
-  width: 165px;
+    width: 165px;
 }
 .name_product_item:nth-child(4) {
-  width: 65px;
+    width: 65px;
 }
 .data_product_information:nth-child(4) {
-  width: 65px;
+    width: 65px;
 }
 .name_product_item:nth-child(5) {
-  width: 65px;
+    width: 65px;
 }
 .data_product_information:nth-child(5) {
-  width: 65px;
+    width: 65px;
 }
 .name_product_item:nth-child(6) {
-  width: 260px;
+    width: 260px;
 }
 .buttons_wrapper_moderator {
-  display: flex;
-  flex-direction: row;
-  column-gap: 24px;
-  margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    margin-top: 24px;
 }
 .button_moderator_recipes_2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  column-gap: 14px;
-  background-color: #708571;
-  border-radius: 8px;
-  padding: 14px 21px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 14px;
+    background-color: #708571;
+    border-radius: 8px;
+    padding: 14px 21px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
 }
 .button_moderator_recipes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  column-gap: 14px;
-  background-color: #708571;
-  border-radius: 8px;
-  padding: 14px 21px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 14px;
+    background-color: #708571;
+    border-radius: 8px;
+    padding: 14px 21px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
 }
 .change_status_order_admin {
-  padding: 14px 38px;
-  background-color: #708571;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 500;
-  border-radius: 8px;
+    padding: 14px 38px;
+    background-color: #708571;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 8px;
 }
 
 #openRulesButton {
-  margin: 20px 0;
-  font-size: 16px;
+    margin: 20px 0;
+    font-size: 16px;
 
-  transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 #openRulesButton:hover {
-  color: #708571;
+    color: #708571;
 }
 
 .rules_list {
-  max-width: 600px;
-  width: 100%;
+    max-width: 600px;
+    width: 100%;
 }
 
 .rules_list li {
-  margin: 10px 0;
-  font-size: 16px;
-  line-height: 150%;
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 150%;
 }
 
 .rules_list li span {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 .rules-btn {
-  justify-content: center !important;
+    justify-content: center !important;
 }
 
 /* my recipes */
 
 .moderate_recipes {
-  width: 100%;
-  padding: 200px 0;
+    width: 100%;
+    padding: 200px 0;
 }
 
 .moderate_recipes .container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .recipe_status {
-  box-sizing: border-box;
-  margin-bottom: 40px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
 
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .recipe_status_btns {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .time-recipe-flex {
-  position: unset !important;
+    position: unset !important;
 }
 
 .moderate-title {
-  text-align: center;
+    text-align: center;
 }
 
 .myrecipes {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .myrecipes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .myrecipes-item {
-  box-sizing: border-box;
+    box-sizing: border-box;
 
-  display: flex;
-  justify-content: flex-start;
-  gap: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
 
-  max-width: 460px;
-  min-height: 115px;
-  padding: 24px;
-  border-radius: 18px;
-  background-color: #d3ded4;
+    max-width: 460px;
+    min-height: 115px;
+    padding: 24px;
+    border-radius: 18px;
+    background-color: #d3ded4;
 }
 
 .myrecipe-image {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .myrecipe-title {
-  font-size: 18px;
-  font-weight: 500;
-  color: #4a5743;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
 }
 
 /* my recipes end */
@@ -1558,56 +1604,56 @@ body {
 /* push notifications */
 
 #notification-container {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 
-  z-index: 9999;
+    z-index: 9999;
 
-  width: 500px;
-  /* height: 800px; */
+    width: 500px;
+    /* height: 800px; */
 }
 
 .push-notification {
-  background-color: #708571;
-  color: #2a2a2f;
-  border-radius: 8px;
-  opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transform: translateY(-100%);
+    background-color: #708571;
+    color: #2a2a2f;
+    border-radius: 8px;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(-100%);
 
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
 
-  max-width: 430px;
-  width: 100%;
+    max-width: 430px;
+    width: 100%;
 }
 
 .push-notification span {
-  color: #2a2a2f;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+    color: #2a2a2f;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
 
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .push-notification.show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .push-notification.hide {
-  opacity: 0;
-  transform: translateY(-100%);
+    opacity: 0;
+    transform: translateY(-100%);
 }
 
 /* push notifications end */
@@ -1615,525 +1661,521 @@ body {
 /* drawer */
 
 .header_menu {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-  max-width: 40px;
-  width: 100%;
-  cursor: pointer;
-  padding: 10px;
+    max-width: 40px;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
 }
 
 .header_menu_item {
-  width: 100%;
-  height: 3px;
-  border-radius: 8px;
-  background-color: #4a5743;
+    width: 100%;
+    height: 3px;
+    border-radius: 8px;
+    background-color: #4a5743;
 }
 
 #drawer {
-  position: fixed;
-  top: 0;
-  left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-  background-color: #708571;
-  height: 100vh;
-  z-index: 999;
+    background-color: #708571;
+    height: 100vh;
+    z-index: 999;
 }
 
 .drawer_wrapper {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 40px;
-  height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    height: 100%;
 }
 
 .drawer_wrapper_top {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
 }
 
 .drawer_close_wrapper {
-  align-self: flex-end;
-  cursor: pointer;
+    align-self: flex-end;
+    cursor: pointer;
 }
 
 .drawer_title {
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 43px;
-  color: #ffffff;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    color: #ffffff;
 }
 
 .part-of-the-day {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 .drawer_menu {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 
-  width: 100%;
+    width: 100%;
 }
 
 .drawer_menu_item {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 19px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 19px 20px;
 
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 14px;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 8px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
 
-  transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .drawer_menu_item:hover {
-  background-color: rgba(211, 222, 212, 0.5);
+    background-color: rgba(211, 222, 212, 0.5);
 }
 
 .drawer_menu_item span {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
 
-  color: #ffffff;
-  white-space: nowrap;
+    color: #ffffff;
+    white-space: nowrap;
 }
 
 .drawer_logout {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  color: #ffffff;
-  text-decoration: none;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 20px;
 }
 
 .drawer_logout span {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
 
-  color: #ffffff;
-}
-
-.none {
-  display: none;
+    color: #ffffff;
 }
 
 #stepsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 select {
-  resize: none;
+    resize: none;
 }
 
 /* drawer end */
 
 /* cart */
 .cart {
-  padding-top: 180px;
-  padding-bottom: 90px;
-  box-sizing: border-box;
+    padding-top: 180px;
+    padding-bottom: 90px;
+    box-sizing: border-box;
 }
 .delete_all_products {
-  text-decoration: none;
-  padding: 17px 30px;
-  background-color: #d3ded4;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 8px;
+    text-decoration: none;
+    padding: 17px 30px;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
 }
 .delete_all_products p {
-  color: #4a5743;
-  font-size: 22px;
-  font-weight: 500;
+    color: #4a5743;
+    font-size: 22px;
+    font-weight: 500;
 }
 .cart_products_list {
-  width: 840px;
-  display: flex;
-  flex-direction: column;
-  gap: 38px;
+    width: 840px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
 }
 .cart_product_item {
-  display: flex;
-  column-gap: 24px;
-  align-items: center;
-  flex-direction: row;
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+    flex-direction: row;
 }
 .cart_product_quantity_name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  width: 565px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 565px;
 }
 .cart-product-item {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  column-gap: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 24px;
 }
 
 .image_cart_product {
-  width: 90px;
-  height: 90px;
-  padding: 12px;
-  background-color: #d3ded4;
-  border-radius: 18px;
+    width: 90px;
+    height: 90px;
+    padding: 12px;
+    background-color: #d3ded4;
+    border-radius: 18px;
 }
 .cart_product_item_name {
-  color: #4a5743;
-  font-size: 20px;
-  font-weight: 600;
+    color: #4a5743;
+    font-size: 20px;
+    font-weight: 600;
 }
 .cart_product_item_price {
-  color: #4a5743;
-  font-size: 22px;
-  font-weight: 500;
-  margin-top: 5px;
+    color: #4a5743;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 5px;
 }
 .changing_quantity {
-  padding: 12px 24px;
-  background-color: #d3ded4;
-  border-radius: 8px;
-  width: 130px;
-  height: 35px;
-  display: none;
+    padding: 12px 24px;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    width: 130px;
+    height: 35px;
+    display: none;
 }
 .content_cart {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 96px;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 96px;
+    align-items: flex-start;
 }
 .content_cart_final_price {
-  padding: 38px;
-  background-color: #d3ded4;
-  border-radius: 18px;
-  width: 500px;
+    padding: 38px;
+    background-color: #d3ded4;
+    border-radius: 18px;
+    width: 500px;
 }
 .final_price_title {
-  font-size: 36px;
-  font-weight: 600;
-  color: #4a5743;
+    font-size: 36px;
+    font-weight: 600;
+    color: #4a5743;
 }
 .cart_final_price_product {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 38px;
 }
 .cart_final_price_product p {
-  font-size: 22px;
-  font-weight: 500;
-  color: #2a2a2f;
+    font-size: 22px;
+    font-weight: 500;
+    color: #2a2a2f;
 }
 .cart_final_price_delivery {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
 }
 .cart_final_price_delivery p {
-  font-size: 22px;
-  font-weight: 500;
-  color: #2a2a2f;
+    font-size: 22px;
+    font-weight: 500;
+    color: #2a2a2f;
 }
 .delivery_price_counter p {
-  font-size: 18px;
-  color: #828284;
-  font-weight: 500;
-  margin-top: 6px;
+    font-size: 18px;
+    color: #828284;
+    font-weight: 500;
+    margin-top: 6px;
 }
 .total_price_cart {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 38px;
-  margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 38px;
+    margin-bottom: 24px;
 }
 .total_price_cart p {
-  font-size: 24px;
-  font-weight: 500;
-  color: #4a5743;
+    font-size: 24px;
+    font-weight: 500;
+    color: #4a5743;
 }
 .button_cart {
-  padding: 18px 100px;
-  background-color: #708571;
-  font-family: 'Fira Sans', sans-serif;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-  font-size: 22px;
-  font-weight: 500;
-  color: #ffffff;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
+    padding: 18px 100px;
+    background-color: #708571;
+    font-family: "Fira Sans", sans-serif;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 .content_cart_final_price {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .cart-empty-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .cart-empty-title {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
 .cart-empty-title span {
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 58px;
-  color: #4a5743;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    color: #4a5743;
 }
 
 .cart-empty-description {
-  margin-top: 24px;
-  margin-bottom: 56px;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 26px;
+    margin-top: 24px;
+    margin-bottom: 56px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
 
-  color: #2a2a2f;
+    color: #2a2a2f;
 }
 
 /* cart end */
 
 /* order */
 .title_order_payment {
-  font-size: 24px;
-  font-weight: 600;
-  color: #4a5743;
-  margin-bottom: 38px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #4a5743;
+    margin-bottom: 38px;
 }
 .input_style_order {
-  padding: 20px 14px;
-  width: 520px;
-  background-color: #d3ded4;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  color: #4a5743;
-  font-family: 'Fira Sans', sans-serif;
-  margin-bottom: 14px;
-  text-decoration: none;
+    padding: 20px 14px;
+    width: 520px;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    font-family: "Fira Sans", sans-serif;
+    margin-bottom: 14px;
+    text-decoration: none;
 }
 .form_style_order {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .input_style_order::placeholder {
-  font-size: 18px;
-  font-weight: 500;
-  color: #4a5743;
-  font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_style_order_address::placeholder {
-  font-size: 18px;
-  font-weight: 500;
-  color: #4a5743;
-  font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    font-family: "Fira Sans", sans-serif;
 }
 .input_style_order_address {
-  padding: 20px 14px;
-  width: 106px;
-  background-color: #d3ded4;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  color: #4a5743;
-  font-family: 'Fira Sans', sans-serif;
-  margin-bottom: 14px;
-  text-decoration: none;
+    padding: 20px 14px;
+    width: 106px;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    font-family: "Fira Sans", sans-serif;
+    margin-bottom: 14px;
+    text-decoration: none;
 }
 .select_style_order {
-  padding: 20px 14px;
-  width: 548px;
-  background-color: #d3ded4;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  color: #4a5743;
-  font-family: 'Fira Sans', sans-serif;
-  margin-bottom: 14px;
-  text-decoration: none;
+    padding: 20px 14px;
+    width: 548px;
+    background-color: #d3ded4;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5743;
+    font-family: "Fira Sans", sans-serif;
+    margin-bottom: 14px;
+    text-decoration: none;
 }
 /* order end */
 
 /* recipe catalog */
 .recipe {
-  padding-top: 180px;
-  padding-bottom: 90px;
-  box-sizing: border-box;
+    padding-top: 180px;
+    padding-bottom: 90px;
+    box-sizing: border-box;
 }
 .tune_filter {
-  padding: 14px;
-  background-color: #708571;
-  border-radius: 8px;
-  border: none;
-  outline: none;
+    padding: 14px;
+    background-color: #708571;
+    border-radius: 8px;
+    border: none;
+    outline: none;
 }
 .filter_open_search {
-  display: flex;
-  flex-direction: row;
-  column-gap: 14px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 14px;
 }
 .content_recipe_list {
-  margin-top: 54px;
+    margin-top: 54px;
 }
 .recipe_item {
-  width: 280px;
-  height: 460px;
-  border-radius: 18px;
-  display: block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-decoration: none;
+    width: 280px;
+    height: 460px;
+    border-radius: 18px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
 }
 
 .filters {
-  margin-top: 55px;
+    margin-top: 55px;
 
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .tooltip {
-  position: absolute;
-  background: #d3ded4;
-  border-radius: 8px;
-  color: #4a5743;
-  padding: 5px 20px;
-  font-weight: 600;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+    position: absolute;
+    background: #d3ded4;
+    border-radius: 8px;
+    color: #4a5743;
+    padding: 5px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .tooltip.visible {
-  opacity: 1;
+    opacity: 1;
 }
 
 .title_recipe {
-  font-size: 26px;
-  font-weight: 500;
-  color: #ffffff;
-  width: 200px;
+    font-size: 26px;
+    font-weight: 500;
+    color: #ffffff;
+    width: 200px;
 }
 
 .content_recipe_list {
-  display: flex;
-  flex-direction: row;
-  column-gap: 24px;
-  row-gap: 54px;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    row-gap: 54px;
+    flex-wrap: wrap;
 }
 .image_recipe {
-  width: 1520px;
-  height: 500px;
-  border-radius: 32px;
-  object-fit: cover;
+    width: 1520px;
+    height: 500px;
+    border-radius: 32px;
+    object-fit: cover;
 }
 
 .filter_title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
-  color: #4a5743;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #4a5743;
 }
 
 .ingridients {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .ingridients_wrapper {
-  max-width: 100%;
+    max-width: 100%;
 
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  /* flex-wrap: wrap; */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* flex-wrap: wrap; */
 }
 
 .ingridient {
-  padding: 14px;
-  background-color: #d3ded4;
-  border-radius: 8px;
+    padding: 14px;
+    background-color: #d3ded4;
+    border-radius: 8px;
 
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .active-ingridient {
-  background: rgba(112, 133, 113, 0.8);
-  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.08);
+    background: rgba(112, 133, 113, 0.8);
+    box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .complexity {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .complexity_wrapper {
-  display: flex;
-  align-items: center;
-  gap: 11px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
 }
 
 .filter-complexity-item {
-  color: #4a5743;
-  background-color: #d3ded4;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+    color: #4a5743;
+    background-color: #d3ded4;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .filter-complexity-item-active {
-  color: #2a2a2f;
-  background: rgba(112, 133, 113, 0.8);
-  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.08);
+    color: #2a2a2f;
+    background: rgba(112, 133, 113, 0.8);
+    box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* recipe catalog end */
@@ -2141,250 +2183,250 @@ select {
 /* recipe */
 
 .recipe-product-span {
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 24px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
 
-  color: #4a5743;
+    color: #4a5743;
 }
 
 .content_recipe {
-  margin-top: 38px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    margin-top: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .ingredients_list_container {
-  background-color: #d3ded4;
-  border-radius: 18px;
-  padding: 38px 24px;
-  width: 420px;
-  margin-top: 54px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 38px;
+    background-color: #d3ded4;
+    border-radius: 18px;
+    padding: 38px 24px;
+    width: 420px;
+    margin-top: 54px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 38px;
 }
 
 .ingredients_list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .description_recipe_item {
-  width: 800px;
-  font-size: 20px;
+    width: 800px;
+    font-size: 20px;
 }
 .content_description_recipe {
-  display: flex;
-  flex-direction: column;
-  row-gap: 38px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 38px;
 }
 .caloric_value_recipe_list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .recipe_steps_content {
-  margin-top: 54px;
+    margin-top: 54px;
 }
 .recipe_step_item {
-  display: flex;
-  flex-direction: column;
-  row-gap: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
 }
 .steps_counter {
-  font-size: 26px;
-  color: #2a2a2f;
-  font-weight: 600;
+    font-size: 26px;
+    color: #2a2a2f;
+    font-weight: 600;
 }
 .description_recipe_step_item {
-  font-size: 20px;
-  color: #2a2a2f;
+    font-size: 20px;
+    color: #2a2a2f;
 }
 .recipe_steps_list {
-  display: grid;
-  grid-template-columns: repeat(2, 700px);
-  row-gap: 38px;
-  column-gap: 120px;
-  margin-top: 54px;
+    display: grid;
+    grid-template-columns: repeat(2, 700px);
+    row-gap: 38px;
+    column-gap: 120px;
+    margin-top: 54px;
 }
 .recipe_item {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  height: 460px;
-  width: 280px;
-  border-radius: 18px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 460px;
+    width: 280px;
+    border-radius: 18px;
 }
 
 .recipe_item_image {
-  height: 460px;
-  width: 280px;
-  border-radius: 18px;
-  transition: 1s;
-  display: block;
-  object-fit: cover;
+    height: 460px;
+    width: 280px;
+    border-radius: 18px;
+    transition: 1s;
+    display: block;
+    object-fit: cover;
 }
 .recipe_item_image:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 .content_recipe_item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 .title_recipe {
-  position: absolute;
-  left: 24px;
-  top: 24px;
+    position: absolute;
+    left: 24px;
+    top: 24px;
 }
 .button_moderator_recipes {
-  position: absolute;
-  left: 24px;
-  bottom: 24px;
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
 }
 /* recipe end */
 
 /* accordion */
 
 .accordionContainer {
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 0;
 }
 
 /* accordion end */
 
 .nonee {
-  display: none !important;
+    display: none !important;
 }
 
 /* modal */
 
 #map {
-  box-sizing: border-box;
-  width: 1252px;
-  height: 495px;
+    box-sizing: border-box;
+    width: 1252px;
+    height: 495px;
 }
 
 .modal {
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal.open {
-  opacity: 1;
-  pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .modal-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  padding: 48px 54px;
-  background: #f1f5ed;
-  border-radius: 32px;
-  opacity: 0;
-  transform: translateY(-50px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 48px 54px;
+    background: #f1f5ed;
+    border-radius: 32px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .modal-title {
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 43px;
-  text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
 
-  color: #4a5743;
+    color: #4a5743;
 }
 
 .modal-description {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #2a2a2f;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2a2a2f;
 }
 
 .modal-btns {
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .modal-btn {
-  padding: 18px 52px;
-  background: #d3ded4;
-  border-radius: 8px;
+    padding: 18px 52px;
+    background: #d3ded4;
+    border-radius: 8px;
 
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  color: #4a5743;
-  font-family: 'Fira Sans';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #4a5743;
+    font-family: "Fira Sans";
 }
 
 .modal-btn-success {
-  background-color: #708571;
-  color: #2a2a2f;
+    background-color: #708571;
+    color: #2a2a2f;
 }
 
 .modal-content.open {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #closeMapModal {
-  background: none;
+    background: none;
 }
 
 .feedback-form {
-  width: 620px;
+    width: 620px;
 }
 
 .modal-textarea {
-  margin-top: 20px;
-  box-sizing: border-box;
-  max-width: 620px;
-  width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+    max-width: 620px;
+    width: 100%;
 }
 
 #message {
-  box-sizing: border-box;
-  width: 100%;
+    box-sizing: border-box;
+    width: 100%;
 
-  resize: none;
+    resize: none;
 }
 
 .close {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* modal end */
@@ -2392,1017 +2434,1019 @@ select {
 /* adaptive */
 
 @media (max-width: 1600px) {
-  .container {
-    max-width: 1300px;
-  }
-  .title_main {
-    font-size: 66px;
-    width: 680px;
-  }
-  .subtitle_button {
-    width: 680px;
-  }
-  .headtitle_style {
-    font-size: 42px;
-  }
-  .headtitle_style_search {
-    font-size: 42px;
-  }
-  .popular_product_item {
-    width: 280px;
-    height: 360px;
-  }
-  .swiper-slide {
-    width: 280px;
-    height: 360px;
-  }
-  .popular_product_item_text {
-    font-size: 22px;
-  }
-  .content_catalog-category {
-    column-gap: 30px;
-  }
-  .item {
-    width: 460px;
-    height: 210px;
-  }
-  .item:nth-child(6n + 4) {
-    width: 300px;
-    height: 210px;
-  }
-  .item:nth-child(6n + 2) {
-    width: 300px;
-    height: 210px;
-  }
-  .title {
-    font-size: 32px;
-  }
-  .recipe_item_image {
-    height: 380px;
-    width: 230px;
-  }
-  .recipe_item {
-    height: 380px;
-    width: 230px;
-  }
-  .content_recipe_list {
-    column-gap: 0px;
-    justify-content: space-between;
-  }
-  .title_recipe {
-    font-size: 22px;
-    width: 170px;
-  }
-  .button_moderator_recipes {
-    font-size: 18px;
-    padding: 12px 18px;
-  }
-  .button_moderator_recipes_2 {
-    padding: 12px 18px;
-    font-size: 18px;
-  }
-  .nav-link {
-    font-size: 18px;
-  }
-  .button_style {
-    padding: 14px 35px;
-  }
-  .tune_filter {
-    padding: 10px;
-  }
-  .input_style {
-    width: 320px;
-  }
-  .input_style_recipe {
-    width: 320px;
-  }
-  .name_product {
-    font-size: 22px;
-    width: 145px;
-  }
-  .catalog_products_list {
-    grid-template-columns: repeat(3, 260px);
-  }
-  .category_list_item {
-    font-size: 22px;
-  }
-  .category_list {
-    row-gap: 10px;
-  }
-  .description_one_product {
-    width: 650px;
-  }
-  .product-big-image {
-    width: 480px;
-    height: 500px;
-  }
-  .content_cart_final_price {
-    width: 420px;
-  }
-  .cart_products_list {
-    width: 700px;
-  }
-  .button_cart {
-    font-size: 20px;
-    padding: 18px 80px;
-  }
-  .delete_all_products {
-    padding: 15px 25px;
-  }
-  .delete_all_products p {
-    font-size: 20px;
-  }
-  .image_recipe {
-    width: 1300px;
-  }
-  .ingredients_list_container {
-    width: 380px;
-  }
-  .description_recipe_item {
-    width: 750px;
-  }
-  .recipe_steps_list {
-    grid-template-columns: repeat(2, 600px);
-  }
-  .content_admin_user_item {
-    width: 900px;
-  }
-  .content_admin_order_item {
-    width: 850px;
-  }
-  .select_style {
-    width: 354px;
-  }
-  .input_group {
-    column-gap: 6px;
-  }
-  .input_style_group {
-    width: 50px;
-  }
-  .description_one_product {
-    width: 560px;
-  }
-  .caloric_value_data_list {
-    column-gap: 38px;
-  }
-  .caloric_value_one_product {
-    width: 560px;
-  }
-  .caloric_value_data_item {
-    padding: 22px 28px;
-  }
-  .specifications_item_description {
-    width: 560px;
-  }
-  .content_one_product {
-    column-gap: 76px;
-    justify-content: flex-start;
-  }
-  .user_profile_item {
-    width: 360px;
-  }
-  .user_profile_order_item {
-    width: 600px;
-  }
+    .container {
+        max-width: 1300px;
+    }
+    .title_main {
+        font-size: 66px;
+        width: 680px;
+    }
+    .subtitle_button {
+        width: 680px;
+    }
+    .headtitle_style {
+        font-size: 42px;
+    }
+    .headtitle_style_search {
+        font-size: 42px;
+    }
+    .popular_product_item {
+        width: 280px;
+        height: 360px;
+    }
+    .swiper-slide {
+        width: 280px;
+        height: 360px;
+    }
+    .popular_product_item_text {
+        font-size: 22px;
+    }
+    .content_catalog-category {
+        gap: 30px;
+    }
+    .item {
+        width: 460px;
+        height: 210px;
+    }
+    .item:nth-child(6n + 4) {
+        width: 300px;
+        height: 210px;
+    }
+    .item:nth-child(6n + 2) {
+        width: 300px;
+        height: 210px;
+    }
+    .title {
+        font-size: 32px;
+    }
+    .recipe_item_image {
+        height: 380px;
+        width: 230px;
+    }
+    .recipe_item {
+        height: 380px;
+        width: 230px;
+    }
+    .content_recipe_list {
+        column-gap: 0px;
+        justify-content: space-between;
+    }
+    .title_recipe {
+        font-size: 22px;
+        width: 170px;
+    }
+    .button_moderator_recipes {
+        font-size: 18px;
+        padding: 12px 18px;
+    }
+    .button_moderator_recipes_2 {
+        padding: 12px 18px;
+        font-size: 18px;
+    }
+    .nav-link {
+        font-size: 18px;
+    }
+    .button_style {
+        padding: 14px 35px;
+    }
+    .tune_filter {
+        padding: 10px;
+    }
+    .input_style {
+        width: 320px;
+    }
+    .input_style_recipe {
+        width: 320px;
+    }
+    .name_product {
+        font-size: 22px;
+        width: 145px;
+    }
+    .catalog_products_list {
+        grid-template-columns: repeat(3, 260px);
+    }
+    .category_list_item {
+        font-size: 22px;
+    }
+    .category_list {
+        row-gap: 10px;
+    }
+    .description_one_product {
+        width: 650px;
+    }
+    .product-big-image {
+        width: 480px;
+        height: 500px;
+    }
+    .content_cart_final_price {
+        width: 420px;
+    }
+    .cart_products_list {
+        width: 700px;
+    }
+    .button_cart {
+        font-size: 20px;
+        padding: 18px 80px;
+    }
+    .delete_all_products {
+        padding: 15px 25px;
+    }
+    .delete_all_products p {
+        font-size: 20px;
+    }
+    .image_recipe {
+        width: 1300px;
+    }
+    .ingredients_list_container {
+        width: 380px;
+    }
+    .description_recipe_item {
+        width: 750px;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(2, 600px);
+    }
+    .content_admin_user_item {
+        width: 900px;
+    }
+    .content_admin_order_item {
+        width: 850px;
+    }
+    .select_style {
+        width: 354px;
+    }
+    .input_group {
+        column-gap: 6px;
+    }
+    .input_style_group {
+        width: 50px;
+    }
+    .description_one_product {
+        width: 560px;
+    }
+    .caloric_value_data_list {
+        column-gap: 38px;
+    }
+    .caloric_value_one_product {
+        width: 560px;
+    }
+    .caloric_value_data_item {
+        padding: 22px 28px;
+    }
+    .specifications_item_description {
+        width: 560px;
+    }
+    .content_one_product {
+        column-gap: 76px;
+        justify-content: flex-start;
+    }
+    .user_profile_item {
+        width: 360px;
+    }
+    .user_profile_order_item {
+        width: 600px;
+    }
 }
 @media (max-width: 1320px) {
-  .container {
-    max-width: 1150px;
-  }
-  .image_recipe {
-    width: 1150px;
-    height: 400px;
-  }
-  .description_recipe_item {
-    width: 600px;
-  }
-  .content_description_recipe {
-    width: 600px;
-  }
-  .ingredients_list_container {
-    width: 390px;
-  }
-  .recipe_steps_list {
-    grid-template-columns: repeat(2, 500px);
-  }
-  .title_main {
-    font-size: 56px;
-  }
-  .nav-footer {
-    column-gap: 90px;
-  }
-  .item {
-    height: 190px;
-    width: 400px;
-  }
-  .item:nth-child(6n + 2) {
-    height: 190px;
-    width: 260px;
-  }
-  .item:nth-child(6n + 4) {
-    height: 190px;
-    width: 260px;
-  }
-  .cart_icon img {
-    padding: 13px 18px;
-  }
-  .product-big-image {
-    width: 400px;
-    height: 420px;
-  }
-  .slider_wrapper {
-    margin-bottom: 60px;
-  }
-  .content_one_product {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .caloric_value_data_list {
-    column-gap: 38px;
-  }
-  .cart_product_item_text {
-    width: 250px;
-  }
-  .cart_products_list {
-    width: 570px;
-  }
-  .content_cart_final_price {
-    width: 390px;
-  }
-  .popular_product_item {
-    width: 260px;
-  }
-  .title_user_style {
-    font-size: 28px;
-  }
-  .button_log_out {
-    padding: 16px 45px;
-    font-size: 20px;
-  }
-  .user_profile_item {
-    width: 330px;
-  }
-  .user_profile_order_item {
-    width: 580px;
-  }
-  .content_recipe_list {
-    column-gap: 18px;
-    justify-content: flex-start;
-  }
-  .recipe_item {
-    width: 215px;
-    height: 375px;
-  }
-  .recipe_item_image {
-    width: 215px;
-    height: 375px;
-  }
-  .catalog_products_list {
-    grid-template-columns: repeat(2, 260px);
-  }
+    .container {
+        max-width: 1150px;
+    }
+    .image_recipe {
+        width: 1150px;
+        height: 400px;
+    }
+    .description_recipe_item {
+        width: 600px;
+    }
+    .content_description_recipe {
+        width: 600px;
+    }
+    .ingredients_list_container {
+        width: 390px;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(2, 500px);
+    }
+    .title_main {
+        font-size: 56px;
+    }
+    .nav-footer {
+        column-gap: 90px;
+    }
+    .item {
+        height: 190px;
+        width: 400px;
+    }
+    .item:nth-child(6n + 2) {
+        height: 190px;
+        width: 260px;
+    }
+    .item:nth-child(6n + 4) {
+        height: 190px;
+        width: 260px;
+    }
+    .cart_icon img {
+        padding: 13px 18px;
+    }
+    .product-big-image {
+        width: 400px;
+        height: 420px;
+    }
+    .slider_wrapper {
+        margin-bottom: 60px;
+    }
+    .content_one_product {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .caloric_value_data_list {
+        column-gap: 38px;
+    }
+    .cart_product_item_text {
+        width: 250px;
+    }
+    .cart_products_list {
+        width: 570px;
+    }
+    .content_cart_final_price {
+        width: 390px;
+    }
+    .popular_product_item {
+        width: 260px;
+    }
+    .title_user_style {
+        font-size: 28px;
+    }
+    .button_log_out {
+        padding: 16px 45px;
+        font-size: 20px;
+    }
+    .user_profile_item {
+        width: 330px;
+    }
+    .user_profile_order_item {
+        width: 580px;
+    }
+    .content_recipe_list {
+        column-gap: 18px;
+        justify-content: flex-start;
+    }
+    .recipe_item {
+        width: 215px;
+        height: 375px;
+    }
+    .recipe_item_image {
+        width: 215px;
+        height: 375px;
+    }
+    .catalog_products_list {
+        grid-template-columns: repeat(2, 260px);
+    }
 }
 @media (max-width: 1150px) {
-  .container {
-    max-width: 950px;
-  }
-  .image_recipe {
-    width: 950px;
-    object-fit: cover;
-  }
-  .recipe_steps_list {
-    grid-template-columns: repeat(1, 700px);
-  }
-  .content_description_recipe {
-    width: 500px;
-  }
-  .description_recipe_item {
-    width: 500px;
-  }
-  .caloric_value_one_product {
-    width: 500px;
-  }
-  .caloric_value_data_item {
-    padding: 18px 24px;
-  }
-  .caloric_value_number_data {
-    font-size: 20px;
-  }
-  .caloric_value_name_data {
-    font-size: 20px;
-  }
-  .ingredients_list_container {
-    width: 350px;
-  }
-  .button_cart {
-    padding: 18px 70px;
-  }
-  .cart_icon img {
-    padding: 10px 15px;
-  }
-  .title_main {
-    font-size: 50px;
-    width: 600px;
-  }
-  .subtitle_button {
-    width: 600px;
-  }
-  .subtitle_button h3 {
-    font-size: 18px;
-    width: 320px;
-  }
-  .button_style {
-    font-size: 16px;
-  }
-  .headtitle_style {
-    font-size: 36px;
-    margin-bottom: 60px;
-  }
-  .headtitle_style_search {
-    font-size: 36px;
-  }
-  .swiper-slide {
-    width: 220px;
-  }
-  .popular_product_item_text {
-    font-size: 20px;
-    width: 185px;
-  }
-  .nav-footer {
-    column-gap: 60px;
-  }
-  .ask_questions p {
-    font-size: 18px;
-  }
-  .button_style {
-    padding: 13px 30px;
-  }
-  .nav-link {
-    font-size: 16px;
-  }
-  .nav-link:nth-child(1) {
-    font-size: 18px;
-  }
-  .item {
-    height: 150px;
-    width: 340px;
-  }
-  .item:nth-child(6n + 2) {
-    height: 150px;
-    width: 200px;
-  }
-  .item:nth-child(6n + 4) {
-    height: 150px;
-    width: 200px;
-  }
-  .title {
-    font-size: 26px;
-  }
-  .content_catalog-category {
-    row-gap: 38px;
-    column-gap: 22px;
-  }
-  .popular_products {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .catalog_category {
-    padding-top: 60px;
-  }
-  .catalog_products_list {
-    grid-template-columns: repeat(2, 250px);
-  }
-  .content_cart {
-    flex-direction: column;
-    width: 100%;
-  }
-  .cart_products_list {
-    width: 100%;
-    margin-bottom: 38px;
-  }
-  .content_cart_final_price {
-    width: 92%;
-  }
-  .cart_product_quantity_name {
-    width: 100%;
-  }
-  .form_style_order {
-    justify-content: center;
-    width: 100%;
-  }
-  .select_style_order {
-    width: 100%;
-    display: flex;
-  }
-  .input_style_order {
-    width: 97%;
-    display: flex;
-  }
-  .input_style_order_address {
-    width: 21%;
-  }
-  .address_inputs_order {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    column-gap: 13px;
-  }
-  .title_order_payment {
-    margin-top: 24px;
-  }
-  .content_user-profile {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .user-profile_information {
-    margin-top: 54px;
-  }
-  .filters {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 24px;
-  }
+    .container {
+        max-width: 950px;
+    }
+    .image_recipe {
+        width: 950px;
+        object-fit: cover;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(1, 700px);
+    }
+    .content_description_recipe {
+        width: 500px;
+    }
+    .description_recipe_item {
+        width: 500px;
+    }
+    .caloric_value_one_product {
+        width: 500px;
+    }
+    .caloric_value_data_item {
+        padding: 18px 24px;
+    }
+    .caloric_value_number_data {
+        font-size: 20px;
+    }
+    .caloric_value_name_data {
+        font-size: 20px;
+    }
+    .ingredients_list_container {
+        width: 350px;
+    }
+    .button_cart {
+        padding: 18px 70px;
+    }
+    .cart_icon img {
+        padding: 10px 15px;
+    }
+    .title_main {
+        font-size: 50px;
+        width: 600px;
+    }
+    .subtitle_button {
+        width: 600px;
+    }
+    .subtitle_button h3 {
+        font-size: 18px;
+        width: 320px;
+    }
+    .button_style {
+        font-size: 16px;
+    }
+    .headtitle_style {
+        font-size: 36px;
+        margin-bottom: 60px;
+    }
+    .headtitle_style_search {
+        font-size: 36px;
+    }
+    .swiper-slide {
+        width: 220px;
+    }
+    .popular_product_item_text {
+        font-size: 20px;
+        width: 185px;
+    }
+    .nav-footer {
+        column-gap: 60px;
+    }
+    .ask_questions p {
+        font-size: 18px;
+    }
+    .button_style {
+        padding: 13px 30px;
+    }
+    .nav-link {
+        font-size: 16px;
+    }
+    .nav-link:nth-child(1) {
+        font-size: 18px;
+    }
+    .item {
+        height: 150px;
+        width: 340px;
+    }
+    .item:nth-child(6n + 2) {
+        height: 150px;
+        width: 200px;
+    }
+    .item:nth-child(6n + 4) {
+        height: 150px;
+        width: 200px;
+    }
+    .title {
+        font-size: 26px;
+    }
+    .content_catalog-category {
+        gap: 22px;
+    }
+    .popular_products {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .catalog_category {
+        padding-top: 60px;
+    }
+    .catalog_products_list {
+        grid-template-columns: repeat(2, 250px);
+    }
+    .content_cart {
+        flex-direction: column;
+        width: 100%;
+    }
+    .cart_products_list {
+        width: 100%;
+        margin-bottom: 38px;
+    }
+    .content_cart_final_price {
+        width: 92%;
+    }
+    .cart_product_quantity_name {
+        width: 100%;
+    }
+    .form_style_order {
+        justify-content: center;
+        width: 100%;
+    }
+    .select_style_order {
+        width: 100%;
+        display: flex;
+    }
+    .input_style_order {
+        width: 97%;
+        display: flex;
+    }
+    .input_style_order_address {
+        width: 21%;
+    }
+    .address_inputs_order {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        column-gap: 13px;
+    }
+    .title_order_payment {
+        margin-top: 24px;
+    }
+    .content_user-profile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-profile_information {
+        margin-top: 54px;
+    }
+    .filters {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 24px;
+    }
 }
 @media (max-width: 950px) {
-  .container {
-    max-width: 700px;
-  }
-  .nav-footer {
-    display: none;
-  }
-  .content_footer {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-  }
-  .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .item {
-    height: 150px;
-    width: 340px;
-  }
-  .item:nth-child(6n + 2) {
-    height: 150px;
-    width: 340px;
-  }
-  .item:nth-child(6n + 4) {
-    height: 150px;
-    width: 340px;
-  }
-  .item:nth-child(even) {
-    height: 150px;
-    width: 210px;
-  }
-  .content_catalog-category {
-    justify-content: center;
-  }
-  .title_main {
-    font-size: 46px;
-    width: 500px;
-  }
-  .subtitle_button {
-    width: 500px;
-  }
-  .headtitle_style {
-    font-size: 28px;
-  }
-  .headtitle_style_search {
-    font-size: 28px;
-  }
-  .category_list {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 38px;
-  }
-  .category_list_item {
-    width: 95%;
-  }
-  .catalog_products_list {
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-  }
-  .catalog-empty-text {
-    font-size: 26px;
-  }
-  .content_catalog_selected {
-    flex-direction: column;
-    margin-top: 60px;
-  }
-  .change_status_order_admin {
-    margin: auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .description_one_product {
-    width: 500px;
-  }
-  .caloric_value_data_item {
-    padding: 18px 24px;
-  }
-  .caloric_value_data_list {
-    column-gap: 12px;
-  }
-  .specifications_item_description {
-    width: 500px;
-  }
-  .one_product_item_price {
-    font-size: 26px;
-  }
-  .content_cart_final_price {
-    width: 89%;
-  }
+    .container {
+        max-width: 700px;
+    }
+    .nav-footer {
+        display: none;
+    }
+    .content_footer {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .item {
+        height: 150px;
+        width: 340px;
+    }
+    .item:nth-child(6n + 2) {
+        height: 150px;
+        width: 340px;
+    }
+    .item:nth-child(6n + 4) {
+        height: 150px;
+        width: 340px;
+    }
+    .item:nth-child(even) {
+        height: 150px;
+        width: 210px;
+    }
+    .content_catalog-category {
+        justify-content: center;
+    }
+    .title_main {
+        font-size: 46px;
+        width: 500px;
+    }
+    .subtitle_button {
+        width: 500px;
+    }
+    .headtitle_style {
+        font-size: 28px;
+    }
+    .headtitle_style_search {
+        font-size: 28px;
+    }
+    .category_list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 38px;
+    }
+    .category_list_item {
+        width: 95%;
+    }
+    .catalog_products_list {
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .catalog-empty-text {
+        font-size: 26px;
+    }
+    .content_catalog_selected {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    .change_status_order_admin {
+        margin: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .description_one_product {
+        width: 500px;
+    }
+    .caloric_value_data_item {
+        padding: 18px 24px;
+    }
+    .caloric_value_data_list {
+        column-gap: 12px;
+    }
+    .specifications_item_description {
+        width: 500px;
+    }
+    .one_product_item_price {
+        font-size: 26px;
+    }
+    .content_cart_final_price {
+        width: 89%;
+    }
 
-  .content_cart {
-    margin-top: 56px;
-  }
-  .input_style_order {
-    width: 96%;
-    display: flex;
-  }
-  .input_style {
-    width: 260px;
-    padding: 15px;
-  }
-  .input_style_recipe {
-    width: 248px;
-    padding: 15px;
-  }
-  .title_form {
-    font-size: 28px;
-    width: 60%;
-  }
-  .form_sign_in {
-    background-image: url(../assets/img/main_adaptive.jpg);
-  }
-  .label_style {
-    max-width: 290px;
-  }
-  .visible_input {
-    width: 260px;
-  }
-  .select_style {
-    width: 290px;
-  }
-  .input_style_group {
-    width: 100px;
-  }
-  .input_group {
-    display: grid;
-    grid-template-columns: repeat(2, 140px);
-    row-gap: 24px;
-    column-gap: 16px;
-  }
-  .image_recipe {
-    width: 700px;
-  }
-  .content_recipe {
-    flex-direction: column;
-  }
-  .ingredients_list_container {
-    width: 650px;
-    margin-bottom: 38px;
-  }
-  .description_recipe_item {
-    width: 700px;
-  }
-  .content_description_recipe {
-    width: 700px;
-  }
-  .caloric_value_one_product {
-    width: 700px;
-  }
-  .caloric_value_data_item {
-    padding: 24px 30px;
-  }
+    .content_cart {
+        margin-top: 56px;
+    }
+    .input_style_order {
+        width: 96%;
+        display: flex;
+    }
+    .input_style {
+        width: 260px;
+        padding: 15px;
+    }
+    .input_style_recipe {
+        width: 248px;
+        padding: 15px;
+    }
+    .title_form {
+        font-size: 28px;
+        width: 60%;
+    }
+    .form_sign_in {
+        background-image: url(../assets/img/main_adaptive.jpg);
+    }
+    .label_style {
+        max-width: 290px;
+    }
+    .visible_input {
+        width: 260px;
+    }
+    .select_style {
+        width: 290px;
+    }
+    .input_style_group {
+        width: 100px;
+    }
+    .input_group {
+        display: grid;
+        grid-template-columns: repeat(2, 140px);
+        row-gap: 24px;
+        column-gap: 16px;
+    }
+    .image_recipe {
+        width: 700px;
+    }
+    .content_recipe {
+        flex-direction: column;
+    }
+    .ingredients_list_container {
+        width: 650px;
+        margin-bottom: 38px;
+    }
+    .description_recipe_item {
+        width: 700px;
+    }
+    .content_description_recipe {
+        width: 700px;
+    }
+    .caloric_value_one_product {
+        width: 700px;
+    }
+    .caloric_value_data_item {
+        padding: 24px 30px;
+    }
 }
 @media (max-width: 700px) {
-  .container {
-    max-width: 600px;
-  }
-  .main {
-    background-image: url(../assets/img/main_adaptive.jpg);
-  }
-  .hide_show_button_one_product {
-    font-size: 18px;
-  }
-  .content_cart_final_price {
-    width: 87%;
-  }
-  .changing_quantity {
-    width: 110px;
-    height: 25px;
-  }
-  .input_style_order {
-    width: 95%;
-    display: flex;
-  }
-  .caloric_value_one_product {
-    width: 400px;
-  }
-  .header_catalog_selected_category {
-    align-items: center;
-    column-gap: 24px;
-    justify-content: center;
-  }
-  .header_some_pages {
-    align-items: center;
-    column-gap: 24px;
-    justify-content: center;
-  }
-  .button_log_out {
-    padding: 12px 30px;
-    font-size: 18px;
-  }
-  .order_information_user {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .inf {
-    margin-bottom: 24px;
-  }
-  .user_profile_order_item {
-    width: 400px;
-  }
-  .user_profile_item {
-    width: 280px;
-  }
-  .delete_button {
-    font-size: 16px;
-  }
-  .slider_wrapper {
-    flex-direction: column-reverse;
-  }
-  .product__images {
-    flex-direction: row;
-  }
-  .image_recipe {
-    width: 600px;
-  }
-  .ingredients_list_container {
-    width: 550px;
-  }
-  .description_recipe_item {
-    width: 600px;
-  }
-  .content_description_recipe {
-    width: 600px;
-  }
-  .caloric_value_recipe_list {
-    width: 600px;
-  }
-  .recipe_steps_list {
-    grid-template-columns: repeat(1, 600px);
-  }
-  .category_list_item {
-    width: 92%;
-  }
+    .container {
+        max-width: 600px;
+    }
+    .main {
+        background-image: url(../assets/img/main_adaptive.jpg);
+    }
+    .hide_show_button_one_product {
+        font-size: 18px;
+    }
+    .content_cart_final_price {
+        width: 87%;
+    }
+    .changing_quantity {
+        width: 110px;
+        height: 25px;
+    }
+    .input_style_order {
+        width: 95%;
+        display: flex;
+    }
+    .caloric_value_one_product {
+        width: 400px;
+    }
+    .header_catalog_selected_category {
+        align-items: center;
+        column-gap: 24px;
+        justify-content: center;
+    }
+    .header_some_pages {
+        align-items: center;
+        column-gap: 24px;
+        justify-content: center;
+    }
+    .button_log_out {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+    .order_information_user {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .inf {
+        margin-bottom: 24px;
+    }
+    .user_profile_order_item {
+        width: 400px;
+    }
+    .user_profile_item {
+        width: 280px;
+    }
+    .delete_button {
+        font-size: 16px;
+    }
+    .slider_wrapper {
+        flex-direction: column-reverse;
+    }
+    .product__images {
+        flex-direction: row;
+    }
+    .image_recipe {
+        width: 600px;
+    }
+    .ingredients_list_container {
+        width: 550px;
+    }
+    .description_recipe_item {
+        width: 600px;
+    }
+    .content_description_recipe {
+        width: 600px;
+    }
+    .caloric_value_recipe_list {
+        width: 600px;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(1, 600px);
+    }
+    .category_list_item {
+        width: 92%;
+    }
 }
 @media (max-width: 600px) {
-  .container {
-    max-width: 400px;
-  }
-  .item {
-    height: 130px;
-    width: 320px;
-    padding: 24px;
-  }
-  .item:nth-child(6n + 2) {
-    height: 130px;
-    width: 320px;
-  }
-  .item:nth-child(6n + 4) {
-    height: 130px;
-    width: 320px;
-  }
-  .item:nth-child(even) {
-    height: 130px;
-    width: 320px;
-  }
-  .content_catalog-category {
-    column-gap: 12px;
-    row-gap: 24px;
-  }
-  .title_main {
-    font-size: 42px;
-    text-align: center;
-    width: 370px;
-  }
-  .subtitle_button {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 20px;
-    margin-top: 40px;
-    width: 370px;
-  }
-  .subtitle_button h3 {
-    text-align: center;
-  }
-  .headtitle_style {
-    font-size: 30px;
-    text-align: center;
-  }
-  .content_popular-products {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .popular_product_item {
-    width: 220px;
-  }
-  .drawer_wrapper {
-    width: 300px;
-  }
-  .delete_all_products p {
-    display: none;
-  }
-  .delete_all_products {
-    padding: 10px 20px;
-  }
-  .cart_product_quantity_name {
-    flex-direction: column;
-    align-items: flex-start;
-    height: 110px;
-    justify-content: space-between;
-  }
-  .cart_product_item_text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .cart_product_item_name {
-    font-size: 18px;
-    width: 230px;
-  }
-  .cart_product_item_price {
-    font-size: 18px;
-  }
-  .cart-product-item {
-    column-gap: 12px;
-  }
-  .cart_product_item_text {
-    width: 100%;
-  }
-  .button_cart {
-    padding: 18px 80px;
-  }
-  .input_style_order_address {
-    width: 42%;
-  }
-  .address_inputs_order {
-    flex-wrap: wrap;
-    column-gap: 8px;
-  }
-  .input_style_order {
-    width: 93%;
-  }
-  .title_form {
-    width: 80%;
-  }
-  .header_some_pages {
-    flex-direction: column;
-  }
-  .filter_open_search {
-    margin-top: 38px;
-  }
-  .tune_filter {
-    padding: 8px;
-  }
-  .form_search {
-    padding: 3px 5px;
-  }
-  .recipe_item_image {
-    width: 190px;
-    height: 350px;
-  }
-  .recipe_item {
-    width: 190px;
-    height: 350px;
-  }
-  .title_recipe {
-    width: 160px;
-  }
-  .image_recipe {
-    width: 400px;
-  }
-  .ingredients_list_container {
-    width: 350px;
-  }
-  .description_recipe_item {
-    width: 400px;
-  }
-  .recipe_steps_list {
-    grid-template-columns: repeat(1, 400px);
-  }
-  .caloric_value_recipe_list {
-    display: grid;
-    grid-template-columns: repeat(2, 180px);
-    width: 400px;
-    row-gap: 24px;
-  }
-  .content_description_recipe {
-    width: 400px;
-  }
-  .caloric_value_name {
-    font-size: 22px;
-  }
-  .steps_counter {
-    font-size: 22px;
-  }
-  .final_price_title {
-    font-size: 28px;
-  }
-  .catalog_products_list {
-    grid-template-columns: repeat(1, 260px);
-  }
-  .headtitle_style_search {
-    margin-bottom: 18px;
-  }
-  .ingridients_wrapper {
-    flex-wrap: wrap;
-  }
-  .complexity_wrapper {
-    flex-wrap: wrap;
-  }
+    .container {
+        max-width: 400px;
+    }
+    .item {
+        height: 130px;
+        width: 320px;
+        padding: 24px;
+    }
+    .item:nth-child(6n + 2) {
+        height: 130px;
+        width: 320px;
+    }
+    .item:nth-child(6n + 4) {
+        height: 130px;
+        width: 320px;
+    }
+    .item:nth-child(even) {
+        height: 130px;
+        width: 320px;
+    }
+    .content_catalog-category {
+        gap: 12px;
+    }
+    .title_main {
+        font-size: 42px;
+        text-align: center;
+        width: 370px;
+    }
+    .subtitle_button {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+        margin-top: 40px;
+        width: 370px;
+    }
+    .subtitle_button h3 {
+        text-align: center;
+    }
+    .headtitle_style {
+        font-size: 30px;
+        text-align: center;
+    }
+    .content_popular-products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .popular_product_item {
+        width: 220px;
+    }
+    .drawer_wrapper {
+        width: 300px;
+    }
+    .delete_all_products p {
+        display: none;
+    }
+    .delete_all_products {
+        padding: 10px 20px;
+    }
+    .cart_product_quantity_name {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 110px;
+        justify-content: space-between;
+    }
+    .cart_product_item_text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cart_product_item_name {
+        font-size: 18px;
+        width: 230px;
+    }
+    .cart_product_item_price {
+        font-size: 18px;
+    }
+    .cart-product-item {
+        column-gap: 12px;
+    }
+    .cart_product_item_text {
+        width: 100%;
+    }
+    .button_cart {
+        padding: 18px 80px;
+    }
+    .input_style_order_address {
+        width: 42%;
+    }
+    .address_inputs_order {
+        flex-wrap: wrap;
+        column-gap: 8px;
+    }
+    .input_style_order {
+        width: 93%;
+    }
+    .title_form {
+        width: 80%;
+    }
+    .header_some_pages {
+        flex-direction: column;
+    }
+    .filter_open_search {
+        margin-top: 38px;
+    }
+    .tune_filter {
+        padding: 8px;
+    }
+    .form_search {
+        padding: 3px 5px;
+    }
+    .recipe_item_image {
+        width: 190px;
+        height: 350px;
+    }
+    .recipe_item {
+        width: 190px;
+        height: 350px;
+    }
+    .title_recipe {
+        width: 160px;
+    }
+    .image_recipe {
+        width: 400px;
+    }
+    .ingredients_list_container {
+        width: 350px;
+    }
+    .description_recipe_item {
+        width: 400px;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(1, 400px);
+    }
+    .caloric_value_recipe_list {
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        width: 400px;
+        row-gap: 24px;
+    }
+    .content_description_recipe {
+        width: 400px;
+    }
+    .caloric_value_name {
+        font-size: 22px;
+    }
+    .steps_counter {
+        font-size: 22px;
+    }
+    .final_price_title {
+        font-size: 28px;
+    }
+    .catalog_products_list {
+        grid-template-columns: repeat(1, 260px);
+    }
+    .headtitle_style_search {
+        margin-bottom: 18px;
+    }
+    .ingridients_wrapper {
+        flex-wrap: wrap;
+    }
+    .complexity_wrapper {
+        flex-wrap: wrap;
+    }
 }
 @media (max-width: 500px) {
-  .container {
-    max-width: 380px;
-  }
-  .content_cart_final_price {
-    width: 80%;
-  }
-  .button_cart {
-    padding: 18px 60px;
-  }
-  .cart_product_item_name {
-    width: 180px;
-  }
-  .cart_product_item_text {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .button_cart {
-    padding: 18px 30px;
-  }
-  .input_style_order_address {
-    width: 41%;
-  }
-  .address_inputs_order {
-    column-gap: 12px;
-  }
-  .description_one_product {
-    width: 360px;
-  }
-  .caloric_value_one_product {
-    width: 360px;
-  }
-  .caloric_value_data_list {
-    flex-wrap: wrap;
-    row-gap: 24px;
-  }
+    .container {
+        max-width: 380px;
+    }
+    .content_cart_final_price {
+        width: 80%;
+    }
+    .button_cart {
+        padding: 18px 60px;
+    }
+    .cart_product_item_name {
+        width: 180px;
+    }
+    .cart_product_item_text {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .button_cart {
+        padding: 18px 30px;
+    }
+    .input_style_order_address {
+        width: 41%;
+    }
+    .address_inputs_order {
+        column-gap: 12px;
+    }
+    .description_one_product {
+        width: 360px;
+    }
+    .caloric_value_one_product {
+        width: 360px;
+    }
+    .caloric_value_data_list {
+        flex-wrap: wrap;
+        row-gap: 24px;
+    }
 
-  .specifications_item_description {
-    width: 360px;
-  }
-  .caloric_value_data_item {
-    padding: 22px 38px;
-    /* width: 100%; */
-  }
-  .product-big-image {
-    width: 340px;
-    height: 360px;
-  }
-  .user_profile_order_item {
-    width: 315px;
-  }
-  .input_style_recipe {
-    width: 225px;
-  }
-  .content_recipe_list {
-    justify-content: center;
-  }
-  .recipe_item_image {
-    width: 220px;
-    height: 360px;
-  }
-  .recipe_item {
-    width: 220px;
-    height: 360px;
-  }
-  .image_recipe {
-    width: 380px;
-  }
-  .ingredients_list_container {
-    width: 330px;
-  }
-  .description_recipe_item {
-    width: 380px;
-  }
-  .content_description_recipe {
-    width: 380px;
-  }
-  .caloric_value_recipe_list {
-    width: 380px;
-    grid-template-columns: repeat(1, 360px);
-    justify-content: flex-start;
-    column-gap: 38px;
-  }
-  .recipe_steps_list {
-    grid-template-columns: repeat(1, 380px);
-  }
+    .specifications_item_description {
+        width: 360px;
+    }
+    .caloric_value_data_item {
+        padding: 22px 38px;
+        /* width: 100%; */
+    }
+    .product-big-image {
+        width: 340px;
+        height: 360px;
+    }
+    .user_profile_order_item {
+        width: 315px;
+    }
+    .input_style_recipe {
+        width: 225px;
+    }
+    .content_recipe_list {
+        justify-content: center;
+    }
+    .recipe_item_image {
+        width: 220px;
+        height: 360px;
+    }
+    .recipe_item {
+        width: 220px;
+        height: 360px;
+    }
+    .image_recipe {
+        width: 380px;
+    }
+    .ingredients_list_container {
+        width: 330px;
+    }
+    .description_recipe_item {
+        width: 380px;
+    }
+    .content_description_recipe {
+        width: 380px;
+    }
+    .caloric_value_recipe_list {
+        width: 380px;
+        grid-template-columns: repeat(1, 360px);
+        justify-content: flex-start;
+        column-gap: 38px;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(1, 380px);
+    }
 }
 @media (max-width: 400px) {
-  .container {
-    max-width: 300px;
-  }
-  .title_main {
-    width: 300px;
-    font-size: 36px;
-  }
-  .subtitle_button {
-    width: 300px;
-  }
-  .input_style_order_address {
-    width: 39%;
-  }
-  .address_inputs_order {
-    column-gap: 10px;
-  }
-  .product-big-image {
-    width: 290px;
-    height: 330px;
-    object-fit: contain;
-  }
-  .description_one_product {
-    width: 320px;
-  }
-  .caloric_value_one_product {
-    width: 320px;
-  }
-  .specifications_item_description {
-    width: 320px;
-  }
-  .caloric_value_data_list {
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
-  .title_form {
-    width: 90%;
-  }
-  .input_style_recipe {
-    width: 160px;
-  }
-  .input_style_recipe::placeholder {
-    font-size: 15px;
-  }
-  .tune_filter img {
-    width: 30px;
-    height: 30px;
-  }
-  .search_button img {
-    width: 30px;
-    height: 30px;
-  }
-  .filter_open_search {
-    column-gap: 12px;
-  }
-  .image_recipe {
-    width: 300px;
-  }
-  .ingredients_list_container {
-    width: 250px;
-  }
-  .description_recipe_item {
-    width: 300px;
-  }
-  .content_description_recipe {
-    width: 300px;
-  }
-  .caloric_value_recipe_list {
-    width: 300px;
-    grid-template-columns: repeat(1, 300px);
-    justify-content: flex-start;
-    column-gap: 38px;
-  }
-  .recipe_steps_list {
-    grid-template-columns: repeat(1, 300px);
-  }
-  .button_moderator_recipes_2 {
-    padding: 12px 14px;
-    font-size: 16px;
-  }
-  .buttons_wrapper_moderator {
-    column-gap: 22px;
-  }
+    .container {
+        max-width: 300px;
+    }
+    .title_main {
+        width: 300px;
+        font-size: 36px;
+    }
+    .subtitle_button {
+        width: 300px;
+    }
+    .input_style_order_address {
+        width: 39%;
+    }
+    .address_inputs_order {
+        column-gap: 10px;
+    }
+    .product-big-image {
+        width: 290px;
+        height: 330px;
+        object-fit: contain;
+    }
+    .description_one_product {
+        width: 320px;
+    }
+    .caloric_value_one_product {
+        width: 320px;
+    }
+    .specifications_item_description {
+        width: 320px;
+    }
+    .caloric_value_data_list {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .title_form {
+        width: 90%;
+    }
+    .input_style_recipe {
+        width: 160px;
+    }
+    .input_style_recipe::placeholder {
+        font-size: 15px;
+    }
+    .tune_filter img {
+        width: 30px;
+        height: 30px;
+    }
+    .search_button img {
+        width: 30px;
+        height: 30px;
+    }
+    .filter_open_search {
+        column-gap: 12px;
+    }
+    .image_recipe {
+        width: 300px;
+    }
+    .ingredients_list_container {
+        width: 250px;
+    }
+    .description_recipe_item {
+        width: 300px;
+    }
+    .content_description_recipe {
+        width: 300px;
+    }
+    .caloric_value_recipe_list {
+        width: 300px;
+        grid-template-columns: repeat(1, 300px);
+        justify-content: flex-start;
+        column-gap: 38px;
+    }
+    .recipe_steps_list {
+        grid-template-columns: repeat(1, 300px);
+    }
+    .button_moderator_recipes_2 {
+        padding: 12px 14px;
+        font-size: 16px;
+    }
+    .buttons_wrapper_moderator {
+        column-gap: 22px;
+    }
+}
+
+.none {
+    display: none;
 }

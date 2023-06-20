@@ -81,7 +81,15 @@ if (isset($_GET["deleteAll"])) {
                   </p>
                 </div>
               </div>
-              <div class="changing_quantity"></div>
+              <div class="catalog_product-btns">
+                <div id="counterContainer" class="counter-container counter-container-cart">
+                  <input class="cartProductId" type="hidden" value="<?= $product["id"] ?>" />
+                  <input class="cartListId" type="hidden" value="<?= $cartProducts["id"] ?>" />
+                  <button class="counter-container-minus">-</button>
+                  <span><?= $cartProducts["count"] ?></span>
+                  <button class="counter-container-plus">+</button>
+                </div>
+              </div>
             </div>
           </div>
         <?php
@@ -148,3 +156,54 @@ if (isset($_GET["deleteAll"])) {
 </section>
 
 <script src="/js/modal.js"></script>
+
+<script>
+  const countersContainers = document.querySelectorAll(".counter-container");
+
+  const increment = (currentContainer, productId) => {
+    if (currentContainer.classList.contains("disable-counter")) {
+      currentContainer.classList.remove("disable-counter");
+    }
+    const currentCounterSpan = currentContainer.querySelector("span");
+    const prevValue = Number(currentCounterSpan.textContent);
+    currentCounterSpan.textContent = `${prevValue + 1}`;
+    updateProductQuantity(productId, "increment")
+  }
+
+  const decrement = (currentContainer, productId) => {
+    const currentCounterSpan = currentContainer.querySelector("span");
+    const prevValue = Number(currentCounterSpan.textContent);
+    if (prevValue == 1) {
+      currentContainer.parentElement.parentElement.parentElement.classList.add("none");
+      updateProductQuantity(productId, "decrement");
+    } else {
+      currentCounterSpan.textContent = `${prevValue - 1}`;
+      updateProductQuantity(productId, "decrement");
+    }
+  }
+
+  countersContainers.forEach((element, index) => {
+    // const productId = element.querySelector(".cartProductId").value;
+    const cartListId = element.querySelector(".cartListId").value;
+
+    const minusBtnElement = element.querySelector(".counter-container-minus");
+    const plusBtnElement = element.querySelector(".counter-container-plus");
+
+    plusBtnElement.addEventListener("click", () => {
+      increment(countersContainers[index], cartListId);
+    });
+
+    minusBtnElement.addEventListener("click", () => {
+      decrement(countersContainers[index], cartListId);
+    })
+  })
+
+  const updateProductQuantity = (cartListId, type) => {
+    // type === increment || decrement || new
+    return fetch(`actions/update-cart-quantity.php?cart_list_id=${cartListId}&type=${type}`)
+      .then((response) => {
+        console.log(response);
+        return response.json();
+      });
+  };
+</script>

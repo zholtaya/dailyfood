@@ -9,14 +9,12 @@ if (!$user) {
   <div class="container">
     <div class="content_main">
       <h1 class="title_main">
-        Доставка на дом, когда вам это нужно.
+        Доставка на дом, когда вам это нужно
       </h1>
-      <div class="subtitle_button">
-        <h3>Попробуйте новую возможность подбора рецептов </h3>
-        <a href="?page=recipe-catalog" class="button_style">
-          Попробовать
-        </a>
-      </div>
+      <h3>Попробуйте новую возможность подбора рецептов </h3>
+      <a href="?page=recipe-catalog" class="button_style">
+        Попробовать
+      </a>
     </div>
   </div>
 </main>
@@ -34,7 +32,7 @@ if (!$user) {
 
         while ($product = $getPopularProductsResponse->fetch_assoc()) { ?>
           <div class="swiper-slide">
-            <a href="?page=product&id=<?=$product['id']?>" class="popular_product_item">
+            <a href="?page=product&id=<?= $product['id'] ?>" class="popular_product_item">
               <img src="<?= $product["thirdImage"] ?>" alt="product_item" class="popular_product_item_image">
               <div class="popular_product_item_text">
                 <div class="name_item">
@@ -67,10 +65,9 @@ if (!$user) {
         $getSubcategoryByCategoryIdSQL = "SELECT * FROM subcategories WHERE categoryId = '$categoryId' LIMIT 1";
         $subcategoryResponse = $link->query($getSubcategoryByCategoryIdSQL);
         $subcategory = $subcategoryResponse->fetch_assoc();
-        ?>
+      ?>
 
-        <a href="?page=catalog&categoryId=<?= $category["id"] ?>&subcategoryId=<?= $subcategory["id"] ?>" class="item"
-          style="background-image: url(<?= $category["img"] ?>);">
+        <a href="?page=catalog&categoryId=<?= $category["id"] ?>&subcategoryId=<?= $subcategory["id"] ?>" class="item" style="background-image: url(<?= $category["img"] ?>);">
           <h5 class="title">
             <?= $category["title"] ?>
           </h5>
